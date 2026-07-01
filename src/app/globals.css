@@ -119,6 +119,24 @@ textarea {
   color: #14004a !important;
 }
 
+.paper-cta {
+  background: var(--warm-bone);
+  color: #090a0c !important;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.paper-cta:visited,
+.paper-cta * {
+  color: #090a0c !important;
+}
+
+.paper-cta:hover {
+  background: var(--asterion-acid);
+  color: #090a0c !important;
+}
+
 @media (max-width: 420px) {
   .page-wrap {
     width: min(calc(100% - 3rem), 1180px);

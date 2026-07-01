@@ -199,7 +199,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world in development."
                 : "Geliştirme sürecindeki film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
             </p>
-            <Link href={routePaths[locale].contact} className="mt-6 inline-block bg-[#e9e5dc] px-5 py-3 text-sm text-[#090a0c]">
+            <Link href={routePaths[locale].contact} className="paper-cta mt-6 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
               {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
             </Link>
           </div>

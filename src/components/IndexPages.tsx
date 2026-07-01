@@ -322,7 +322,7 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <textarea className="min-h-40 border fine-rule bg-[#111317] px-4 py-3 text-[#e9e5dc]" />
           </label>
           <Input label={locale === "en" ? "Reference Link" : "Referans Link"} />
-          <button className="justify-self-start bg-[#e9e5dc] px-5 py-3 text-sm text-[#090a0c]" type="submit">
+          <button className="paper-cta justify-self-start px-5 py-3 text-sm" style={{ color: "#090a0c" }} type="submit">
             {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
           </button>
         </form>
