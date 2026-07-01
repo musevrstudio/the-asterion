@@ -14,13 +14,24 @@ export type LocalizedText = {
 };
 
 export type MediaItem = {
-  kind: "placeholder" | "image" | "video";
+  id: string;
+  type: "image" | "video" | "embed";
   src?: string;
   poster?: string;
+  width?: number;
+  height?: number;
+  aspectRatio?: string;
+  focalPoint?: {
+    x: number;
+    y: number;
+  };
+  cropMode?: "cover" | "contain";
   alt: LocalizedText;
-  credit?: LocalizedText;
-  sourceUrl?: string;
-  missingAsset?: boolean;
+  caption?: LocalizedText;
+  credit?: string;
+  copyright?: string;
+  source?: string;
+  approvalStatus?: "approved" | "pending" | "placeholder";
 };
 
 export type CreditItem = {

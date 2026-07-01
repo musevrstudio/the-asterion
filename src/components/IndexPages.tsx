@@ -107,9 +107,9 @@ export function ProductionPage({ locale }: { locale: Locale }) {
     <SiteShell locale={locale} active="production" alternateHref={routePaths[locale === "en" ? "tr" : "en"].production}>
       <PageHeader
         locale={locale}
-        eyebrow={locale === "en" ? "Production" : "Prodüksiyon"}
-        title={locale === "en" ? "Development, direction and production across image, space and story." : "Görüntü, mekan ve hikaye arasında geliştirme, yönetim ve prodüksiyon."}
-        body={locale === "en" ? "Technology is treated as one production material inside an editorial and artistic process." : "Teknoloji, editoryal ve sanatsal süreç içinde bir prodüksiyon malzemesi olarak ele alınır."}
+        eyebrow={locale === "en" ? "Capabilities" : "Yetkinlikler"}
+        title={locale === "en" ? "Story-led production for films, museums, exhibitions and interactive environments." : "Filmler, müzeler, sergiler ve interaktif ortamlar için hikâye odaklı prodüksiyon."}
+        body={locale === "en" ? "The Asterion develops projects from research and narrative structure through creative direction, media production, technical integration and public presentation." : "The Asterion; projeleri araştırma ve anlatı kurgusundan yaratıcı yönetime, medya prodüksiyonuna, teknik entegrasyona ve kamusal sunuma kadar geliştirir."}
       />
       <section className="page-wrap grid gap-px border fine-rule pb-20 md:grid-cols-2">
         {practices.map((practice) => (
@@ -272,6 +272,41 @@ export function ContactPage({ locale }: { locale: Locale }) {
             {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
           </button>
         </form>
+      </section>
+    </SiteShell>
+  );
+}
+
+export function PrivacyPage({ locale }: { locale: Locale }) {
+  const items = locale === "en"
+    ? [
+        ["Contact", "When you contact The Asterion, we use the information you provide only to respond to your enquiry and discuss the relevant project."],
+        ["Project material", "Any project descriptions, references or attachments shared with us are treated as confidential unless a different agreement is made in writing."],
+        ["Analytics", "The website may use standard hosting and analytics logs to understand basic site performance and usage. No public project claims are derived from this data."],
+        ["Rights", "Project images, artworks, trademarks and institutional names remain the property of their respective rights holders."],
+      ]
+    : [
+        ["İletişim", "The Asterion ile iletişime geçtiğinizde paylaştığınız bilgiler yalnızca talebinize yanıt vermek ve ilgili projeyi görüşmek için kullanılır."],
+        ["Proje materyalleri", "Bizimle paylaşılan proje açıklamaları, referanslar veya ekler, yazılı olarak farklı bir anlaşma yapılmadıkça gizli kabul edilir."],
+        ["Analitik", "Web sitesi, temel performans ve kullanım bilgilerini anlamak için standart barındırma ve analitik kayıtlarından yararlanabilir. Bu verilerden kamusal proje iddiaları üretilmez."],
+        ["Haklar", "Proje görselleri, eserler, ticari markalar ve kurum adları ilgili hak sahiplerine aittir."],
+      ];
+
+  return (
+    <SiteShell locale={locale} active="privacy" alternateHref={routePaths[locale === "en" ? "tr" : "en"].privacy}>
+      <PageHeader
+        locale={locale}
+        eyebrow={locale === "en" ? "Privacy" : "Gizlilik"}
+        title={locale === "en" ? "A clear note on contact, project material and rights." : "İletişim, proje materyalleri ve haklar hakkında açık not."}
+        body={locale === "en" ? "This page explains how The Asterion treats basic contact information and project material shared through the website." : "Bu sayfa, The Asterion'un web sitesi üzerinden paylaşılan temel iletişim bilgilerini ve proje materyallerini nasıl ele aldığını açıklar."}
+      />
+      <section className="page-wrap grid gap-px border fine-rule pb-20 md:grid-cols-2">
+        {items.map(([title, body]) => (
+          <article key={title} className="bg-[#111317] p-7">
+            <h2 className="font-romie text-4xl text-[#f4f1ea]">{title}</h2>
+            <p className="mt-5 text-sm leading-7 text-[#a7a39b]">{body}</p>
+          </article>
+        ))}
       </section>
     </SiteShell>
   );

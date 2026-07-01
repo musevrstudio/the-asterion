@@ -1,9 +1,5 @@
 import type { Project } from "./types";
-
-const missingAlt = {
-  en: "Editorial media field reserved for approved project imagery.",
-  tr: "Onaylı proje görselleri için ayrılmış editoryal medya alanı.",
-};
+import { placeholderMedia, projectMedia } from "./media";
 
 export const projects: Project[] = [
   {
@@ -49,20 +45,8 @@ export const projects: Project[] = [
       { en: "Immersive flight", tr: "Immersif uçuş" },
       { en: "Documentary and film development", tr: "Belgesel ve film geliştirme" },
     ],
-    heroMedia: {
-      kind: "image",
-      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
-      alt: {
-        en: "Nu D.38 aircraft in flight, archival photograph.",
-        tr: "Nu D.38 uçağını uçuş halinde gösteren arşiv fotoğrafı.",
-      },
-      credit: {
-        en: "Public domain archival image via Wikimedia Commons",
-        tr: "Wikimedia Commons üzerinden kamu malı arşiv görseli",
-      },
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
-    },
-    gallery: [{ kind: "placeholder", alt: missingAlt, missingAsset: true }],
+    heroMedia: projectMedia.nud38.hero,
+    gallery: projectMedia.nud38.gallery.length ? projectMedia.nud38.gallery : [placeholderMedia("nud38-gallery-placeholder")],
   },
   {
     slug: "osman-hamdi-bey",
@@ -93,20 +77,10 @@ export const projects: Project[] = [
       en: "Originally developed under Muse Studio. Original institutional, collaborator and production credits are retained.",
       tr: "İlk olarak Muse Studio bünyesinde geliştirilmiştir. Özgün kurum, ortaklık ve prodüksiyon kredileri korunmaktadır.",
     },
-    heroMedia: {
-      kind: "image",
-      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg?width=1600",
-      alt: {
-        en: "Detail from Osman Hamdi Bey's The Tortoise Trainer.",
-        tr: "Osman Hamdi Bey'in Kaplumbağa Terbiyecisi eserinden detay.",
-      },
-      credit: {
-        en: "Public domain artwork reproduction via Wikimedia Commons",
-        tr: "Wikimedia Commons üzerinden kamu malı eser reprodüksiyonu",
-      },
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg",
-    },
-    gallery: [{ kind: "placeholder", alt: missingAlt, missingAsset: true }],
+    heroMedia: projectMedia.osmanHamdiBey.hero,
+    gallery: projectMedia.osmanHamdiBey.gallery.length
+      ? projectMedia.osmanHamdiBey.gallery
+      : [placeholderMedia("osman-hamdi-bey-gallery-placeholder")],
   },
   {
     slug: "beyond-istanbul",
@@ -133,20 +107,10 @@ export const projects: Project[] = [
       tr: "İlk olarak Muse Studio bünyesinde geliştirilmiştir.",
     },
     verificationNotes: ["Dates, institutions and exhibition details must be confirmed before publishing."],
-    heroMedia: {
-      kind: "image",
-      src: "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%2C_Turkey_%28Unsplash_D7zGOhMJBys%29.jpg?width=1800",
-      alt: {
-        en: "Istanbul city view used as editorial atmosphere for Beyond Istanbul.",
-        tr: "Beyond Istanbul için editoryal atmosfer olarak kullanılan İstanbul kent görünümü.",
-      },
-      credit: {
-        en: "CC0 image by Petar Petkovski via Wikimedia Commons",
-        tr: "Wikimedia Commons üzerinden Petar Petkovski imzalı CC0 görsel",
-      },
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Istanbul,_Turkey_(Unsplash_D7zGOhMJBys).jpg",
-    },
-    gallery: [{ kind: "placeholder", alt: missingAlt, missingAsset: true }],
+    heroMedia: projectMedia.beyondIstanbul.hero,
+    gallery: projectMedia.beyondIstanbul.gallery.length
+      ? projectMedia.beyondIstanbul.gallery
+      : [placeholderMedia("beyond-istanbul-gallery-placeholder")],
   },
   {
     slug: "chefs-slice",
@@ -182,8 +146,8 @@ export const projects: Project[] = [
       en: "Originally developed under Muse Studio.",
       tr: "İlk olarak Muse Studio bünyesinde geliştirilmiştir.",
     },
-    heroMedia: { kind: "placeholder", alt: missingAlt, missingAsset: true },
-    gallery: [{ kind: "placeholder", alt: missingAlt, missingAsset: true }],
+    heroMedia: projectMedia.chefsSlice.hero,
+    gallery: projectMedia.chefsSlice.gallery.length ? projectMedia.chefsSlice.gallery : [placeholderMedia("chefs-slice-gallery-placeholder")],
   },
   {
     slug: "nowhere",
@@ -214,8 +178,8 @@ export const projects: Project[] = [
       "Production scope requires confirmation.",
       "Film, photography and installation credits require confirmation.",
     ],
-    heroMedia: { kind: "placeholder", alt: missingAlt, missingAsset: true },
-    gallery: [{ kind: "placeholder", alt: missingAlt, missingAsset: true }],
+    heroMedia: projectMedia.nowhere.hero,
+    gallery: projectMedia.nowhere.gallery.length ? projectMedia.nowhere.gallery : [placeholderMedia("nowhere-gallery-placeholder")],
   },
 ];
 

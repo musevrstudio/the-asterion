@@ -17,8 +17,8 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
     tr: "Özgün Projeler | The Asterion",
   },
   production: {
-    en: "Production | The Asterion",
-    tr: "Prodüksiyon | The Asterion",
+    en: "Capabilities | The Asterion",
+    tr: "Yetkinlikler | The Asterion",
   },
   studio: {
     en: "Studio | The Asterion",
@@ -31,6 +31,10 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
   contact: {
     en: "Contact | The Asterion",
     tr: "İletişim | The Asterion",
+  },
+  privacy: {
+    en: "Privacy | The Asterion",
+    tr: "Gizlilik | The Asterion",
   },
 };
 
