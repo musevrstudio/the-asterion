@@ -19,6 +19,11 @@ Internal file. Do not render publicly.
 ## Media Decisions
 
 - Project media is centralized in `src/content/media.ts`.
+- Imported media records are written to `src/content/media-imports.json` and are read by `src/content/media.ts` as controlled overrides.
+- Raw desktop files must not be linked directly from public pages or components.
+- `npm run media:import` converts source images into web-ready files under `public/media/projects`.
+- Hero imports are rejected below 1800x1100, preventing low-resolution images such as small Osman Hamdi references from being used as oversized heroes.
+- `npm run media:check` validates approved manifest entries and missing public files.
 - Media records support image, video and embed fields; focal point; crop mode; captions; credit; copyright; source and approval status.
 - Current NU.D38, Osman Hamdi Bey and Beyond Istanbul visuals are temporary/reference images with `approvalStatus: "pending"`.
 - Chef's Slice and Nowhere use placeholders until approved documentation is supplied.

@@ -1,4 +1,11 @@
 import type { MediaItem } from "./types";
+import mediaImports from "./media-imports.json";
+
+const importedMedia = mediaImports as Record<string, MediaItem | undefined>;
+
+function imported(key: string, fallback: MediaItem): MediaItem {
+  return importedMedia[key] ?? fallback;
+}
 
 const reservedProjectImage = {
   en: "Editorial media field reserved for approved project imagery.",
@@ -7,7 +14,7 @@ const reservedProjectImage = {
 
 export const projectMedia = {
   nud38: {
-    hero: {
+    hero: imported("nud38.hero", {
       id: "nud38-archive-flight",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
@@ -25,11 +32,11 @@ export const projectMedia = {
       credit: "Public domain archival image via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
       approvalStatus: "pending",
-    },
+    }),
     gallery: [],
   },
   osmanHamdiBey: {
-    hero: {
+    hero: imported("osman-hamdi-bey.hero", {
       id: "osman-hamdi-bey-tortoise-trainer",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg?width=1600",
@@ -47,11 +54,11 @@ export const projectMedia = {
       credit: "Public domain artwork reproduction via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg",
       approvalStatus: "pending",
-    },
+    }),
     gallery: [],
   },
   beyondIstanbul: {
-    hero: {
+    hero: imported("beyond-istanbul.hero", {
       id: "beyond-istanbul-city-reference",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%2C_Turkey_%28Unsplash_D7zGOhMJBys%29.jpg?width=1800",
@@ -69,27 +76,27 @@ export const projectMedia = {
       credit: "CC0 image by Petar Petkovski via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Istanbul,_Turkey_(Unsplash_D7zGOhMJBys).jpg",
       approvalStatus: "pending",
-    },
+    }),
     gallery: [],
   },
   chefsSlice: {
-    hero: {
+    hero: imported("chefs-slice.hero", {
       id: "chefs-slice-placeholder",
       type: "image",
       alt: reservedProjectImage,
       caption: reservedProjectImage,
       approvalStatus: "placeholder",
-    },
+    }),
     gallery: [],
   },
   nowhere: {
-    hero: {
+    hero: imported("nowhere.hero", {
       id: "nowhere-placeholder",
       type: "image",
       alt: reservedProjectImage,
       caption: reservedProjectImage,
       approvalStatus: "placeholder",
-    },
+    }),
     gallery: [],
   },
 } satisfies Record<
