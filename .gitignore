@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/Romie/
 
 # debug
 npm-debug.log*
