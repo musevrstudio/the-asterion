@@ -2,19 +2,18 @@
   "orta-blueskyer-nft.hero": {
     "id": "orta-blueskyer-nft",
     "type": "image",
-    "src": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-hero.webp",
-    "mobileSrc": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-mobile.webp",
-    "ogSrc": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-og.jpg",
+    "src": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-hero.webp",
+    "mobileSrc": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-mobile.webp",
+    "ogSrc": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-og.jpg",
     "sources": {
-      "thumbnail": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-thumb.webp",
-      "content": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-content.webp",
-      "hero": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-hero.webp",
-      "mobile": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-mobile.webp",
-      "og": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-og.jpg"
+      "thumbnail": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-thumb.webp",
+      "content": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-content.webp",
+      "hero": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-hero.webp",
+      "mobile": "/media/projects/orta-blueskyer-nft/generated/orta-blueskyer-nft-mobile.webp"
     },
-    "width": 1920,
-    "height": 1040,
-    "aspectRatio": "16 / 10",
+    "width": 1366,
+    "height": 768,
+    "aspectRatio": "16 / 9",
     "cropMode": "cover",
     "focalPoint": {
       "x": 50,
@@ -39,24 +38,24 @@
     "credit": "ORTA / historical project reference",
     "source": "https://ortaanadolu.com/metadenimverse-of-orta/",
     "sourcePath": "ORTA_NFT\\orta_blueskyert.jpg",
+    "masterSrc": "/media/projects/orta-blueskyer-nft/master/orta-blueskyer-nft-master.webp",
     "approvalStatus": "pending"
   },
   "water-reverie-app.hero": {
     "id": "water-reverie-app-hero",
     "type": "image",
-    "src": "/media/projects/water-reverie-app/water-reverie-app-hero-hero.webp",
-    "mobileSrc": "/media/projects/water-reverie-app/water-reverie-app-hero-mobile.webp",
-    "ogSrc": "/media/projects/water-reverie-app/water-reverie-app-hero-og.jpg",
+    "src": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-hero.webp",
+    "mobileSrc": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-mobile.webp",
+    "ogSrc": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-og.jpg",
     "sources": {
-      "thumbnail": "/media/projects/water-reverie-app/water-reverie-app-hero-thumb.webp",
-      "content": "/media/projects/water-reverie-app/water-reverie-app-hero-content.webp",
-      "hero": "/media/projects/water-reverie-app/water-reverie-app-hero-hero.webp",
-      "mobile": "/media/projects/water-reverie-app/water-reverie-app-hero-mobile.webp",
-      "og": "/media/projects/water-reverie-app/water-reverie-app-hero-og.jpg"
+      "thumbnail": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-thumb.webp",
+      "content": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-content.webp",
+      "hero": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-hero.webp",
+      "mobile": "/media/projects/water-reverie-app/generated/water-reverie-app-hero-mobile.webp"
     },
-    "width": 1920,
-    "height": 1040,
-    "aspectRatio": "16 / 10",
+    "width": 1366,
+    "height": 768,
+    "aspectRatio": "16 / 9",
     "cropMode": "cover",
     "focalPoint": {
       "x": 50,
@@ -79,24 +78,24 @@
       "tr": "Water Reverie mobil uygulaması, seçili arayüz görseli."
     },
     "sourcePath": "WaterRevApp\\mobilhero_2.png",
+    "masterSrc": "/media/projects/water-reverie-app/master/water-reverie-app-hero-master.webp",
     "approvalStatus": "pending"
   },
   "water-reverie-vr.hero": {
     "id": "water-reverie-vr-hero",
     "type": "image",
-    "src": "/media/projects/water-reverie-vr/water-reverie-vr-hero-hero.webp",
-    "mobileSrc": "/media/projects/water-reverie-vr/water-reverie-vr-hero-mobile.webp",
-    "ogSrc": "/media/projects/water-reverie-vr/water-reverie-vr-hero-og.jpg",
+    "src": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-hero.webp",
+    "mobileSrc": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-mobile.webp",
+    "ogSrc": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-og.jpg",
     "sources": {
-      "thumbnail": "/media/projects/water-reverie-vr/water-reverie-vr-hero-thumb.webp",
-      "content": "/media/projects/water-reverie-vr/water-reverie-vr-hero-content.webp",
-      "hero": "/media/projects/water-reverie-vr/water-reverie-vr-hero-hero.webp",
-      "mobile": "/media/projects/water-reverie-vr/water-reverie-vr-hero-mobile.webp",
-      "og": "/media/projects/water-reverie-vr/water-reverie-vr-hero-og.jpg"
+      "thumbnail": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-thumb.webp",
+      "content": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-content.webp",
+      "hero": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-hero.webp",
+      "mobile": "/media/projects/water-reverie-vr/generated/water-reverie-vr-hero-mobile.webp"
     },
-    "width": 1920,
-    "height": 1040,
-    "aspectRatio": "16 / 10",
+    "width": 1366,
+    "height": 768,
+    "aspectRatio": "16 / 9",
     "cropMode": "cover",
     "focalPoint": {
       "x": 50,
@@ -119,23 +118,24 @@
       "tr": "Water Reverie VR filmi, seçili prodüksiyon görseli."
     },
     "sourcePath": "Water_Reverie\\waterreveriehero.jpg",
+    "masterSrc": "/media/projects/water-reverie-vr/master/water-reverie-vr-hero-master.webp",
     "approvalStatus": "pending"
   },
   "osman-hamdi-bey.gallery.context": {
     "id": "osman-hamdi-context-600",
     "type": "image",
-    "src": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-content.webp",
-    "mobileSrc": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-mobile.webp",
-    "ogSrc": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-og.jpg",
+    "src": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-content.webp",
+    "mobileSrc": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-mobile.webp",
+    "ogSrc": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-og.jpg",
     "sources": {
-      "thumbnail": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-thumb.webp",
-      "content": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-content.webp",
-      "mobile": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-mobile.webp",
-      "og": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-og.jpg"
+      "thumbnail": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-thumb.webp",
+      "content": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-content.webp",
+      "mobile": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-mobile.webp",
+      "og": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-context-600-og.jpg"
     },
     "width": 600,
     "height": 450,
-    "aspectRatio": "4 / 3",
+    "aspectRatio": "16 / 9",
     "cropMode": "contain",
     "focalPoint": {
       "x": 50,
@@ -158,25 +158,25 @@
       "tr": "4:3 kompozisyonu korunmuş bağlamsal dokümantasyon görseli."
     },
     "sourcePath": "OsmanHamdi3.PNG",
+    "masterSrc": "/media/projects/osman-hamdi-bey/master/osman-hamdi-context-600-master.webp",
     "approvalStatus": "pending"
   },
   "beyond-istanbul.hero": {
     "id": "beyond-istanbul-panorama",
     "type": "image",
-    "src": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-hero.webp",
-    "mobileSrc": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-mobile.webp",
-    "ogSrc": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-og.jpg",
+    "src": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-hero.webp",
+    "mobileSrc": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-mobile.webp",
+    "ogSrc": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-og.jpg",
     "sources": {
-      "thumbnail": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-thumb.webp",
-      "content": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-content.webp",
-      "hero": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-hero.webp",
-      "mobile": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-mobile.webp",
-      "og": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-og.jpg"
+      "thumbnail": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-thumb.webp",
+      "content": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-content.webp",
+      "hero": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-hero.webp",
+      "mobile": "/media/projects/beyond-istanbul/generated/beyond-istanbul-panorama-mobile.webp"
     },
-    "width": 1891,
-    "height": 497,
+    "width": 1366,
+    "height": 768,
     "aspectRatio": "16 / 9",
-    "cropMode": "contain",
+    "cropMode": "cover",
     "focalPoint": {
       "x": 50,
       "y": 50
@@ -198,6 +198,167 @@
       "tr": "Beyond Istanbul, ana proje görseli."
     },
     "sourcePath": "beyond_1.jpg",
-    "approvalStatus": "approved"
+    "masterSrc": "/media/projects/beyond-istanbul/master/beyond-istanbul-panorama-master.webp",
+    "approvalStatus": "pending"
+  },
+  "osman-hamdi-bey.hero": {
+    "id": "osman-hamdi-bey-hero",
+    "type": "image",
+    "alt": {
+      "en": "Editorial visual for the Osman Hamdi Bey museum experience.",
+      "tr": "Osman Hamdi Bey m?ze deneyimi i?in editoryal g?rsel."
+    },
+    "caption": {
+      "en": "Osman Hamdi Bey, selected project image.",
+      "tr": "Osman Hamdi Bey, se?ili proje g?rseli."
+    },
+    "credit": "Historical project reference",
+    "approvalStatus": "pending",
+    "src": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-hero.webp",
+    "mobileSrc": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-mobile.webp",
+    "ogSrc": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-thumb.webp",
+      "content": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-content.webp",
+      "hero": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-hero.webp",
+      "mobile": "/media/projects/osman-hamdi-bey/generated/osman-hamdi-bey-hero-mobile.webp"
+    },
+    "width": 1366,
+    "height": 768,
+    "aspectRatio": "16 / 9",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "cropMode": "cover",
+    "masterSrc": "/media/projects/osman-hamdi-bey/master/osman-hamdi-bey-hero-master.webp"
+  },
+  "nowhere.hero": {
+    "id": "nowhere",
+    "type": "image",
+    "alt": {
+      "en": "Visual reference image for Nowhere, a project connected to Sinan Kuran's artistic universe.",
+      "tr": "Sinan Kuran'?n sanatsal evreniyle ili?kili Nowhere projesi i?in g?rsel referans."
+    },
+    "caption": {
+      "en": "Nowhere, historical project reference.",
+      "tr": "Nowhere, tarihsel proje referans?."
+    },
+    "credit": "Sinan Kuran / historical project reference",
+    "approvalStatus": "pending",
+    "src": "/media/projects/nowhere/generated/nowhere-hero.webp",
+    "mobileSrc": "/media/projects/nowhere/generated/nowhere-mobile.webp",
+    "ogSrc": "/media/projects/nowhere/generated/nowhere-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/nowhere/generated/nowhere-thumb.webp",
+      "content": "/media/projects/nowhere/generated/nowhere-content.webp",
+      "hero": "/media/projects/nowhere/generated/nowhere-hero.webp",
+      "mobile": "/media/projects/nowhere/generated/nowhere-mobile.webp"
+    },
+    "width": 1366,
+    "height": 768,
+    "aspectRatio": "16 / 9",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "cropMode": "cover",
+    "masterSrc": "/media/projects/nowhere/master/nowhere-master.webp"
+  },
+  "nud38.hero": {
+    "id": "nud38-hero",
+    "type": "image",
+    "src": "/media/projects/nud38/generated/nud38-hero-hero.webp",
+    "mobileSrc": "/media/projects/nud38/generated/nud38-hero-mobile.webp",
+    "ogSrc": "/media/projects/nud38/generated/nud38-hero-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/nud38/generated/nud38-hero-thumb.webp",
+      "content": "/media/projects/nud38/generated/nud38-hero-content.webp",
+      "hero": "/media/projects/nud38/generated/nud38-hero-hero.webp",
+      "mobile": "/media/projects/nud38/generated/nud38-hero-mobile.webp"
+    },
+    "width": 1673,
+    "height": 940,
+    "aspectRatio": "16 / 9",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "cropMode": "cover",
+    "alt": {
+      "en": "NU.D38 project hero image, presenting the original story world and aviation reference.",
+      "tr": "NU.D38 projesinin ?zg?n anlat? d?nyas?n? ve havac?l?k referans?n? ta??yan hero g?rseli."
+    },
+    "caption": {
+      "en": "NU.D38, primary ongoing original project.",
+      "tr": "NU.D38, devam eden ana ?zg?n proje."
+    },
+    "credit": "NU.D38 project visual",
+    "masterSrc": "/media/projects/nud38/master/nud38-hero-master.webp",
+    "approvalStatus": "pending"
+  },
+  "chefs-slice.hero": {
+    "id": "pirge-chefs-slice",
+    "type": "image",
+    "src": "/media/projects/chefs-slice/generated/pirge-chefs-slice-hero.webp",
+    "mobileSrc": "/media/projects/chefs-slice/generated/pirge-chefs-slice-mobile.webp",
+    "ogSrc": "/media/projects/chefs-slice/generated/pirge-chefs-slice-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/chefs-slice/generated/pirge-chefs-slice-thumb.webp",
+      "content": "/media/projects/chefs-slice/generated/pirge-chefs-slice-content.webp",
+      "hero": "/media/projects/chefs-slice/generated/pirge-chefs-slice-hero.webp",
+      "mobile": "/media/projects/chefs-slice/generated/pirge-chefs-slice-mobile.webp"
+    },
+    "width": 1262,
+    "height": 709,
+    "aspectRatio": "16 / 9",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "cropMode": "cover",
+    "alt": {
+      "en": "Pirge Chef's Slice kitchen scene with floating knives and cinematic product composition.",
+      "tr": "Pirge Chef's Slice i?in u?u?an b??aklar ve sinematik ?r?n kompozisyonu i?eren mutfak sahnesi."
+    },
+    "caption": {
+      "en": "Pirge - Chef's Slice, selected project image.",
+      "tr": "Pirge - Chef's Slice, se?ili proje g?rseli."
+    },
+    "credit": "Pirge / historical project reference",
+    "masterSrc": "/media/projects/chefs-slice/master/pirge-chefs-slice-master.webp",
+    "approvalStatus": "pending"
   }
 }

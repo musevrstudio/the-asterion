@@ -83,14 +83,22 @@ async function main() {
     );
   }
 
-  const outputDir = path.join(outputRoot, project);
-  await mkdir(outputDir, { recursive: true });
+  const masterDir = path.join(outputRoot, project, "master");
+  const generatedDir = path.join(outputRoot, project, "generated");
+  await mkdir(masterDir, { recursive: true });
+  await mkdir(generatedDir, { recursive: true });
+
+  const masterName = `${id}-master.webp`;
+  const masterPath = path.join(masterDir, masterName);
+  const masterPublicPath = `/media/projects/${project}/master/${masterName}`;
+
+  await sharp(input).rotate().webp({ quality: 94, effort: 5 }).toFile(masterPath);
 
   const outputName = `${id}.webp`;
-  const outputPath = path.join(outputDir, outputName);
-  const publicPath = `/media/projects/${project}/${outputName}`;
+  const outputPath = path.join(generatedDir, outputName);
+  const publicPath = `/media/projects/${project}/generated/${outputName}`;
 
-  const resized = sharp(input).rotate().resize({
+  const resized = sharp(masterPath).resize({
     width: outputWidth,
     withoutEnlargement: true,
   });
@@ -122,6 +130,7 @@ async function main() {
     credit: args.credit ? String(args.credit) : undefined,
     copyright: args.copyright ? String(args.copyright) : undefined,
     source: args.source ? String(args.source) : undefined,
+    masterSrc: masterPublicPath,
     approvalStatus: args.approvalStatus === "approved" ? "approved" : "pending",
   };
 

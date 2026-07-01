@@ -144,11 +144,11 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
         </div>
       </header>
       <main id="main">{children}</main>
-      <footer className="border-t fine-rule py-16">
+      <footer className="border-t fine-rule py-14 sm:py-16">
         <div className="page-wrap">
-          <div className="grid gap-10 lg:grid-cols-[1.25fr_1fr_0.9fr_1fr]">
-            <div>
-              <p className="font-romie text-4xl leading-none text-[#f4f1ea]">THE ASTERION</p>
+          <div className="grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-[minmax(16rem,1.35fr)_minmax(11rem,0.85fr)_minmax(9rem,0.75fr)_minmax(12rem,0.95fr)] lg:items-start">
+            <div className="max-w-sm">
+              <p className="font-romie text-[2.35rem] leading-none text-[#f4f1ea] sm:text-[2.7rem]">THE ASTERION</p>
               <p className="mt-4 text-sm leading-7 text-[#e9e5dc]">{footerText.descriptor}</p>
               <p className="mt-3 max-w-sm text-sm leading-7 text-[#a7a39b]">{footerText.support}</p>
             </div>
@@ -179,17 +179,17 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
               </div>
             </div>
           </div>
-          <div className="mt-14 grid gap-6 border-t fine-rule pt-8 md:grid-cols-[1fr_auto] md:items-end">
-            <div>
-              <p className="font-romie text-3xl leading-tight text-[#f4f1ea]">{footerText.invitation}</p>
+          <div className="mt-12 grid gap-10 border-t fine-rule pt-9 lg:grid-cols-[minmax(18rem,0.9fr)_minmax(24rem,1.1fr)] lg:items-start">
+            <div className="max-w-[30rem]">
+              <p className="font-romie text-[2rem] leading-[1.05] text-[#f4f1ea] sm:text-[2.35rem] lg:text-[2.5rem]">{footerText.invitation}</p>
               <Link href={routePaths[locale].contact} className="mt-5 inline-block border-b border-[#d7ff2f] pb-1 text-sm text-[#e9e5dc]">
                 {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
               </Link>
             </div>
-            <div className="grid gap-2 text-xs leading-6 text-[#777a7f] md:max-w-xl md:text-right">
+            <div className="grid max-w-2xl gap-3 text-xs leading-6 text-[#777a7f] lg:justify-self-end">
               <p>{footerText.rights}</p>
               <p>{footerText.references}</p>
-              <p>
+              <p className="pt-1 text-[#8b8e94]">
                 © {year} The Asterion. {locale === "en" ? "All rights reserved." : "Tüm hakları saklıdır."}{" "}
                 <Link href={routePaths[locale].privacy} className="text-[#a7a39b] underline decoration-[#d7ff2f] underline-offset-4">
                   {navLabels[locale].privacy}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { divisions } from "@/content/divisions";
-import { chronology, futureNotes, journalIntro } from "@/content/journal";
+import { academicEngagements, academicIntro, chronology, futureNotes, journalIntro } from "@/content/journal";
 import { projectPath, routePaths } from "@/content/navigation";
 import { projects } from "@/content/projects";
 import { site } from "@/content/site";
@@ -18,21 +18,32 @@ export function WorkIndex({ locale }: { locale: Locale }) {
         body={locale === "en" ? "A selection of original and commissioned projects across cinema, museum experience, cultural production and visual storytelling." : "Sinema, müze deneyimi, kültürel prodüksiyon ve görsel anlatı alanlarında geliştirilen özgün ve siparişe dayalı projelerden bir seçki."}
       />
       <section className="page-wrap grid gap-8 pb-20">
-        {projects.map((project) => (
-          <article key={project.slug} className="grid gap-6 border-t fine-rule pt-8 md:grid-cols-[0.65fr_1.35fr]">
-            <MediaBlock media={project.heroMedia} locale={locale} className="min-h-64" />
-            <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
-                {project.featured ? (locale === "en" ? "Featured Original" : "Öne Çıkan Özgün Proje") : divisions[project.division].name}
-              </p>
-              <h2 className="mt-4 font-romie text-5xl text-[#f4f1ea]">{project.displayTitle?.[locale] ?? project.title}</h2>
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-[#a7a39b]">{project.summary[locale]}</p>
-              <Link href={projectPath(locale, project.slug)} className="mt-6 inline-block text-sm text-[#e9e5dc] underline decoration-[#d7ff2f] underline-offset-8">
-                {locale === "en" ? "View project" : "Projeyi incele"}
-              </Link>
-            </div>
-          </article>
-        ))}
+        {projects.map((project) => {
+          const isExternal = Boolean(project.externalUrl);
+          const ctaClassName = "mt-6 inline-block text-sm text-[#e9e5dc] underline decoration-[#d7ff2f] underline-offset-8";
+
+          return (
+            <article key={project.slug} className="grid gap-6 border-t fine-rule pt-8 md:grid-cols-[0.65fr_1.35fr]">
+              <MediaBlock media={project.heroMedia} locale={locale} className="min-h-64" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
+                  {project.featured ? (locale === "en" ? "Featured Original" : "Öne Çıkan Özgün Proje") : divisions[project.division].name}
+                </p>
+                <h2 className="mt-4 font-romie text-5xl text-[#f4f1ea]">{project.displayTitle?.[locale] ?? project.title}</h2>
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-[#a7a39b]">{project.summary[locale]}</p>
+                {isExternal ? (
+                  <a href={project.externalUrl} className={ctaClassName}>
+                    nud38.com
+                  </a>
+                ) : (
+                  <Link href={projectPath(locale, project.slug)} className={ctaClassName}>
+                    {locale === "en" ? "View project" : "Projeyi incele"}
+                  </Link>
+                )}
+              </div>
+            </article>
+          );
+        })}
       </section>
     </SiteShell>
   );
@@ -56,9 +67,15 @@ export function OriginalsPage({ locale }: { locale: Locale }) {
           </p>
           <h2 className="mt-4 font-romie text-7xl text-[#f4f1ea]">{original.title}</h2>
           <p className="mt-6 text-sm leading-7 text-[#a7a39b]">{original.summary[locale]}</p>
-          <Link href={projectPath(locale, original.slug)} className="mt-8 inline-block bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
-            {locale === "en" ? "Explore NU.D38" : "NU.D38'i incele"}
-          </Link>
+          {original.externalUrl ? (
+            <a href={original.externalUrl} className="mt-8 inline-block bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
+              nud38.com
+            </a>
+          ) : (
+            <Link href={projectPath(locale, original.slug)} className="mt-8 inline-block bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
+              {locale === "en" ? "Explore NU.D38" : "NU.D38'i incele"}
+            </Link>
+          )}
         </div>
       </section>
     </SiteShell>
@@ -160,33 +177,39 @@ export function StudioPage({ locale }: { locale: Locale }) {
               ? "Talat Alkan is a creative director and producer working across cultural storytelling, film, immersive experience and spatial media. His practice combines philosophical and historical research, visual culture, narrative development and multidisciplinary production."
               : "Talat Alkan; kültürel anlatı, film, immersif deneyim ve mekansal medya alanlarında çalışan yaratıcı yönetmen ve yapımcıdır. Üretim pratiği; felsefi ve tarihsel araştırmayı, görsel kültürü, anlatı geliştirmeyi ve disiplinlerarası prodüksiyonu bir araya getirir."}
           </p>
+          <Link
+            href={locale === "en" ? "/en/studio/selected-history" : "/tr/studyo/secili-gecmis"}
+            className="mt-6 inline-block border-b border-[#d7ff2f] pb-1 text-sm text-[#e9e5dc]"
+          >
+            {locale === "en" ? "Selected history" : "Seçili geçmiş"}
+          </Link>
         </aside>
       </section>
     </SiteShell>
   );
 }
 
-export function JournalPage({ locale }: { locale: Locale }) {
+export function JournalPage({ locale, alternateHref }: { locale: Locale; alternateHref?: string }) {
   return (
-    <SiteShell locale={locale} active="journal" alternateHref={routePaths[locale === "en" ? "tr" : "en"].journal}>
+    <SiteShell locale={locale} active="journal" alternateHref={alternateHref ?? routePaths[locale === "en" ? "tr" : "en"].journal}>
       <PageHeader
         locale={locale}
-        eyebrow={locale === "en" ? "Journal / Notes" : "Notlar / Günlük"}
-        title={locale === "en" ? "Talks, references, screenings and field notes." : "Konuşmalar, referanslar, gösterimler ve saha notları."}
+        eyebrow={locale === "en" ? "Selected history" : "Seçili geçmiş"}
+        title={locale === "en" ? "Selected Exhibitions, Talks and Institutional Engagements" : "Seçili Sergiler, Konuşmalar ve Kurumsal İşbirlikleri"}
         body={journalIntro[locale]}
       />
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-[0.78fr_1.22fr]">
         <aside className="journal-note border fine-rule p-7">
           <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
-            {locale === "en" ? "Chronology and notes" : "Kronoloji ve notlar"}
+            {locale === "en" ? "Selective institutional record" : "Seçici kurumsal kayıt"}
           </p>
           <h2 className="mt-4 font-romie text-5xl leading-none text-[#f4f1ea]">
-            {locale === "en" ? "A living reference shelf." : "Yaşayan bir referans rafı."}
+            {locale === "en" ? "Not a complete chronology." : "Eksiksiz bir kronoloji değil."}
           </h2>
           <p className="mt-5 text-sm leading-7 text-[#a7a39b]">
             {locale === "en"
-              ? "This section brings together public context around the studio's projects, references and research. Longer essays and production notes will be added over time."
-              : "Bu bölüm, stüdyonun projeleri, referansları ve araştırmaları etrafındaki kamusal bağlamı bir araya getirir. Daha uzun denemeler ve prodüksiyon notları zamanla eklenecektir."}
+              ? "This page keeps the public archive intentionally concise: exhibitions, talks, workshops and institutional collaborations with a meaningful creative, production or educational role."
+              : "Bu sayfa kamusal arşivi bilinçli olarak seçici tutar: anlamlı bir yaratıcı, prodüksiyonel veya eğitsel rol içeren sergiler, konuşmalar, atölyeler ve kurumsal işbirlikleri."}
           </p>
         </aside>
         <ol className="grid gap-px border fine-rule">
@@ -210,6 +233,28 @@ export function JournalPage({ locale }: { locale: Locale }) {
             </li>
           ))}
         </ol>
+      </section>
+      <section className="page-wrap pb-20">
+        <div className="border-t fine-rule pt-10">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
+            {locale === "en" ? "Academic and Educational Engagements" : "Akademik ve Eğitsel Katkılar"}
+          </p>
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-[#a7a39b]">{academicIntro[locale]}</p>
+          <ol className="mt-8 grid gap-px border fine-rule">
+            {academicEngagements.map((entry) => (
+              <li key={`${entry.year}-${entry.title.en}`} className="chronology-row grid gap-5 bg-[#111317] p-6 md:grid-cols-[8rem_1fr]">
+                <div>
+                  <p className="font-romie text-3xl leading-none text-[#d7ff2f]">{entry.year}</p>
+                  <p className="mt-3 text-xs uppercase tracking-[0.2em] text-[#a7a39b]">{entry.category[locale]}</p>
+                </div>
+                <div>
+                  <h2 className="font-romie text-4xl leading-none text-[#f4f1ea]">{entry.title[locale]}</h2>
+                  <p className="mt-4 text-sm leading-7 text-[#a7a39b]">{entry.body[locale]}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
       <section className="page-wrap pb-24">
         <div className="border-t fine-rule pt-10">
@@ -246,6 +291,11 @@ export function ContactPage({ locale }: { locale: Locale }) {
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-[0.75fr_1.25fr]">
         <div className="text-sm leading-7 text-[#a7a39b]">
           <p className="text-[#e9e5dc]">{site.email}</p>
+          <p>
+            <a href="tel:+905323902000" className="transition-colors hover:text-[#e9e5dc]">
+              {site.phone}
+            </a>
+          </p>
           <p>{site.location[locale]}</p>
         </div>
         <form className="grid gap-4" action={`mailto:${site.email}`} method="post">

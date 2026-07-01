@@ -1,7 +1,7 @@
 import type { Project } from "./types";
 import { placeholderMedia, projectMedia } from "./media";
 
-export const projects: Project[] = [
+const projectRecords: Project[] = [
   {
     slug: "nud38",
     title: "NU.D38",
@@ -300,6 +300,24 @@ export const projects: Project[] = [
     gallery: projectMedia.nowhere.gallery.length ? projectMedia.nowhere.gallery : [placeholderMedia("nowhere-gallery-placeholder")],
   },
 ];
+
+const projectOrder = [
+  "nud38",
+  "osman-hamdi-bey",
+  "beyond-istanbul",
+  "chefs-slice",
+  "water-reverie-vr",
+  "orta-blueskyer-nft",
+  "nowhere",
+];
+
+export const projects = projectRecords
+  .filter((project) => project.slug !== "water-reverie-app")
+  .sort((first, second) => {
+    const firstIndex = projectOrder.indexOf(first.slug);
+    const secondIndex = projectOrder.indexOf(second.slug);
+    return (firstIndex === -1 ? 999 : firstIndex) - (secondIndex === -1 ? 999 : secondIndex);
+  });
 
 export const featuredProject = projects.find((project) => project.featured)!;
 export const selectedProjects = projects.filter((project) => !project.featured);

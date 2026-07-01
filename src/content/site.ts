@@ -4,7 +4,8 @@ export const site = {
   name: "THE ASTERION",
   editorialName: "The Asterion",
   url: "https://theasterion.com",
-  email: "hello@theasterion.com",
+  email: "talatalkan@gmail.com",
+  phone: "+90 532 390 20 00",
   location: {
     en: "Istanbul, Turkiye - working internationally",
     tr: "İstanbul, Türkiye - uluslararası ölçekte çalışır",
