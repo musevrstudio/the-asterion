@@ -173,7 +173,11 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-[#d7ff2f]">{locale === "en" ? "Contact" : "İletişim"}</p>
               <div className="mt-5 text-sm leading-7 text-[#a7a39b]">
-                <p className="text-[#e9e5dc]">{site.email}</p>
+                <p>
+                  <a href={`mailto:${site.email}`} className="text-[#e9e5dc] transition-colors hover:text-[#d7ff2f]">
+                    {site.email}
+                  </a>
+                </p>
                 <p>{locale === "en" ? "Istanbul, Türkiye" : "İstanbul, Türkiye"}</p>
                 <p>{locale === "en" ? "Working internationally" : "Uluslararası ölçekte çalışır"}</p>
               </div>

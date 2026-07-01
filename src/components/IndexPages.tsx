@@ -290,7 +290,11 @@ export function ContactPage({ locale }: { locale: Locale }) {
       />
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-[0.75fr_1.25fr]">
         <div className="text-sm leading-7 text-[#a7a39b]">
-          <p className="text-[#e9e5dc]">{site.email}</p>
+          <p>
+            <a href={`mailto:${site.email}`} className="text-[#e9e5dc] transition-colors hover:text-[#d7ff2f]">
+              {site.email}
+            </a>
+          </p>
           <p>
             <a href="tel:+905323902000" className="transition-colors hover:text-[#e9e5dc]">
               {site.phone}

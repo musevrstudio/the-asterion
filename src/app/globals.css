@@ -88,7 +88,7 @@ textarea {
 }
 
 .page-wrap {
-  width: min(100% - 3rem, 1180px);
+  width: min(calc(100% - clamp(3.25rem, 8vw, 4.5rem)), 1180px);
   margin-inline: auto;
 }
 
@@ -121,7 +121,7 @@ textarea {
 
 @media (max-width: 420px) {
   .page-wrap {
-    width: min(100% - 2.5rem, 1180px);
+    width: min(calc(100% - 3rem), 1180px);
   }
 }
 
