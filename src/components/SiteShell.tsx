@@ -67,9 +67,17 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
               {otherLocale.toUpperCase()}
             </Link>
           </nav>
-          <details className="relative lg:hidden">
-            <summary className="cursor-pointer list-none border fine-rule px-4 py-2 text-sm text-[#e9e5dc]">
-              Menu
+          <details className="mobile-menu relative lg:hidden">
+            <summary
+              className="mobile-menu-button cursor-pointer list-none border fine-rule text-[#e9e5dc]"
+              aria-label={locale === "en" ? "Open menu" : "Menüyü aç"}
+            >
+              <span className="sr-only">{locale === "en" ? "Menu" : "Menü"}</span>
+              <span className="hamburger-lines" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
             </summary>
             <nav className="absolute right-0 top-12 grid w-56 gap-1 border fine-rule bg-[#111317] p-3 shadow-2xl">
               {navItems.map((item) => (

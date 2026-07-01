@@ -96,6 +96,63 @@ textarea {
   border-color: rgba(233, 229, 220, 0.18);
 }
 
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-menu-button {
+  display: grid;
+  height: 2.75rem;
+  width: 2.75rem;
+  place-items: center;
+  background: rgba(17, 19, 23, 0.78);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.mobile-menu-button:hover,
+.mobile-menu[open] .mobile-menu-button {
+  border-color: rgba(215, 255, 47, 0.72);
+  background: rgba(215, 255, 47, 0.08);
+}
+
+.hamburger-lines {
+  position: relative;
+  display: grid;
+  height: 1rem;
+  width: 1.25rem;
+  align-content: space-between;
+}
+
+.hamburger-lines span {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform-origin: center;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    background 180ms ease;
+}
+
+.mobile-menu[open] .hamburger-lines span {
+  background: var(--asterion-acid);
+}
+
+.mobile-menu[open] .hamburger-lines span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.mobile-menu[open] .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu[open] .hamburger-lines span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
 .cinematic-panel {
   position: relative;
   overflow: hidden;
