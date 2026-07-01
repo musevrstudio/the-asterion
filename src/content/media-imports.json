@@ -32,8 +32,8 @@
       "tr": "ORTA Blueskyer NFT için görsel referans."
     },
     "caption": {
-      "en": "The Blueskyer NFT, historical project reference.",
-      "tr": "The Blueskyer NFT, tarihsel proje referansı."
+      "en": "The Blueskyer NFT.",
+      "tr": "The Blueskyer NFT."
     },
     "credit": "ORTA / historical project reference",
     "source": "https://ortaanadolu.com/metadenimverse-of-orta/",
@@ -74,8 +74,8 @@
       "tr": "Water Reverie mobil uygulamasından görsel referans."
     },
     "caption": {
-      "en": "Water Reverie mobile application, selected interface visual.",
-      "tr": "Water Reverie mobil uygulaması, seçili arayüz görseli."
+      "en": "Water Reverie mobile study.",
+      "tr": "Water Reverie mobil çalışma."
     },
     "sourcePath": "WaterRevApp\\mobilhero_2.png",
     "masterSrc": "/media/projects/water-reverie-app/master/water-reverie-app-hero-master.webp",
@@ -114,8 +114,8 @@
       "tr": "Water Reverie VR filminden görsel referans."
     },
     "caption": {
-      "en": "Water Reverie VR film, selected production visual.",
-      "tr": "Water Reverie VR filmi, seçili prodüksiyon görseli."
+      "en": "Water Reverie VR film.",
+      "tr": "Water Reverie VR filmi."
     },
     "sourcePath": "Water_Reverie\\waterreveriehero.jpg",
     "masterSrc": "/media/projects/water-reverie-vr/master/water-reverie-vr-hero-master.webp",
@@ -154,8 +154,8 @@
       "tr": "Osman Hamdi Bey müze deneyiminden bağlamsal dokümantasyon görseli."
     },
     "caption": {
-      "en": "Contextual documentation image, preserved at 4:3 composition.",
-      "tr": "4:3 kompozisyonu korunmuş bağlamsal dokümantasyon görseli."
+      "en": "Osman Hamdi Bey documentation.",
+      "tr": "Osman Hamdi Bey dokümantasyonu."
     },
     "sourcePath": "OsmanHamdi3.PNG",
     "masterSrc": "/media/projects/osman-hamdi-bey/master/osman-hamdi-context-600-master.webp",
@@ -194,8 +194,8 @@
       "tr": "Beyond Istanbul projesinden panoramik görsel."
     },
     "caption": {
-      "en": "Beyond Istanbul, principal project image.",
-      "tr": "Beyond Istanbul, ana proje görseli."
+      "en": "Beyond Istanbul.",
+      "tr": "Beyond Istanbul."
     },
     "sourcePath": "beyond_1.jpg",
     "masterSrc": "/media/projects/beyond-istanbul/master/beyond-istanbul-panorama-master.webp",
@@ -206,11 +206,11 @@
     "type": "image",
     "alt": {
       "en": "Editorial visual for the Osman Hamdi Bey museum experience.",
-      "tr": "Osman Hamdi Bey m?ze deneyimi i?in editoryal g?rsel."
+      "tr": "Osman Hamdi Bey müze deneyimi için editoryal görsel."
     },
     "caption": {
-      "en": "Osman Hamdi Bey, selected project image.",
-      "tr": "Osman Hamdi Bey, se?ili proje g?rseli."
+      "en": "Osman Hamdi Bey.",
+      "tr": "Osman Hamdi Bey."
     },
     "credit": "Historical project reference",
     "approvalStatus": "pending",
@@ -246,11 +246,11 @@
     "type": "image",
     "alt": {
       "en": "Visual reference image for Nowhere, a project connected to Sinan Kuran's artistic universe.",
-      "tr": "Sinan Kuran'?n sanatsal evreniyle ili?kili Nowhere projesi i?in g?rsel referans."
+      "tr": "Sinan Kuran'ın sanatsal evreniyle ilişkili Nowhere projesi için görsel referans."
     },
     "caption": {
-      "en": "Nowhere, historical project reference.",
-      "tr": "Nowhere, tarihsel proje referans?."
+      "en": "Nowhere.",
+      "tr": "Nowhere."
     },
     "credit": "Sinan Kuran / historical project reference",
     "approvalStatus": "pending",
@@ -311,11 +311,11 @@
     "cropMode": "cover",
     "alt": {
       "en": "NU.D38 project hero image, presenting the original story world and aviation reference.",
-      "tr": "NU.D38 projesinin ?zg?n anlat? d?nyas?n? ve havac?l?k referans?n? ta??yan hero g?rseli."
+      "tr": "NU.D38 projesinin özgün anlatı dünyasını ve havacılık referansını taşıyan hero görseli."
     },
     "caption": {
-      "en": "NU.D38, primary ongoing original project.",
-      "tr": "NU.D38, devam eden ana ?zg?n proje."
+      "en": "NU.D38.",
+      "tr": "NU.D38."
     },
     "credit": "NU.D38 project visual",
     "masterSrc": "/media/projects/nud38/master/nud38-hero-master.webp",
@@ -351,11 +351,11 @@
     "cropMode": "cover",
     "alt": {
       "en": "Pirge Chef's Slice kitchen scene with floating knives and cinematic product composition.",
-      "tr": "Pirge Chef's Slice i?in u?u?an b??aklar ve sinematik ?r?n kompozisyonu i?eren mutfak sahnesi."
+      "tr": "Pirge Chef's Slice için uçuşan bıçaklar ve sinematik ürün kompozisyonu içeren mutfak sahnesi."
     },
     "caption": {
-      "en": "Pirge - Chef's Slice, selected project image.",
-      "tr": "Pirge - Chef's Slice, se?ili proje g?rseli."
+      "en": "Pirge - Chef's Slice.",
+      "tr": "Pirge - Chef's Slice."
     },
     "credit": "Pirge / historical project reference",
     "masterSrc": "/media/projects/chefs-slice/master/pirge-chefs-slice-master.webp",

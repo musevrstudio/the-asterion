@@ -31,8 +31,8 @@ export const projectMedia = {
         tr: "Nu D.38 uçağını uçuş halinde gösteren arşiv fotoğrafı.",
       },
       caption: {
-        en: "Archival reference image for NU.D38.",
-        tr: "NU.D38 için arşiv referans görseli.",
+        en: "NU.D38.",
+        tr: "NU.D38.",
       },
       credit: "Public domain archival image via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
@@ -83,8 +83,8 @@ export const projectMedia = {
         tr: "Osman Hamdi Bey'in Kaplumbağa Terbiyecisi eserinden detay.",
       },
       caption: {
-        en: "Public-domain artwork reference used until approved project documentation is added.",
-        tr: "Onaylı proje dokümantasyonu eklenene kadar kullanılan kamu malı eser referansı.",
+        en: "Osman Hamdi Bey.",
+        tr: "Osman Hamdi Bey.",
       },
       credit: "Public domain artwork reproduction via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg",
@@ -105,8 +105,8 @@ export const projectMedia = {
         tr: "Beyond Istanbul için editoryal atmosfer olarak kullanılan İstanbul kent görünümü.",
       },
       caption: {
-        en: "Temporary city reference image.",
-        tr: "Geçici kent referans görseli.",
+        en: "Beyond Istanbul.",
+        tr: "Beyond Istanbul.",
       },
       credit: "CC0 image by Petar Petkovski via Wikimedia Commons",
       source: "https://commons.wikimedia.org/wiki/File:Istanbul,_Turkey_(Unsplash_D7zGOhMJBys).jpg",

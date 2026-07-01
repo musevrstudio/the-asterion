@@ -35,21 +35,9 @@ export function MediaBlock({ media, locale, label, className = "" }: MediaBlockP
             />
           </picture>
         ) : null}
-        <div className="media-sheen absolute inset-0" />
       </div>
       <figcaption className="media-caption">
         <span>{label ?? media.caption?.[locale] ?? (locale === "en" ? "Production archive" : "Prodüksiyon arşivi")}</span>
-        {media.credit ? (
-          <span>
-            {media.source ? (
-              <a href={media.source} target="_blank" rel="noreferrer">
-                {media.credit}
-              </a>
-            ) : (
-              media.credit
-            )}
-          </span>
-        ) : null}
       </figcaption>
     </figure>
   );

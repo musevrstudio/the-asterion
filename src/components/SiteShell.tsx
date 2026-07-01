@@ -186,7 +186,7 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
                 {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
               </Link>
             </div>
-            <div className="grid max-w-2xl gap-3 text-xs leading-6 text-[#777a7f] lg:justify-self-end">
+            <div className="grid max-w-2xl gap-2 text-left text-xs leading-6 text-[#858891] lg:justify-self-end">
               <p>{footerText.rights}</p>
               <p>{footerText.references}</p>
               <p className="pt-1 text-[#8b8e94]">

@@ -145,12 +145,12 @@ const projectRecords: Project[] = [
       { en: "Visual Production", tr: "Görsel Prodüksiyon" },
     ],
     summary: {
-      en: "A VR film record from the Water Reverie archive, kept separate from the related mobile application and presented through selected production visuals.",
-      tr: "Water Reverie arşivinden bir VR film kaydı; ilişkili mobil uygulamadan ayrı tutulur ve seçili prodüksiyon görselleriyle sunulur.",
+      en: "An immersive film experience from the Water Reverie archive, presented through selected production visuals.",
+      tr: "Water Reverie arşivinden seçili prodüksiyon görselleriyle sunulan immersif film deneyimi.",
     },
     context: {
-      en: "The project is retained as an archive record while exhibition, production and credit details are reviewed for publication.",
-      tr: "Proje; sergi, prodüksiyon ve kredi bilgileri yayın için gözden geçirilirken arşiv kaydı olarak korunur.",
+      en: "A concise archive record while final exhibition and credit details are reviewed.",
+      tr: "Nihai sergi ve kredi bilgileri gözden geçirilirken tutulan kısa arşiv kaydı.",
     },
     verificationNotes: [
       "VR film credits, exhibition context, dates and installation details require confirmation.",
@@ -213,12 +213,12 @@ const projectRecords: Project[] = [
       { en: "Visual Research", tr: "Görsel Araştırma" },
     ],
     summary: {
-      en: "A cinematic journey through Istanbul's architecture, waterways, transformations and collective memory.",
-      tr: "İstanbul'un mimarisi, su yolları, dönüşümü ve kolektif hafızası üzerinden ilerleyen sinematik bir yolculuk.",
+      en: "A cinematic city work tracing Istanbul through architecture, water and collective memory.",
+      tr: "İstanbul'u mimari, su ve kolektif hafıza üzerinden izleyen sinematik kent işi.",
     },
     context: {
-      en: "Beyond Istanbul approaches the city not as a fixed image, but as an evolving visual, architectural and historical organism.",
-      tr: "Beyond Istanbul, kenti sabit bir görüntü olarak değil; değişen, katmanlanan ve yaşayan görsel-mimari bir organizma olarak ele alır.",
+      en: "A visual study of the city as a layered and changing organism.",
+      tr: "Kenti katmanlanan ve değişen bir organizma olarak ele alan görsel çalışma.",
     },
     legacyCredit: {
       en: "Originally developed under Muse Studio.",
@@ -245,12 +245,12 @@ const projectRecords: Project[] = [
       { en: "Brand Film", tr: "Marka Filmi" },
     ],
     summary: {
-      en: "A large-scale visual production translating the precision, movement and material culture of professional knife-making into a spatial cinematic environment.",
-      tr: "Profesyonel bıçak üretiminin hassasiyetini, hareketini ve malzeme kültürünü büyük ölçekli mekansal bir sinematik ortama taşıyan görsel prodüksiyon.",
+      en: "A spatial visual production shaped around precision, movement and professional knife-making.",
+      tr: "Hassasiyet, hareket ve profesyonel bıçak üretimi etrafında şekillenen mekansal görsel prodüksiyon.",
     },
     production: {
-      en: "Developed through motion design, three-dimensional animation and integrated LED systems, Chef's Slice translated an industrial product narrative into an architectural field of image and movement.",
-      tr: "Hareketli grafik, üç boyutlu animasyon ve entegre LED sistemleriyle geliştirilen Chef's Slice, endüstriyel bir ürün anlatısını mimari bir görüntü ve hareket alanına taşıdı.",
+      en: "Developed through motion design, 3D animation and spatial media integration.",
+      tr: "Hareketli grafik, 3D animasyon ve mekansal medya entegrasyonuyla geliştirildi.",
     },
     scope: [
       { en: "Concept development", tr: "Konsept geliştirme" },
