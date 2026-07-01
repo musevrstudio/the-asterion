@@ -96,6 +96,11 @@ textarea {
   border-color: rgba(233, 229, 220, 0.18);
 }
 
+.media-figure {
+  display: grid;
+  gap: 0.85rem;
+}
+
 .mobile-menu summary::-webkit-details-marker {
   display: none;
 }
@@ -190,6 +195,27 @@ textarea {
   background-color: #111317;
 }
 
+.media-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  color: #a7a39b;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.media-caption span:first-child {
+  max-width: 42rem;
+}
+
+.media-caption a {
+  color: #d7ff2f;
+  text-decoration: underline;
+  text-underline-offset: 0.28rem;
+  text-decoration-thickness: 1px;
+}
+
 .media-image {
   position: absolute;
   inset: 0;
@@ -197,7 +223,7 @@ textarea {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.18) brightness(0.82);
+  filter: saturate(1.04) contrast(1.06) brightness(0.9);
   transform: scale(1.01);
 }
 
@@ -217,22 +243,25 @@ textarea {
 
 .media-frame.has-image::before {
   z-index: -1;
-  background: linear-gradient(135deg, rgba(215, 255, 47, 0.5), rgba(9, 10, 12, 0.12) 48%, rgba(75, 0, 255, 0.32));
-  mix-blend-mode: multiply;
-  opacity: 0.72;
+  background:
+    linear-gradient(0deg, rgba(9, 10, 12, 0.96) 0%, rgba(9, 10, 12, 0.84) 24%, rgba(9, 10, 12, 0.48) 43%, transparent 58%),
+    linear-gradient(14deg, rgba(215, 255, 47, 0.26) 0%, rgba(75, 0, 255, 0.14) 38%, transparent 58%);
+  mix-blend-mode: normal;
+  opacity: 0.96;
   transition: opacity 220ms ease;
 }
 
 .media-frame.has-image::after {
   background:
-    linear-gradient(180deg, transparent 42%, rgba(9, 10, 12, 0.82)),
-    repeating-linear-gradient(90deg, rgba(244, 241, 234, 0.08) 0 1px, transparent 1px 3px),
-    repeating-linear-gradient(0deg, rgba(244, 241, 234, 0.05) 0 1px, transparent 1px 4px);
-  opacity: 0.18;
+    linear-gradient(0deg, rgba(9, 10, 12, 0.36), transparent 48%),
+    radial-gradient(circle at 22% 12%, rgba(244, 241, 234, 0.08) 0 1px, transparent 1px 3px),
+    repeating-radial-gradient(circle at 30% 20%, rgba(244, 241, 234, 0.08) 0 1px, transparent 1px 4px);
+  mix-blend-mode: overlay;
+  opacity: 0.16;
 }
 
 .media-frame.has-image:hover::before {
-  opacity: 0.45;
+  opacity: 0.82;
 }
 
 .media-sheen {

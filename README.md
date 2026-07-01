@@ -48,10 +48,19 @@ The script:
 - reads `ASTERION_SOURCE_DIR`,
 - verifies expected files,
 - never changes source files,
-- writes web-ready derivatives to `public/media/projects`,
+- writes one editable master file to `public/media/projects/{project}/master`,
+- writes web-ready derivatives to `public/media/projects/{project}/generated`,
 - updates `src/content/media-imports.json`,
 - preserves source filenames in metadata,
 - avoids direct Windows paths in the production website.
+
+Manual image editing should happen only in the `master` folders. After editing a master image, rerun:
+
+```bash
+npm run media:import:asterion
+```
+
+The generated images are disposable outputs and can be recreated from the master/source workflow.
 
 Generic single-file import is also available:
 

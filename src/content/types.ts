@@ -43,6 +43,7 @@ export type MediaItem = {
   };
   mobileSrc?: string;
   ogSrc?: string;
+  masterSrc?: string;
   sources?: {
     thumbnail?: string;
     content?: string;

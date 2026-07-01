@@ -23,7 +23,7 @@ export const projectMedia = {
       id: "nud38-archive-flight",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Turkiye-nin-ilk-yerli-ucagi-nu.d-38.jpg",
-      aspectRatio: "4 / 5",
+      aspectRatio: "16 / 9",
       cropMode: "cover",
       focalPoint: { x: 50, y: 42 },
       alt: {
@@ -75,7 +75,7 @@ export const projectMedia = {
       id: "osman-hamdi-bey-tortoise-trainer",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg?width=1600",
-      aspectRatio: "4 / 5",
+      aspectRatio: "16 / 9",
       cropMode: "cover",
       focalPoint: { x: 52, y: 38 },
       alt: {
@@ -97,7 +97,7 @@ export const projectMedia = {
       id: "beyond-istanbul-city-reference",
       type: "image",
       src: "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%2C_Turkey_%28Unsplash_D7zGOhMJBys%29.jpg?width=1800",
-      aspectRatio: "16 / 10",
+      aspectRatio: "16 / 9",
       cropMode: "cover",
       focalPoint: { x: 50, y: 48 },
       alt: {

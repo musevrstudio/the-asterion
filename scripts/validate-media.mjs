@@ -7,11 +7,17 @@ const manifestPath = path.join(ROOT, "src", "content", "media-imports.json");
 const HERO_MIN_WIDTH = 1800;
 const HERO_MIN_HEIGHT = 1100;
 
-const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+const manifest = JSON.parse((await readFile(manifestPath, "utf8")).replace(/^\uFEFF/, ""));
 const errors = [];
 
 for (const [key, media] of Object.entries(manifest)) {
   if (!media || media.type !== "image") continue;
+  if (media.aspectRatio && media.aspectRatio !== "16 / 9") {
+    errors.push(`${key} must use a 16 / 9 media window, got ${media.aspectRatio}.`);
+  }
+  if (!media.alt?.en?.trim() || !media.alt?.tr?.trim()) {
+    errors.push(`${key} is missing English or Turkish alt text.`);
+  }
   if (key.endsWith(".hero") && media.approvalStatus === "approved") {
     const isApprovedPanorama = media.cropMode === "contain" && (media.width ?? 0) >= HERO_MIN_WIDTH && (media.height ?? 0) >= 450;
     if (!isApprovedPanorama && ((media.width ?? 0) < HERO_MIN_WIDTH || (media.height ?? 0) < HERO_MIN_HEIGHT)) {

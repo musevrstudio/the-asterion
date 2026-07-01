@@ -4,7 +4,11 @@ import { projects } from "@/content/projects";
 import { site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = Object.values(routePaths).flatMap((routes) => Object.values(routes));
+  const staticRoutes = [
+    ...Object.values(routePaths).flatMap((routes) => Object.values(routes)),
+    "/en/studio/selected-history",
+    "/tr/studyo/secili-gecmis",
+  ];
   const projectRoutes = projects.flatMap((project) => [
     projectPath("en", project.slug),
     projectPath("tr", project.slug),

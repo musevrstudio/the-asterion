@@ -34,7 +34,7 @@ const selectedAssets = [
     input: path.join("ORTA_NFT", "orta_blueskyert.jpg"),
     id: "orta-blueskyer-nft",
     cropMode: "cover",
-    aspectRatio: "16 / 10",
+    aspectRatio: "16 / 9",
     focalPoint: { x: 50, y: 46 },
     alt: {
       en: "Visual reference for ORTA's Blueskyer NFT.",
@@ -54,7 +54,7 @@ const selectedAssets = [
     input: path.join("WaterRevApp", "mobilhero_2.png"),
     id: "water-reverie-app-hero",
     cropMode: "cover",
-    aspectRatio: "16 / 10",
+    aspectRatio: "16 / 9",
     focalPoint: { x: 50, y: 48 },
     alt: {
       en: "Visual reference from the Water Reverie mobile application.",
@@ -72,7 +72,7 @@ const selectedAssets = [
     input: path.join("Water_Reverie", "waterreveriehero.jpg"),
     id: "water-reverie-vr-hero",
     cropMode: "cover",
-    aspectRatio: "16 / 10",
+    aspectRatio: "16 / 9",
     focalPoint: { x: 50, y: 48 },
     alt: {
       en: "Visual reference from the Water Reverie VR film.",
@@ -90,7 +90,7 @@ const selectedAssets = [
     input: "OsmanHamdi3.PNG",
     id: "osman-hamdi-context-600",
     cropMode: "contain",
-    aspectRatio: "4 / 3",
+    aspectRatio: "16 / 9",
     focalPoint: { x: 50, y: 50 },
     alt: {
       en: "Contextual documentation image from the Osman Hamdi Bey museum experience.",
@@ -176,17 +176,24 @@ async function importAsset(asset, manifest) {
     return;
   }
 
-  const outDir = path.join(outputRoot, asset.project);
-  await mkdir(outDir, { recursive: true });
+  const masterDir = path.join(outputRoot, asset.project, "master");
+  const generatedDir = path.join(outputRoot, asset.project, "generated");
+  await mkdir(masterDir, { recursive: true });
+  await mkdir(generatedDir, { recursive: true });
+
+  const masterFile = `${asset.id}-master.webp`;
+  const masterPath = path.join(masterDir, masterFile);
+  const masterPublicPath = publicPath(asset.project, `master/${masterFile}`);
+  await sharp(source).rotate().webp({ quality: 94, effort: 5 }).toFile(masterPath);
 
   const sources = {};
   for (const derivative of derivatives) {
     if (asset.noHero && derivative.name === "hero") continue;
     const extension = derivative.format === "jpg" ? "jpg" : "webp";
     const file = `${asset.id}-${derivative.name}.${extension}`;
-    const outputPath = path.join(outDir, file);
-    await writeDerivative(source, outputPath, asset, derivative);
-    sources[derivative.name] = publicPath(asset.project, file);
+    const outputPath = path.join(generatedDir, file);
+    await writeDerivative(masterPath, outputPath, asset, derivative);
+    sources[derivative.name] = publicPath(asset.project, `generated/${file}`);
     console.log(`IMPORTED ${asset.key} -> ${sources[derivative.name]}`);
   }
 
@@ -215,6 +222,7 @@ async function importAsset(asset, manifest) {
     credit: asset.credit,
     source: asset.source,
     sourcePath: asset.input,
+    masterSrc: masterPublicPath,
     approvalStatus: asset.approvalStatus,
   };
 }

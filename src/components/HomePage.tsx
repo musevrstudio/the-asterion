@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { divisions } from "@/content/divisions";
 import { projectPath, routePaths } from "@/content/navigation";
+import { homepageHistoryHighlights } from "@/content/journal";
 import { featuredProject, selectedProjects } from "@/content/projects";
 import { site } from "@/content/site";
 import type { Locale } from "@/content/types";
@@ -28,6 +29,8 @@ const method = {
 };
 
 export function HomePage({ locale }: { locale: Locale }) {
+  const featuredUrl = featuredProject.externalUrl ?? projectPath(locale, featuredProject.slug);
+
   return (
     <SiteShell locale={locale} active="home" alternateHref={routePaths[locale === "en" ? "tr" : "en"].home}>
       <section className="cinematic-panel border-b fine-rule">
@@ -56,6 +59,19 @@ export function HomePage({ locale }: { locale: Locale }) {
             ))}
           </div>
         </div>
+        <div className="mt-12 border-t fine-rule pt-8">
+          <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
+            {locale === "en" ? "Selected institutional engagements" : "Seçili kurumsal işbirlikleri"}
+          </p>
+          <ul className="mt-6 grid gap-px border fine-rule md:grid-cols-2 lg:grid-cols-3">
+            {homepageHistoryHighlights.map((entry) => (
+              <li key={entry.title.en} className="bg-[#090a0c] p-5">
+                <p className="font-romie text-3xl leading-none text-[#f4f1ea]">{entry.year}</p>
+                <p className="mt-3 text-sm leading-6 text-[#a7a39b]">{entry.title[locale]}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section className="page-wrap grid gap-10 py-20 lg:grid-cols-[0.95fr_1.05fr]">
@@ -78,11 +94,8 @@ export function HomePage({ locale }: { locale: Locale }) {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={projectPath(locale, featuredProject.slug)} className="bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
-              {locale === "en" ? "View Project" : "Projeyi İncele"}
-            </Link>
-            <a href={featuredProject.externalUrl} className="border fine-rule px-5 py-3 text-sm text-[#e9e5dc]">
-              {locale === "en" ? "Explore NU.D38" : "NU.D38'i Keşfet"}
+            <a href={featuredUrl} className="bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
+              nud38.com
             </a>
           </div>
         </div>
