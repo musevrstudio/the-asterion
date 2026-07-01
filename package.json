@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "media:import": "node scripts/import-media.mjs",
+    "media:import:asterion": "node scripts/import-asterion-media.mjs",
     "media:check": "node scripts/validate-media.mjs"
   },
   "dependencies": {

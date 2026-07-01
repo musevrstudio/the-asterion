@@ -7,6 +7,11 @@ function imported(key: string, fallback: MediaItem): MediaItem {
   return importedMedia[key] ?? fallback;
 }
 
+function importedGallery(key: string): MediaItem[] {
+  const media = importedMedia[key];
+  return media ? [media] : [];
+}
+
 const reservedProjectImage = {
   en: "Editorial media field reserved for approved project imagery.",
   tr: "Onaylı proje görselleri için ayrılmış editoryal medya alanı.",
@@ -35,6 +40,36 @@ export const projectMedia = {
     }),
     gallery: [],
   },
+  ortaBlueskyerNft: {
+    hero: imported("orta-blueskyer-nft.hero", {
+      id: "orta-blueskyer-nft-placeholder",
+      type: "image",
+      alt: reservedProjectImage,
+      caption: reservedProjectImage,
+      approvalStatus: "placeholder",
+    }),
+    gallery: [],
+  },
+  waterReverieApp: {
+    hero: imported("water-reverie-app.hero", {
+      id: "water-reverie-app-placeholder",
+      type: "image",
+      alt: reservedProjectImage,
+      caption: reservedProjectImage,
+      approvalStatus: "placeholder",
+    }),
+    gallery: [],
+  },
+  waterReverieVr: {
+    hero: imported("water-reverie-vr.hero", {
+      id: "water-reverie-vr-placeholder",
+      type: "image",
+      alt: reservedProjectImage,
+      caption: reservedProjectImage,
+      approvalStatus: "placeholder",
+    }),
+    gallery: [],
+  },
   osmanHamdiBey: {
     hero: imported("osman-hamdi-bey.hero", {
       id: "osman-hamdi-bey-tortoise-trainer",
@@ -55,7 +90,7 @@ export const projectMedia = {
       source: "https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey_-_The_Tortoise_Trainer_-_Google_Art_Project.jpg",
       approvalStatus: "pending",
     }),
-    gallery: [],
+    gallery: importedGallery("osman-hamdi-bey.gallery.context"),
   },
   beyondIstanbul: {
     hero: imported("beyond-istanbul.hero", {

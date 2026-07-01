@@ -201,6 +201,12 @@ textarea {
   transform: scale(1.01);
 }
 
+@media (max-width: 640px) {
+  .media-image {
+    object-position: var(--mobile-object-position, 50% 50%) !important;
+  }
+}
+
 .media-frame.has-image::before,
 .media-frame.has-image::after {
   content: "";

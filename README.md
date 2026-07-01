@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Asterion
 
-## Getting Started
+Standalone bilingual Next.js website for **THE ASTERION**.
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Local preview:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build Checks
 
-## Learn More
+```bash
+npm run media:check
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Source Media Archive
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Raw source media is treated as an external archive and must not be linked directly from website components.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Local source root:
 
-## Deploy on Vercel
+```text
+ASTERION_SOURCE_DIR=C:\Users\MUSE VR\Desktop\Asterion
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Copy `.env.example` to `.env.local` if the source archive is in a different location.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Controlled Media Import
+
+Import selected local media into the repository-controlled public media structure:
+
+```bash
+npm run media:import:asterion
+```
+
+The script:
+
+- reads `ASTERION_SOURCE_DIR`,
+- verifies expected files,
+- never changes source files,
+- writes web-ready derivatives to `public/media/projects`,
+- updates `src/content/media-imports.json`,
+- preserves source filenames in metadata,
+- avoids direct Windows paths in the production website.
+
+Generic single-file import is also available:
+
+```bash
+npm run media:import -- --project osman-hamdi-bey --slot hero --input "C:\path\to\source.jpg" --altEn "..." --altTr "..."
+```
+
+## Content Notes
+
+Public project facts must remain verified. Uncertain dates, venues, credits, collaborators and production details belong in internal verification notes or `src/content/editorial-decisions.md`, not in public copy.

@@ -73,6 +73,16 @@ export function projectMetadata(locale: Locale, project: Project): Metadata {
       url: `${site.url}${projectPath(locale, project.slug)}`,
       siteName: "The Asterion",
       type: "article",
+      images: project.heroMedia.ogSrc
+        ? [
+            {
+              url: `${site.url}${project.heroMedia.ogSrc}`,
+              width: 1200,
+              height: 630,
+              alt: project.heroMedia.alt[locale],
+            },
+          ]
+        : undefined,
     },
   };
 }

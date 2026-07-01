@@ -1,1 +1,203 @@
-{}
+{
+  "orta-blueskyer-nft.hero": {
+    "id": "orta-blueskyer-nft",
+    "type": "image",
+    "src": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-hero.webp",
+    "mobileSrc": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-mobile.webp",
+    "ogSrc": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-thumb.webp",
+      "content": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-content.webp",
+      "hero": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-hero.webp",
+      "mobile": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-mobile.webp",
+      "og": "/media/projects/orta-blueskyer-nft/orta-blueskyer-nft-og.jpg"
+    },
+    "width": 1920,
+    "height": 1040,
+    "aspectRatio": "16 / 10",
+    "cropMode": "cover",
+    "focalPoint": {
+      "x": 50,
+      "y": 46
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 46
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 46
+    },
+    "alt": {
+      "en": "Visual reference for ORTA's Blueskyer NFT.",
+      "tr": "ORTA Blueskyer NFT için görsel referans."
+    },
+    "caption": {
+      "en": "The Blueskyer NFT, historical project reference.",
+      "tr": "The Blueskyer NFT, tarihsel proje referansı."
+    },
+    "credit": "ORTA / historical project reference",
+    "source": "https://ortaanadolu.com/metadenimverse-of-orta/",
+    "sourcePath": "ORTA_NFT\\orta_blueskyert.jpg",
+    "approvalStatus": "pending"
+  },
+  "water-reverie-app.hero": {
+    "id": "water-reverie-app-hero",
+    "type": "image",
+    "src": "/media/projects/water-reverie-app/water-reverie-app-hero-hero.webp",
+    "mobileSrc": "/media/projects/water-reverie-app/water-reverie-app-hero-mobile.webp",
+    "ogSrc": "/media/projects/water-reverie-app/water-reverie-app-hero-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/water-reverie-app/water-reverie-app-hero-thumb.webp",
+      "content": "/media/projects/water-reverie-app/water-reverie-app-hero-content.webp",
+      "hero": "/media/projects/water-reverie-app/water-reverie-app-hero-hero.webp",
+      "mobile": "/media/projects/water-reverie-app/water-reverie-app-hero-mobile.webp",
+      "og": "/media/projects/water-reverie-app/water-reverie-app-hero-og.jpg"
+    },
+    "width": 1920,
+    "height": 1040,
+    "aspectRatio": "16 / 10",
+    "cropMode": "cover",
+    "focalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "alt": {
+      "en": "Visual reference from the Water Reverie mobile application.",
+      "tr": "Water Reverie mobil uygulamasından görsel referans."
+    },
+    "caption": {
+      "en": "Water Reverie mobile application, selected interface visual.",
+      "tr": "Water Reverie mobil uygulaması, seçili arayüz görseli."
+    },
+    "sourcePath": "WaterRevApp\\mobilhero_2.png",
+    "approvalStatus": "pending"
+  },
+  "water-reverie-vr.hero": {
+    "id": "water-reverie-vr-hero",
+    "type": "image",
+    "src": "/media/projects/water-reverie-vr/water-reverie-vr-hero-hero.webp",
+    "mobileSrc": "/media/projects/water-reverie-vr/water-reverie-vr-hero-mobile.webp",
+    "ogSrc": "/media/projects/water-reverie-vr/water-reverie-vr-hero-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/water-reverie-vr/water-reverie-vr-hero-thumb.webp",
+      "content": "/media/projects/water-reverie-vr/water-reverie-vr-hero-content.webp",
+      "hero": "/media/projects/water-reverie-vr/water-reverie-vr-hero-hero.webp",
+      "mobile": "/media/projects/water-reverie-vr/water-reverie-vr-hero-mobile.webp",
+      "og": "/media/projects/water-reverie-vr/water-reverie-vr-hero-og.jpg"
+    },
+    "width": 1920,
+    "height": 1040,
+    "aspectRatio": "16 / 10",
+    "cropMode": "cover",
+    "focalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 48
+    },
+    "alt": {
+      "en": "Visual reference from the Water Reverie VR film.",
+      "tr": "Water Reverie VR filminden görsel referans."
+    },
+    "caption": {
+      "en": "Water Reverie VR film, selected production visual.",
+      "tr": "Water Reverie VR filmi, seçili prodüksiyon görseli."
+    },
+    "sourcePath": "Water_Reverie\\waterreveriehero.jpg",
+    "approvalStatus": "pending"
+  },
+  "osman-hamdi-bey.gallery.context": {
+    "id": "osman-hamdi-context-600",
+    "type": "image",
+    "src": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-content.webp",
+    "mobileSrc": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-mobile.webp",
+    "ogSrc": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-thumb.webp",
+      "content": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-content.webp",
+      "mobile": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-mobile.webp",
+      "og": "/media/projects/osman-hamdi-bey/osman-hamdi-context-600-og.jpg"
+    },
+    "width": 600,
+    "height": 450,
+    "aspectRatio": "4 / 3",
+    "cropMode": "contain",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "alt": {
+      "en": "Contextual documentation image from the Osman Hamdi Bey museum experience.",
+      "tr": "Osman Hamdi Bey müze deneyiminden bağlamsal dokümantasyon görseli."
+    },
+    "caption": {
+      "en": "Contextual documentation image, preserved at 4:3 composition.",
+      "tr": "4:3 kompozisyonu korunmuş bağlamsal dokümantasyon görseli."
+    },
+    "sourcePath": "OsmanHamdi3.PNG",
+    "approvalStatus": "pending"
+  },
+  "beyond-istanbul.hero": {
+    "id": "beyond-istanbul-panorama",
+    "type": "image",
+    "src": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-hero.webp",
+    "mobileSrc": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-mobile.webp",
+    "ogSrc": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-og.jpg",
+    "sources": {
+      "thumbnail": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-thumb.webp",
+      "content": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-content.webp",
+      "hero": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-hero.webp",
+      "mobile": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-mobile.webp",
+      "og": "/media/projects/beyond-istanbul/beyond-istanbul-panorama-og.jpg"
+    },
+    "width": 1891,
+    "height": 497,
+    "aspectRatio": "16 / 9",
+    "cropMode": "contain",
+    "focalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "desktopFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "mobileFocalPoint": {
+      "x": 50,
+      "y": 50
+    },
+    "alt": {
+      "en": "Panoramic visual from Beyond Istanbul.",
+      "tr": "Beyond Istanbul projesinden panoramik görsel."
+    },
+    "caption": {
+      "en": "Beyond Istanbul, principal project image.",
+      "tr": "Beyond Istanbul, ana proje görseli."
+    },
+    "sourcePath": "beyond_1.jpg",
+    "approvalStatus": "approved"
+  }
+}

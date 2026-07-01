@@ -13,7 +13,8 @@ const errors = [];
 for (const [key, media] of Object.entries(manifest)) {
   if (!media || media.type !== "image") continue;
   if (key.endsWith(".hero") && media.approvalStatus === "approved") {
-    if ((media.width ?? 0) < HERO_MIN_WIDTH || (media.height ?? 0) < HERO_MIN_HEIGHT) {
+    const isApprovedPanorama = media.cropMode === "contain" && (media.width ?? 0) >= HERO_MIN_WIDTH && (media.height ?? 0) >= 450;
+    if (!isApprovedPanorama && ((media.width ?? 0) < HERO_MIN_WIDTH || (media.height ?? 0) < HERO_MIN_HEIGHT)) {
       errors.push(`${key} is approved for hero use but only ${media.width ?? 0}x${media.height ?? 0}.`);
     }
   }

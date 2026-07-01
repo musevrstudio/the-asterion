@@ -31,7 +31,25 @@ export type MediaItem = {
   credit?: string;
   copyright?: string;
   source?: string;
+  sourcePath?: string;
   approvalStatus?: "approved" | "pending" | "placeholder";
+  desktopFocalPoint?: {
+    x: number;
+    y: number;
+  };
+  mobileFocalPoint?: {
+    x: number;
+    y: number;
+  };
+  mobileSrc?: string;
+  ogSrc?: string;
+  sources?: {
+    thumbnail?: string;
+    content?: string;
+    hero?: string;
+    mobile?: string;
+    og?: string;
+  };
 };
 
 export type CreditItem = {

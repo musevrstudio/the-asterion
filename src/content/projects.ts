@@ -49,6 +49,124 @@ export const projects: Project[] = [
     gallery: projectMedia.nud38.gallery.length ? projectMedia.nud38.gallery : [placeholderMedia("nud38-gallery-placeholder")],
   },
   {
+    slug: "orta-blueskyer-nft",
+    title: "The Blueskyer NFT - ORTA",
+    displayTitle: {
+      en: "The Blueskyer NFT - ORTA",
+      tr: "The Blueskyer NFT - ORTA",
+    },
+    division: "labs",
+    status: "completed",
+    featured: false,
+    client: "ORTA",
+    categories: [
+      { en: "Digital Collectible", tr: "Dijital Koleksiyon" },
+      { en: "Visual World-Building", tr: "Görsel Dünya Kurma" },
+      { en: "Cultural Technology", tr: "Kültürel Teknoloji" },
+    ],
+    summary: {
+      en: "A historical project reference connected to ORTA's MetaDENIMverse and The Blueskyer NFT, developed around regenerative denim, digital culture and a speculative visual world.",
+      tr: "ORTA'nın MetaDENIMverse ve The Blueskyer NFT projesiyle ilişkili; rejeneratif denim, dijital kültür ve spekülatif bir görsel dünya etrafında gelişen tarihsel proje referansı.",
+    },
+    context: {
+      en: "ORTA's official project page describes The Blueskyer NFT as part of the MetaDENIMverse of ORTA and presents it as a regenerative denim NFT project.",
+      tr: "ORTA'nın resmi proje sayfası, The Blueskyer NFT'yi MetaDENIMverse of ORTA kapsamında konumlandırır ve rejeneratif denim odağında bir NFT projesi olarak sunar.",
+    },
+    legacyCredit: {
+      en: "Historical project reference. Additional production credits require final publication approval.",
+      tr: "Tarihsel proje referansı. Ek prodüksiyon kredileri yayın öncesinde nihai onay gerektirir.",
+    },
+    externalUrl: "https://ortaanadolu.com/metadenimverse-of-orta/",
+    verificationNotes: [
+      "Official ORTA page confirms the MetaDENIMverse of ORTA context and The Blueskyer NFT project.",
+      "Final public wording for collaborator credit requires approval before expanded publication.",
+      "Project date and detailed production scope require confirmation.",
+    ],
+    scope: [
+      { en: "Visual world-building", tr: "Görsel dünya kurma" },
+      { en: "Digital art production", tr: "Dijital sanat prodüksiyonu" },
+      { en: "Cultural technology reference", tr: "Kültürel teknoloji referansı" },
+    ],
+    heroMedia: projectMedia.ortaBlueskyerNft.hero,
+    gallery: projectMedia.ortaBlueskyerNft.gallery.length
+      ? projectMedia.ortaBlueskyerNft.gallery
+      : [placeholderMedia("orta-blueskyer-gallery-placeholder")],
+  },
+  {
+    slug: "water-reverie-app",
+    title: "Water Reverie - Mobile Application",
+    displayTitle: {
+      en: "Water Reverie - Mobile Application",
+      tr: "Water Reverie - Mobil Uygulama",
+    },
+    division: "experiences",
+    status: "archive",
+    featured: false,
+    categories: [
+      { en: "Mobile Experience", tr: "Mobil Deneyim" },
+      { en: "Interactive Media", tr: "İnteraktif Medya" },
+      { en: "Cultural Experience", tr: "Kültürel Deneyim" },
+    ],
+    summary: {
+      en: "A related mobile experience record from the Water Reverie project archive, presented here through selected interface and visual documentation.",
+      tr: "Water Reverie proje arşivinden ilişkili bir mobil deneyim kaydı; seçili arayüz ve görsel dokümantasyon üzerinden sunulur.",
+    },
+    context: {
+      en: "The mobile application and VR film are treated as related but distinct project records until final credits, dates and presentation details are confirmed.",
+      tr: "Mobil uygulama ve VR film, nihai kredi, tarih ve sunum bilgileri teyit edilene kadar ilişkili fakat ayrı proje kayıtları olarak ele alınır.",
+    },
+    verificationNotes: [
+      "Application credits, public presentation context, dates and release details require confirmation.",
+      "Select additional screenshots only after publication approval.",
+    ],
+    scope: [
+      { en: "Mobile interface", tr: "Mobil arayüz" },
+      { en: "Interactive experience", tr: "İnteraktif deneyim" },
+      { en: "Visual documentation", tr: "Görsel dokümantasyon" },
+    ],
+    heroMedia: projectMedia.waterReverieApp.hero,
+    gallery: projectMedia.waterReverieApp.gallery.length
+      ? projectMedia.waterReverieApp.gallery
+      : [placeholderMedia("water-reverie-app-gallery-placeholder")],
+  },
+  {
+    slug: "water-reverie-vr",
+    title: "Water Reverie - VR Film",
+    displayTitle: {
+      en: "Water Reverie - VR Film",
+      tr: "Water Reverie - VR Film",
+    },
+    division: "pictures",
+    status: "archive",
+    featured: false,
+    categories: [
+      { en: "VR Film", tr: "VR Film" },
+      { en: "Immersive Cinema", tr: "Immersif Sinema" },
+      { en: "Visual Production", tr: "Görsel Prodüksiyon" },
+    ],
+    summary: {
+      en: "A VR film record from the Water Reverie archive, kept separate from the related mobile application and presented through selected production visuals.",
+      tr: "Water Reverie arşivinden bir VR film kaydı; ilişkili mobil uygulamadan ayrı tutulur ve seçili prodüksiyon görselleriyle sunulur.",
+    },
+    context: {
+      en: "The project is retained as an archive record while exhibition, production and credit details are reviewed for publication.",
+      tr: "Proje; sergi, prodüksiyon ve kredi bilgileri yayın için gözden geçirilirken arşiv kaydı olarak korunur.",
+    },
+    verificationNotes: [
+      "VR film credits, exhibition context, dates and installation details require confirmation.",
+      "Review panoramic stills and video material before expanded publication.",
+    ],
+    scope: [
+      { en: "VR film", tr: "VR film" },
+      { en: "Immersive visual production", tr: "Immersif görsel prodüksiyon" },
+      { en: "Archive review", tr: "Arşiv değerlendirmesi" },
+    ],
+    heroMedia: projectMedia.waterReverieVr.hero,
+    gallery: projectMedia.waterReverieVr.gallery.length
+      ? projectMedia.waterReverieVr.gallery
+      : [placeholderMedia("water-reverie-vr-gallery-placeholder")],
+  },
+  {
     slug: "osman-hamdi-bey",
     title: "A Journey into the World of Osman Hamdi Bey",
     displayTitle: {
