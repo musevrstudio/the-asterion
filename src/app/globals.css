@@ -96,6 +96,19 @@ textarea {
   border-color: rgba(233, 229, 220, 0.18);
 }
 
+.lime-cta {
+  background: var(--asterion-acid);
+  color: #090a0c !important;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.lime-cta:hover {
+  background: #c8f02b;
+  color: #14004a !important;
+}
+
 .media-figure {
   display: grid;
   gap: 0.85rem;
@@ -162,7 +175,9 @@ textarea {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(215, 255, 47, 0.08), rgba(75, 0, 255, 0.12) 42%, transparent 72%),
+    radial-gradient(circle at 16% 12%, rgba(215, 255, 47, 0.08), transparent 17rem),
+    radial-gradient(circle at 84% 18%, rgba(75, 0, 255, 0.14), transparent 20rem),
+    linear-gradient(135deg, rgba(215, 255, 47, 0.035), rgba(75, 0, 255, 0.08) 44%, transparent 76%),
     linear-gradient(180deg, rgba(9, 10, 12, 0.99), rgba(13, 15, 18, 0.99));
 }
 
@@ -171,22 +186,19 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(233, 229, 220, 0.045) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(233, 229, 220, 0.035) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, black, transparent 86%);
+    linear-gradient(90deg, rgba(233, 229, 220, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(233, 229, 220, 0.026) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.82), transparent 82%);
   pointer-events: none;
 }
 
 .cinematic-panel::after {
   content: "";
   position: absolute;
-  inset: auto 8% 10% auto;
-  width: 38%;
-  aspect-ratio: 1.8;
-  border: 1px solid rgba(215, 255, 47, 0.34);
-  transform: rotate(-4deg);
-  opacity: 0.55;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 56%, rgba(75, 0, 255, 0.12) 100%);
+  opacity: 0.72;
   pointer-events: none;
 }
 

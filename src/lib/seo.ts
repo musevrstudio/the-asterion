@@ -47,9 +47,24 @@ export function pageMetadata(locale: Locale, routeKey: RouteKey): Metadata {
     alternates: {
       canonical: `${site.url}${routePaths[locale][routeKey]}`,
       languages: {
+        "x-default": `${site.url}${routePaths.en[routeKey]}`,
         [locale]: `${site.url}${routePaths[locale][routeKey]}`,
         [otherLocale]: `${site.url}${routePaths[otherLocale][routeKey]}`,
       },
+    },
+    openGraph: {
+      title: pageTitles[routeKey][locale],
+      description: metadataText[locale].description,
+      url: `${site.url}${routePaths[locale][routeKey]}`,
+      siteName: "The Asterion",
+      locale: locale === "en" ? "en_US" : "tr_TR",
+      alternateLocale: locale === "en" ? "tr_TR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitles[routeKey][locale],
+      description: metadataText[locale].description,
     },
   };
 }
@@ -63,6 +78,7 @@ export function projectMetadata(locale: Locale, project: Project): Metadata {
     alternates: {
       canonical: `${site.url}${projectPath(locale, project.slug)}`,
       languages: {
+        "x-default": `${site.url}${projectPath("en", project.slug)}`,
         [locale]: `${site.url}${projectPath(locale, project.slug)}`,
         [otherLocale]: `${site.url}${projectPath(otherLocale, project.slug)}`,
       },
@@ -83,6 +99,12 @@ export function projectMetadata(locale: Locale, project: Project): Metadata {
             },
           ]
         : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.summary[locale],
+      images: project.heroMedia.ogSrc ? [`${site.url}${project.heroMedia.ogSrc}`] : undefined,
     },
   };
 }
