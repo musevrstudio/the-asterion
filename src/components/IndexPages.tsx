@@ -68,11 +68,11 @@ export function OriginalsPage({ locale }: { locale: Locale }) {
           <h2 className="mt-4 font-romie text-7xl text-[#f4f1ea]">{original.title}</h2>
           <p className="mt-6 text-sm leading-7 text-[#a7a39b]">{original.summary[locale]}</p>
           {original.externalUrl ? (
-            <a href={original.externalUrl} className="lime-cta mt-8 inline-block px-5 py-3 text-sm">
+            <a href={original.externalUrl} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
               nud38.com
             </a>
           ) : (
-            <Link href={projectPath(locale, original.slug)} className="lime-cta mt-8 inline-block px-5 py-3 text-sm">
+            <Link href={projectPath(locale, original.slug)} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
               {locale === "en" ? "Explore NU.D38" : "NU.D38'i incele"}
             </Link>
           )}

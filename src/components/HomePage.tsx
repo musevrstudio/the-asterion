@@ -42,7 +42,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#a7a39b]">{site.support[locale]}</p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Link href={routePaths[locale].work} className="lime-cta px-5 py-3 text-sm">
+              <Link href={routePaths[locale].work} className="lime-cta px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
                 {locale === "en" ? "View Selected Work" : "Seçili İşleri İncele"}
               </Link>
               <Link href={routePaths[locale].contact} className="border fine-rule px-5 py-3 text-sm text-[#e9e5dc]">
@@ -94,7 +94,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={featuredUrl} className="lime-cta px-5 py-3 text-sm">
+            <a href={featuredUrl} className="lime-cta px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
               nud38.com
             </a>
           </div>
