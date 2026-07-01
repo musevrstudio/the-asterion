@@ -22,7 +22,6 @@ export const chronology: JournalEntry[] = [
       en: "Invited talk on audiovisual heritage, new media and cultural memory.",
       tr: "Görsel-işitsel miras, yeni medya ve kültürel hafıza üzerine davetli konuşma.",
     },
-    status: { en: "Source verification in progress", tr: "Kaynak teyidi sürüyor" },
   },
   {
     year: "2024",
@@ -95,7 +94,6 @@ export const chronology: JournalEntry[] = [
       en: "An augmented-reality project developed in collaboration with Gallery Perrotin, Julio Le Parc Studio and Globart.",
       tr: "Gallery Perrotin, Julio Le Parc Studio ve Globart işbirliğiyle geliştirilen artırılmış gerçeklik projesi.",
     },
-    status: { en: "Scope and credits to be verified", tr: "Kapsam ve krediler teyit edilecek" },
   },
   {
     year: "2021",
@@ -114,7 +112,6 @@ export const chronology: JournalEntry[] = [
       en: "Participation in the Venice International Film Festival's Venice VR Expanded programme under Muse VR, in collaboration with Soho House and the Istanbul Planning Agency.",
       tr: "Soho House ve İstanbul Planlama Ajansı işbirliğiyle, Muse VR olarak Venedik Uluslararası Film Festivali'nin Venice VR Expanded programına katılım.",
     },
-    status: { en: "Participation format to be verified", tr: "Katılım formatı teyit edilecek" },
   },
   {
     year: "2020",
@@ -163,7 +160,6 @@ export const chronology: JournalEntry[] = [
       en: "Presentation of Virtual Revolution, an immersive project developed in relation to the work of Devrim Erbil, with Gama Gallery.",
       tr: "Devrim Erbil'in sanatsal dünyasıyla ilişkili olarak geliştirilen Sanal Devrim immersif projesinin Gama Gallery ile sunumu.",
     },
-    status: { en: "Subject to verification", tr: "Teyide tabi" },
   },
 ];
 
