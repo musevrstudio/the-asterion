@@ -19,7 +19,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
       />
       <section className="page-wrap grid gap-8 pb-20">
         {projects.map((project) => {
-          const isExternal = Boolean(project.externalUrl);
+          const externalUrl = project.externalUrl;
           const ctaClassName = "mt-6 inline-block text-sm text-[#e9e5dc] underline decoration-[#d7ff2f] underline-offset-8";
 
           return (
@@ -31,9 +31,9 @@ export function WorkIndex({ locale }: { locale: Locale }) {
                 </p>
                 <h2 className="mt-4 font-romie text-5xl text-[#f4f1ea]">{project.displayTitle?.[locale] ?? project.title}</h2>
                 <p className="mt-4 max-w-3xl text-sm leading-7 text-[#a7a39b]">{project.summary[locale]}</p>
-                {isExternal ? (
-                  <a href={project.externalUrl} className={ctaClassName}>
-                    nud38.com
+                {externalUrl ? (
+                  <a href={externalUrl} className={ctaClassName}>
+                    {externalProjectLabel(externalUrl)}
                   </a>
                 ) : (
                   <Link href={projectPath(locale, project.slug)} className={ctaClassName}>
@@ -380,4 +380,8 @@ function Input({ label, type = "text" }: { label: string; type?: string }) {
       <input type={type} className="border fine-rule bg-[#111317] px-4 py-3 text-[#e9e5dc]" />
     </label>
   );
+}
+
+function externalProjectLabel(url: string) {
+  return new URL(url).hostname.replace(/^www\./, "");
 }
