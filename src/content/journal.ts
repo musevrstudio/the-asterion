@@ -9,8 +9,8 @@ export type JournalEntry = {
 };
 
 export const journalIntro: LocalizedText = {
-  en: "Notes gathers public talks, screenings, exhibitions, references and production fragments around The Asterion's work. It is also the future home for longer essays and development notes.",
-  tr: "Notlar; The Asterion'un işleri etrafındaki konuşmaları, gösterimleri, sergileri, referansları ve üretim parçalarını bir araya getirir. Zamanla daha uzun denemeler ve geliştirme notları için de kullanılacaktır.",
+  en: "A chronological record of selected talks, screenings, exhibitions, production references and research notes connected to The Asterion's work.",
+  tr: "The Asterion'un işleriyle ilişkili seçili konuşmalar, gösterimler, sergiler, prodüksiyon referansları ve araştırma notları için kronolojik bir kayıt.",
 };
 
 export const chronology: JournalEntry[] = [
@@ -19,8 +19,8 @@ export const chronology: JournalEntry[] = [
     category: { en: "Original development", tr: "Özgün proje geliştirme" },
     title: { en: "NU.D38", tr: "NU.D38" },
     body: {
-      en: "A long-term original project around Nuri Demirag's aviation enterprise, developed through research, immersive flight, documentary development and cinematic world-building.",
-      tr: "Nuri Demirağ'ın havacılık girişimi etrafında araştırma, immersif uçuş, belgesel geliştirme ve sinematik dünya kurma üzerinden ilerleyen uzun soluklu özgün proje.",
+      en: "A long-term original project inspired by Nuri Demirağ's aviation enterprise and the early history of civil aircraft production in Turkiye.",
+      tr: "Nuri Demirağ'ın havacılık girişiminden ve Türkiye'de sivil uçak üretiminin erken dönem tarihinden ilham alan uzun soluklu özgün proje.",
     },
   },
   {
@@ -31,8 +31,8 @@ export const chronology: JournalEntry[] = [
       tr: "Osman Hamdi Bey'in Dünyasına Yolculuk",
     },
     body: {
-      en: "An immersive museum experience developed with Pera Museum, carried as historical production context from Muse Studio.",
-      tr: "Pera Müzesi ile geliştirilen ve Muse Studio döneminden tarihsel prodüksiyon bağlamı olarak taşınan immersif müze deneyimi.",
+      en: "An immersive museum experience developed with Pera Museum, preserved here as part of the studio's historical production record.",
+      tr: "Pera Müzesi ile geliştirilen ve stüdyonun tarihsel prodüksiyon kaydının bir parçası olarak burada yer alan immersif müze deneyimi.",
     },
   },
   {
@@ -40,28 +40,28 @@ export const chronology: JournalEntry[] = [
     category: { en: "Artist production", tr: "Sanatçı prodüksiyonu" },
     title: { en: "Nowhere - Sinan Kuran", tr: "Nowhere - Sinan Kuran" },
     body: {
-      en: "Visual and spatial production connected to Sinan Kuran's artistic universe. Exhibition, venue, curator and credit details remain to be confirmed before expanded publication.",
-      tr: "Sinan Kuran'ın sanatsal evreniyle ilişkili görsel ve mekansal prodüksiyon. Sergi, mekan, küratör ve kredi detayları geniş yayın öncesinde teyit edilecektir.",
+      en: "Visual and spatial production connected to Sinan Kuran's artistic universe, with expanded exhibition and credit details to follow after final confirmation.",
+      tr: "Sinan Kuran'ın sanatsal evreniyle ilişkili görsel ve mekansal prodüksiyon; geniş sergi ve kredi bilgileri nihai teyidin ardından eklenecektir.",
     },
-    status: { en: "Details to confirm", tr: "Detaylar teyit edilecek" },
+    status: { en: "Details to be confirmed", tr: "Detaylar teyit edilecek" },
   },
   {
     year: "Archive",
-    category: { en: "Production reference", tr: "Prodüksiyon referansı" },
-    title: { en: "Selected institutional and brand contexts", tr: "Seçili kurumsal ve marka bağlamları" },
+    category: { en: "Reference contexts", tr: "Referans bağlamları" },
+    title: { en: "Selected institutional and brand references", tr: "Seçili kurum ve marka referansları" },
     body: {
       en: "Historical project contexts include Xsolla, Coca-Cola, Turkcell, Heydar Aliyev Center and selected museum, brand and cultural productions developed before The Asterion under Muse Studio.",
       tr: "Tarihsel proje bağlamları arasında Xsolla, Coca-Cola, Turkcell, Haydar Aliyev Merkezi ve The Asterion öncesinde Muse Studio bünyesinde geliştirilen seçili müze, marka ve kültür prodüksiyonları yer alır.",
     },
-    status: { en: "Reference context", tr: "Referans bağlamı" },
+    status: { en: "Historical context", tr: "Tarihsel bağlam" },
   },
   {
     year: "Archive",
     category: { en: "City film", tr: "Kent filmi" },
     title: { en: "Beyond Istanbul", tr: "Beyond Istanbul" },
     body: {
-      en: "A cinematic city work around Istanbul's architecture, waterways, transformations and collective memory.",
-      tr: "İstanbul'un mimarisi, su yolları, dönüşümü ve kolektif hafızası etrafında gelişen sinematik kent işi.",
+      en: "A cinematic city work tracing Istanbul through architecture, waterways, transformation and collective memory.",
+      tr: "İstanbul'u mimari, su yolları, dönüşüm ve kolektif hafıza üzerinden izleyen sinematik kent işi.",
     },
   },
   {
@@ -77,12 +77,12 @@ export const chronology: JournalEntry[] = [
 
 export const futureNotes: JournalEntry[] = [
   {
-    year: "Next",
-    category: { en: "Essays", tr: "Denemeler" },
-    title: { en: "Development notes", tr: "Geliştirme notları" },
+    year: "Notes",
+    category: { en: "Publishing", tr: "Yayın" },
+    title: { en: "Essays and production notes", tr: "Denemeler ve prodüksiyon notları" },
     body: {
-      en: "Longer writing on story development, archives, production design, cinema, museums and original worlds will live here over time.",
-      tr: "Hikaye geliştirme, arşivler, prodüksiyon tasarımı, sinema, müzeler ve özgün dünyalar üzerine daha uzun yazılar zamanla burada yer alacak.",
+      en: "Longer writing on story development, archives, production design, cinema, museums and original worlds will be published here over time.",
+      tr: "Hikaye geliştirme, arşivler, prodüksiyon tasarımı, sinema, müzeler ve özgün dünyalar üzerine daha uzun yazılar zamanla burada yayımlanacaktır.",
     },
   },
 ];

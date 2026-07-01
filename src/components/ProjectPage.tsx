@@ -36,8 +36,8 @@ export function ProjectPage({ locale, slug }: { locale: Locale; slug: string }) 
       <article>
         <section className="page-wrap grid gap-10 py-16 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-[#a76e4d]">
-              {divisions[project.division].name} / {project.status === "ongoing" ? (locale === "en" ? "Ongoing" : "Devam Eden") : project.year ?? "Dossier"}
+            <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
+              {divisions[project.division].name} / {project.status === "ongoing" ? (locale === "en" ? "In development" : "Geliştirme sürecinde") : project.year ?? (locale === "en" ? "Project" : "Proje")}
             </p>
             <h1 className="mt-6 font-romie text-[clamp(4rem,11vw,9rem)] leading-[0.86] text-[#f4f1ea]">
               {project.displayTitle?.[locale] ?? project.title}
@@ -55,25 +55,25 @@ export function ProjectPage({ locale, slug }: { locale: Locale; slug: string }) 
         <section className="border-y fine-rule bg-[#111317] py-12">
           <div className="page-wrap grid gap-6 md:grid-cols-4">
             <Meta label={locale === "en" ? "Division" : "Bölüm"} value={divisions[project.division].name} />
-            <Meta label={locale === "en" ? "Status" : "Durum"} value={project.status === "ongoing" ? (locale === "en" ? "Ongoing Original Project" : "Devam Eden Özgün Proje") : locale === "en" ? "Completed" : "Tamamlandı"} />
+            <Meta label={locale === "en" ? "Status" : "Durum"} value={project.status === "ongoing" ? (locale === "en" ? "In development" : "Geliştirme sürecinde") : locale === "en" ? "Completed" : "Tamamlandı"} />
             <Meta label={locale === "en" ? "Credit" : "Kredi"} value={project.artist ?? project.client ?? project.institution ?? "-"} />
             <Meta label={locale === "en" ? "Categories" : "Kategoriler"} value={project.categories.map((item) => item[locale]).join(", ")} />
           </div>
         </section>
 
         <section className="page-wrap grid gap-10 py-16 lg:grid-cols-[0.75fr_1.25fr]">
-          <h2 className="font-romie text-5xl text-[#f4f1ea]">{locale === "en" ? "Dossier" : "Dosya"}</h2>
+          <h2 className="font-romie text-5xl text-[#f4f1ea]">{locale === "en" ? "Project" : "Proje"}</h2>
           <div className="grid gap-8 text-sm leading-7 text-[#a7a39b]">
             {project.context ? <TextBlock title={locale === "en" ? "Context" : "Bağlam"} body={project.context[locale]} /> : null}
-            {project.concept ? <TextBlock title={locale === "en" ? "Story or Concept" : "Hikaye veya Konsept"} body={project.concept[locale]} /> : null}
-            {project.production ? <TextBlock title={locale === "en" ? "Production Approach" : "Prodüksiyon Yaklaşımı"} body={project.production[locale]} /> : null}
+            {project.concept ? <TextBlock title={locale === "en" ? "Story and Form" : "Hikaye ve Biçim"} body={project.concept[locale]} /> : null}
+            {project.production ? <TextBlock title={locale === "en" ? "Production Language" : "Prodüksiyon Dili"} body={project.production[locale]} /> : null}
             {project.experience ? <TextBlock title={locale === "en" ? "Audience Experience" : "İzleyici Deneyimi"} body={project.experience[locale]} /> : null}
           </div>
         </section>
 
         {project.formats ? (
           <section className="page-wrap pb-16">
-            <h2 className="font-romie text-4xl text-[#f4f1ea]">{locale === "en" ? "Development Fields" : "Geliştirme Alanları"}</h2>
+            <h2 className="font-romie text-4xl text-[#f4f1ea]">{locale === "en" ? "Development Areas" : "Geliştirme Alanları"}</h2>
             <div className="mt-6 grid gap-px border fine-rule md:grid-cols-2 lg:grid-cols-3">
               {project.formats.map((format) => (
                 <div key={format.en} className="bg-[#111317] p-5 text-sm text-[#e9e5dc]">
@@ -111,11 +111,11 @@ export function ProjectPage({ locale, slug }: { locale: Locale; slug: string }) 
 
         <nav className="page-wrap flex flex-wrap items-center justify-between gap-4 border-t fine-rule py-12">
           <Link href={routePaths[locale].work} className="text-sm text-[#e9e5dc]">
-            {locale === "en" ? "Return to work" : "İşlere dön"}
+            {locale === "en" ? "Back to work" : "İşlere dön"}
           </Link>
           {related ? (
-            <Link href={projectPath(locale, related.slug)} className="text-sm text-[#a76e4d]">
-              {locale === "en" ? "Related dossier" : "İlişkili dosya"}: {related.title}
+            <Link href={projectPath(locale, related.slug)} className="text-sm text-[#d7ff2f]">
+              {locale === "en" ? "Next project" : "Sonraki proje"}: {related.title}
             </Link>
           ) : null}
         </nav>

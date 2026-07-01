@@ -6,24 +6,24 @@ export const site = {
   url: "https://theasterion.com",
   email: "hello@theasterion.com",
   location: {
-    en: "Istanbul, Turkiye - Working internationally",
-    tr: "Istanbul, Turkiye - Uluslararası ölçekte çalışıyoruz",
+    en: "Istanbul, Turkiye - working internationally",
+    tr: "İstanbul, Türkiye - uluslararası ölçekte çalışır",
   },
   descriptor: {
     en: "Story Development & Production House",
     tr: "Hikaye Geliştirme ve Prodüksiyon Stüdyosu",
   },
   statement: {
-    en: "We develop stories into films, experiences and worlds.",
-    tr: "Hikayeleri filmlere, deneyimlere ve dünyalara dönüştürüyoruz.",
+    en: "Stories developed for cinema, culture and experience.",
+    tr: "Sinema, kültür ve deneyim alanları için geliştirilen hikayeler.",
   },
   support: {
-    en: "Original stories, documentaries, films, museum experiences and visual worlds - from research and development to production.",
-    tr: "Özgün hikayeler, belgeseller, filmler, müze deneyimleri ve görsel dünyalar; araştırma ve geliştirmeden prodüksiyona kadar.",
+    en: "The Asterion develops original worlds, films, documentaries, museum experiences and visual productions from research and writing to direction and delivery.",
+    tr: "The Asterion; özgün dünyaları, filmleri, belgeselleri, müze deneyimlerini ve görsel prodüksiyonları araştırma ve yazımdan yönetim ve üretime uzanan bütünlüklü bir süreçle geliştirir.",
   },
   principle: {
-    en: "Every medium begins with a story.",
-    tr: "Her mecra bir hikayeyle başlar.",
+    en: "Every form begins with a story.",
+    tr: "Her biçim bir hikayeyle başlar.",
   },
 } satisfies Record<string, string | LocalizedText | { en: string; tr: string }>;
 

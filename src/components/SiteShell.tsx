@@ -28,8 +28,8 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
         : "Tarihsel referanslar, seçili marka bağlamları ve geçmiş prodüksiyon kredileri yalnızca geçmiş proje bağlamını ifade eder; açıkça belirtilmediği sürece güncel onay, ortaklık veya kurumsal ilişki anlamına gelmez.",
     muse:
       locale === "en"
-        ? "Muse Studio is mentioned only where needed as historical production credit."
-        : "Muse Studio yalnızca gerekli yerlerde tarihsel prodüksiyon kredisi olarak anılır.",
+        ? "Certain historical projects retain Muse Studio as their original production credit."
+        : "Belirli tarihsel projelerde Muse Studio özgün prodüksiyon kredisi olarak korunur.",
   };
 
   return (

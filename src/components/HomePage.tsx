@@ -11,7 +11,7 @@ const practice = {
   en: [
     ["Films & Documentaries", "Original films, documentaries, artist films and commissioned cinematic productions."],
     ["Museums & Experiences", "Museum narratives, exhibitions, immersive environments and cultural experiences."],
-    ["Original Worlds", "Long-term story properties developed across film, documentary, exhibition, game, publication and interactive media."],
+    ["Original Worlds", "Long-term story properties developed across film, documentary, exhibition, publication and interactive media."],
     ["Visual Production", "Creative direction, moving image, spatial media, animation and real-time visual production."],
   ],
   tr: [
@@ -40,10 +40,10 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#a7a39b]">{site.support[locale]}</p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link href={routePaths[locale].work} className="bg-[#e9e5dc] px-5 py-3 text-sm text-[#090a0c]">
-                {locale === "en" ? "Explore Our Work" : "İşlerimizi İncele"}
+                {locale === "en" ? "View Selected Work" : "Seçili İşleri İncele"}
               </Link>
               <Link href={routePaths[locale].contact} className="border fine-rule px-5 py-3 text-sm text-[#e9e5dc]">
-                {locale === "en" ? "Start a Project" : "Bir Proje Başlatalım"}
+                {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
               </Link>
             </div>
           </div>
@@ -66,8 +66,8 @@ export function HomePage({ locale }: { locale: Locale }) {
           <h2 className="mt-5 font-romie text-7xl leading-none text-[#f4f1ea]">{featuredProject.title}</h2>
           <p className="mt-6 max-w-xl text-xl leading-8 text-[#e9e5dc]">
             {locale === "en"
-              ? "A forgotten aviation story reconstructed as an immersive experience, documentary research and an expanding cinematic world."
-              : "Unutulmuş bir havacılık hikayesini immersif deneyim, belgesel araştırması ve genişleyen sinematik bir dünya olarak yeniden kuran proje."}
+              ? "A remarkable aviation chapter reimagined through immersive experience, documentary research and an expanding cinematic world."
+              : "Dikkat çekici bir havacılık dönemini immersif deneyim, belgesel araştırması ve genişleyen sinematik bir dünya üzerinden yeniden yorumlayan proje."}
           </p>
           <p className="mt-6 max-w-xl text-sm leading-7 text-[#a7a39b]">{featuredProject.summary[locale]}</p>
           <div className="mt-8 flex flex-wrap gap-2">
@@ -79,7 +79,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href={projectPath(locale, featuredProject.slug)} className="bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
-              {locale === "en" ? "Open Dossier" : "Dosyayı Aç"}
+              {locale === "en" ? "View Project" : "Projeyi İncele"}
             </Link>
             <a href={featuredProject.externalUrl} className="border fine-rule px-5 py-3 text-sm text-[#e9e5dc]">
               {locale === "en" ? "Explore NU.D38" : "NU.D38'i Keşfet"}
@@ -92,7 +92,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="border-y fine-rule bg-[#0d0f12] py-20">
         <div className="page-wrap">
           <h2 className="font-romie text-5xl text-[#f4f1ea]">
-            {locale === "en" ? "Stories can take more than one form." : "Hikayeler birden fazla biçim alabilir."}
+            {locale === "en" ? "A story can choose more than one form." : "Bir hikaye birden fazla biçim seçebilir."}
           </h2>
           <div className="mt-10 grid gap-px overflow-hidden border fine-rule md:grid-cols-2 lg:grid-cols-4">
             {practice[locale].map(([title, body]) => (
@@ -108,7 +108,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="page-wrap py-20">
         <div className="mb-10 flex items-end justify-between gap-6">
           <h2 className="font-romie text-5xl text-[#f4f1ea]">
-            {locale === "en" ? "Selected experiences and productions" : "Seçili deneyimler ve prodüksiyonlar"}
+            {locale === "en" ? "Selected work across culture and production" : "Kültür ve prodüksiyon alanında seçili işler"}
           </h2>
           <Link href={routePaths[locale].work} className="hidden text-sm text-[#d7ff2f] md:block">
             {locale === "en" ? "View all work" : "Tüm işler"}
@@ -141,7 +141,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="page-wrap grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <h2 className="font-romie text-5xl text-[#f4f1ea]">
-              {locale === "en" ? "From the first question to the final form." : "İlk sorudan son biçime."}
+              {locale === "en" ? "From research to the final form." : "Araştırmadan son biçime."}
             </h2>
             <p className="mt-6 text-sm leading-7 text-[#a7a39b]">
               {locale === "en"
@@ -168,23 +168,23 @@ export function HomePage({ locale }: { locale: Locale }) {
           <div>
             <h2 className="text-xl text-[#e9e5dc]">
               {locale === "en"
-                ? "Built on years of cultural and immersive production."
-                : "Kültürel ve immersif prodüksiyon deneyimi üzerine kuruldu."}
+                ? "Built on years of cultural production."
+                : "Yıllara yayılan kültürel prodüksiyon deneyimi üzerine kuruldu."}
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
               {locale === "en"
-                ? "The Asterion carries forward experience developed through selected projects produced under Muse Studio in museums, immersive media, spatial storytelling and visual production. Original project, artist and institutional credits are retained on the relevant case-study pages."
-                : "The Asterion; Muse Studio bünyesinde müze, immersif medya, mekansal anlatı ve görsel prodüksiyon alanlarında geliştirilen seçili projelerden oluşan birikimi sürdürür. Özgün proje, sanatçı ve kurum kredileri ilgili vaka sayfalarında korunur."}
+                ? "The Asterion carries forward a body of cultural, museum, spatial storytelling and visual production work first developed through selected projects under Muse Studio. Original project, artist and institutional credits are retained on the relevant project pages."
+                : "The Asterion; Muse Studio döneminde geliştirilen seçili kültür, müze, mekansal anlatı ve görsel prodüksiyon işlerinden oluşan birikimi sürdürür. Özgün proje, sanatçı ve kurum kredileri ilgili proje sayfalarında korunur."}
             </p>
           </div>
           <div>
             <h2 className="text-xl text-[#e9e5dc]">
-              {locale === "en" ? "What story are you trying to build?" : "Nasıl bir hikaye kurmak istiyorsunuz?"}
+              {locale === "en" ? "What kind of story are you developing?" : "Nasıl bir hikaye geliştiriyorsunuz?"}
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
               {locale === "en"
-                ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world."
-                : "Film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
+                ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world in development."
+                : "Geliştirme sürecindeki film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
             </p>
             <Link href={routePaths[locale].contact} className="mt-6 inline-block bg-[#e9e5dc] px-5 py-3 text-sm text-[#090a0c]">
               {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}

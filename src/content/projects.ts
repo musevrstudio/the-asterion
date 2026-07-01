@@ -1,8 +1,8 @@
 import type { Project } from "./types";
 
 const missingAlt = {
-  en: "Restrained editorial media placeholder awaiting approved project imagery.",
-  tr: "Onaylı proje görselleri bekleyen sade editoryal medya alanı.",
+  en: "Editorial media field reserved for approved project imagery.",
+  tr: "Onaylı proje görselleri için ayrılmış editoryal medya alanı.",
 };
 
 export const projects: Project[] = [
@@ -20,23 +20,23 @@ export const projects: Project[] = [
     ],
     formats: [
       { en: "Historical research", tr: "Tarihsel araştırma" },
-      { en: "Current prototype", tr: "Güncel prototip" },
+      { en: "Experience prototype", tr: "Deneyim prototipi" },
       { en: "Immersive flight experience", tr: "Immersif uçuş deneyimi" },
       { en: "Documentary development", tr: "Belgesel geliştirme" },
-      { en: "Future film development", tr: "Gelecek film geliştirme" },
-      { en: "Possible future game development", tr: "Olasılık dahilinde oyun geliştirme" },
+      { en: "Cinematic development", tr: "Sinematik geliştirme" },
+      { en: "Interactive story research", tr: "Etkileşimli anlatı araştırması" },
     ],
     summary: {
-      en: "NU.D38 is a long-term cultural and cinematic project inspired by Nuri Demirag's aviation enterprise and the story of Turkiye's early civil aircraft industry.",
-      tr: "NU.D38, Nuri Demirağ'ın havacılık girişiminden ve Türkiye'nin erken dönem sivil uçak sanayisinin hikayesinden yola çıkan uzun soluklu bir kültür ve sinema projesidir.",
+      en: "NU.D38 is a long-term cultural and cinematic project inspired by Nuri Demirağ's aviation enterprise and the early history of civil aircraft production in Türkiye.",
+      tr: "NU.D38, Nuri Demirağ'ın havacılık girişiminden ve Türkiye'de sivil uçak üretiminin erken dönem tarihinden ilham alan uzun soluklu bir kültür ve sinema projesidir.",
     },
     context: {
-      en: "The project reconstructs a forgotten technological and entrepreneurial world through historical research, archival material, real-time 3D, immersive flight, documentary development and cinematic storytelling.",
-      tr: "Proje; unutulmuş bir teknoloji ve girişimcilik dünyasını tarihsel araştırma, arşiv malzemeleri, gerçek zamanlı 3D, immersif uçuş, belgesel geliştirme ve sinematik anlatı üzerinden yeniden kurar.",
+      en: "The project revisits a largely forgotten technological and entrepreneurial chapter through historical research, archival material, immersive flight, documentary development and cinematic storytelling.",
+      tr: "Proje, büyük ölçüde unutulmuş bir teknoloji ve girişimcilik dönemini tarihsel araştırma, arşiv malzemeleri, immersif uçuş, belgesel geliştirme ve sinematik anlatı üzerinden yeniden ele alır.",
     },
     concept: {
-      en: "Its first public form is an immersive flight experience. The wider project is being developed as an original story universe that may expand into documentary, film, game, exhibition and publication.",
-      tr: "Projenin ilk kamusal formu immersif bir uçuş deneyimidir. Daha geniş ölçekte NU.D38; belgesel, film, oyun, sergi ve yayın formatlarına açılabilecek özgün bir anlatı evreni olarak geliştirilmektedir.",
+      en: "Its first public form is an immersive flight experience. Beyond that, NU.D38 is being shaped as an original story universe for documentary, cinema, exhibition, publication and interactive formats.",
+      tr: "Projenin ilk kamusal formu immersif bir uçuş deneyimidir. NU.D38 bunun ötesinde belgesel, sinema, sergi, yayın ve etkileşimli formatlara açılabilecek özgün bir anlatı evreni olarak geliştirilmektedir.",
     },
     externalUrl: "https://nud38.com",
     verificationNotes: [
@@ -82,8 +82,8 @@ export const projects: Project[] = [
       { en: "Immersive Storytelling", tr: "Immersif Anlatı" },
     ],
     summary: {
-      en: "An immersive museum experience exploring the life, artistic world and intellectual legacy of Osman Hamdi Bey through spatial storytelling and interactive discovery.",
-      tr: "Osman Hamdi Bey'in yaşamını, sanatsal dünyasını ve düşünsel mirasını mekansal anlatı ve etkileşimli keşif yoluyla ele alan immersif müze deneyimi.",
+      en: "A museum experience exploring Osman Hamdi Bey's life, artistic world and intellectual legacy through spatial storytelling and interactive discovery.",
+      tr: "Osman Hamdi Bey'in yaşamını, sanatsal dünyasını ve düşünsel mirasını mekansal anlatı ve etkileşimli keşif yoluyla ele alan müze deneyimi.",
     },
     context: {
       en: "Developed in collaboration with Pera Museum.",
@@ -122,11 +122,11 @@ export const projects: Project[] = [
     ],
     summary: {
       en: "A cinematic journey through Istanbul's architecture, waterways, transformations and collective memory.",
-      tr: "İstanbul'un mimarisini, su yollarını, dönüşümünü ve kolektif hafızasını ele alan sinematik bir yolculuk.",
+      tr: "İstanbul'un mimarisi, su yolları, dönüşümü ve kolektif hafızası üzerinden ilerleyen sinematik bir yolculuk.",
     },
     context: {
       en: "Beyond Istanbul approaches the city not as a fixed image, but as an evolving visual, architectural and historical organism.",
-      tr: "Beyond Istanbul, kenti sabit bir görüntü olarak değil; sürekli değişen görsel, mimari ve tarihsel bir organizma olarak inceler.",
+      tr: "Beyond Istanbul, kenti sabit bir görüntü olarak değil; değişen, katmanlanan ve yaşayan görsel-mimari bir organizma olarak ele alır.",
     },
     legacyCredit: {
       en: "Originally developed under Muse Studio.",
@@ -163,12 +163,12 @@ export const projects: Project[] = [
       { en: "Brand Film", tr: "Marka Filmi" },
     ],
     summary: {
-      en: "A large-scale visual production translating the precision, movement and material culture of professional knife-making into a spatial cinematic experience.",
-      tr: "Profesyonel bıçak üretiminin hassasiyetini, hareketini ve malzeme kültürünü büyük ölçekli mekansal bir sinema deneyimine dönüştüren görsel prodüksiyon.",
+      en: "A large-scale visual production translating the precision, movement and material culture of professional knife-making into a spatial cinematic environment.",
+      tr: "Profesyonel bıçak üretiminin hassasiyetini, hareketini ve malzeme kültürünü büyük ölçekli mekansal bir sinematik ortama taşıyan görsel prodüksiyon.",
     },
     production: {
-      en: "Developed through motion design, three-dimensional animation and integrated LED systems, Chef's Slice transformed an industrial product narrative into an architectural field of image and movement.",
-      tr: "Hareketli grafik, üç boyutlu animasyon ve entegre LED sistemleriyle geliştirilen Chef's Slice, endüstriyel bir ürün hikayesini mimari bir görüntü ve hareket alanına dönüştürdü.",
+      en: "Developed through motion design, three-dimensional animation and integrated LED systems, Chef's Slice translated an industrial product narrative into an architectural field of image and movement.",
+      tr: "Hareketli grafik, üç boyutlu animasyon ve entegre LED sistemleriyle geliştirilen Chef's Slice, endüstriyel bir ürün anlatısını mimari bir görüntü ve hareket alanına taşıdı.",
     },
     scope: [
       { en: "Concept development", tr: "Konsept geliştirme" },
@@ -199,7 +199,7 @@ export const projects: Project[] = [
       { en: "Spatial Media", tr: "Mekansal Medya" },
     ],
     summary: {
-      en: "A visual and spatial production developed around Sinan Kuran's artistic universe, translating the atmosphere of the work into moving image and exhibition experience.",
+      en: "A visual and spatial production developed around Sinan Kuran's artistic universe, carrying the atmosphere of the work into moving image and exhibition experience.",
       tr: "Sinan Kuran'ın sanatsal evreni çevresinde geliştirilen; eserin atmosferini hareketli görüntüye ve sergi deneyimine taşıyan görsel ve mekansal prodüksiyon.",
     },
     legacyCredit: {

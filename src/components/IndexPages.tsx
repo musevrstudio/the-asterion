@@ -13,9 +13,9 @@ export function WorkIndex({ locale }: { locale: Locale }) {
     <SiteShell locale={locale} active="work" alternateHref={routePaths[locale === "en" ? "tr" : "en"].work}>
       <PageHeader
         locale={locale}
-        eyebrow={locale === "en" ? "Public project archive" : "Kamusal proje arşivi"}
-        title={locale === "en" ? "Work shaped as films, experiences and worlds." : "Filmler, deneyimler ve dünyalar olarak biçimlenen işler."}
-        body={locale === "en" ? "Only five launch projects are public here, with NU.D38 held as the primary ongoing original." : "Lansmanda yalnızca beş proje kamusal olarak yer alır; NU.D38 ana devam eden özgün proje olarak konumlanır."}
+        eyebrow={locale === "en" ? "Selected work" : "Seçili işler"}
+        title={locale === "en" ? "Films, experiences and story worlds shaped with purpose." : "Amacı olan filmler, deneyimler ve anlatı dünyaları."}
+        body={locale === "en" ? "A selection of original and commissioned projects across cinema, museum experience, cultural production and visual storytelling." : "Sinema, müze deneyimi, kültürel prodüksiyon ve görsel anlatı alanlarında geliştirilen özgün ve siparişe dayalı projelerden bir seçki."}
       />
       <section className="page-wrap grid gap-8 pb-20">
         {projects.map((project) => (
@@ -28,7 +28,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
               <h2 className="mt-4 font-romie text-5xl text-[#f4f1ea]">{project.displayTitle?.[locale] ?? project.title}</h2>
               <p className="mt-4 max-w-3xl text-sm leading-7 text-[#a7a39b]">{project.summary[locale]}</p>
               <Link href={projectPath(locale, project.slug)} className="mt-6 inline-block text-sm text-[#e9e5dc] underline decoration-[#d7ff2f] underline-offset-8">
-                {locale === "en" ? "Open dossier" : "Dosyayı aç"}
+                {locale === "en" ? "View project" : "Projeyi incele"}
               </Link>
             </div>
           </article>
@@ -45,8 +45,8 @@ export function OriginalsPage({ locale }: { locale: Locale }) {
       <PageHeader
         locale={locale}
         eyebrow="The Asterion Originals"
-        title={locale === "en" ? "Long-term story worlds developed under the umbrella brand." : "Umbrella marka altında geliştirilen uzun soluklu anlatı dünyaları."}
-        body={locale === "en" ? "Originals is the home for authored intellectual properties. At launch, NU.D38 is the visible ongoing original." : "Originals, yazarlıklı fikri mülkiyet projelerinin alanıdır. Lansmanda görünen devam eden özgün proje NU.D38'dir."}
+        title={locale === "en" ? "Original story worlds with the capacity to move across forms." : "Farklı biçimlere açılabilen özgün anlatı dünyaları."}
+        body={locale === "en" ? "Originals is where authored intellectual properties are developed through research, writing, visual world-building and long-term production strategy." : "Originals; yazarlıklı fikri mülkiyetlerin araştırma, yazım, görsel dünya kurma ve uzun vadeli prodüksiyon stratejisiyle geliştirildiği alandır."}
       />
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-2">
         <MediaBlock media={original.heroMedia} locale={locale} className="min-h-[30rem]" />
@@ -57,7 +57,7 @@ export function OriginalsPage({ locale }: { locale: Locale }) {
           <h2 className="mt-4 font-romie text-7xl text-[#f4f1ea]">{original.title}</h2>
           <p className="mt-6 text-sm leading-7 text-[#a7a39b]">{original.summary[locale]}</p>
           <Link href={projectPath(locale, original.slug)} className="mt-8 inline-block bg-[#d7ff2f] px-5 py-3 text-sm text-[#090a0c]">
-            {locale === "en" ? "Open NU.D38" : "NU.D38'i Aç"}
+            {locale === "en" ? "Explore NU.D38" : "NU.D38'i incele"}
           </Link>
         </div>
       </section>
@@ -67,11 +67,41 @@ export function OriginalsPage({ locale }: { locale: Locale }) {
 
 export function ProductionPage({ locale }: { locale: Locale }) {
   const practices = [
-    ["Story Development", "research, narrative development, treatment development, concept writing, documentary research, archive development, world-building"],
-    ["Film & Documentary", "documentary development, film production, artist films, branded films, interviews, visual essays, cinematic content"],
-    ["Museum & Exhibition", "museum concepts, exhibition narratives, visitor journeys, archive interpretation, cultural heritage experiences, spatial media, interactive exhibits"],
-    ["Visual Production", "creative direction, art direction, moving image, motion design, 3D production, animation, post-production"],
-    ["Real-Time & Immersive", "interactive environments, real-time cinematics, game-engine visualisation, immersive installation"],
+    {
+      title: { en: "Story Development", tr: "Hikaye Geliştirme" },
+      body: {
+        en: "Research, narrative development, treatments, concept writing, documentary research, archive work and world-building.",
+        tr: "Araştırma, anlatı geliştirme, tretman, konsept yazımı, belgesel araştırması, arşiv çalışması ve dünya kurma.",
+      },
+    },
+    {
+      title: { en: "Film & Documentary", tr: "Film ve Belgesel" },
+      body: {
+        en: "Documentary development, film production, artist films, interviews, visual essays and cinematic content.",
+        tr: "Belgesel geliştirme, film prodüksiyonu, sanatçı filmleri, röportajlar, görsel denemeler ve sinematik içerikler.",
+      },
+    },
+    {
+      title: { en: "Museum & Exhibition", tr: "Müze ve Sergi" },
+      body: {
+        en: "Museum concepts, exhibition narratives, visitor journeys, archive interpretation and cultural heritage experiences.",
+        tr: "Müze konseptleri, sergi anlatıları, ziyaretçi yolculukları, arşiv yorumlama ve kültürel miras deneyimleri.",
+      },
+    },
+    {
+      title: { en: "Visual Production", tr: "Görsel Prodüksiyon" },
+      body: {
+        en: "Creative direction, art direction, moving image, motion design, 3D production, animation and post-production.",
+        tr: "Yaratıcı yönetim, sanat yönetimi, hareketli görüntü, motion design, 3D prodüksiyon, animasyon ve post-prodüksiyon.",
+      },
+    },
+    {
+      title: { en: "Spatial & Interactive", tr: "Mekansal ve Etkileşimli" },
+      body: {
+        en: "Spatial media, interactive environments, real-time cinematics and immersive installations shaped around the narrative.",
+        tr: "Anlatı etrafında şekillenen mekansal medya, etkileşimli ortamlar, gerçek zamanlı sinematikler ve immersif enstalasyonlar.",
+      },
+    },
   ];
   return (
     <SiteShell locale={locale} active="production" alternateHref={routePaths[locale === "en" ? "tr" : "en"].production}>
@@ -82,10 +112,10 @@ export function ProductionPage({ locale }: { locale: Locale }) {
         body={locale === "en" ? "Technology is treated as one production material inside an editorial and artistic process." : "Teknoloji, editoryal ve sanatsal süreç içinde bir prodüksiyon malzemesi olarak ele alınır."}
       />
       <section className="page-wrap grid gap-px border fine-rule pb-20 md:grid-cols-2">
-        {practices.map(([title, body]) => (
-          <article key={title} className="bg-[#111317] p-7">
-            <h2 className="font-romie text-4xl text-[#f4f1ea]">{title}</h2>
-            <p className="mt-5 text-sm leading-7 text-[#a7a39b]">{body}</p>
+        {practices.map((practice) => (
+          <article key={practice.title.en} className="bg-[#111317] p-7">
+            <h2 className="font-romie text-4xl text-[#f4f1ea]">{practice.title[locale]}</h2>
+            <p className="mt-5 text-sm leading-7 text-[#a7a39b]">{practice.body[locale]}</p>
           </article>
         ))}
       </section>
@@ -128,7 +158,7 @@ export function StudioPage({ locale }: { locale: Locale }) {
           <p className="mt-5 text-sm leading-7 text-[#a7a39b]">
             {locale === "en"
               ? "Talat Alkan is a creative director and producer working across cultural storytelling, film, immersive experience and spatial media. His practice combines philosophical and historical research, visual culture, narrative development and multidisciplinary production."
-              : "Talat Alkan; kültürel anlatı, film, immersif deneyim, yapay zeka destekli üretim ve mekansal medya alanlarında çalışan yaratıcı yönetmen ve yapımcıdır. Üretim pratiği; felsefi ve tarihsel araştırmayı, görsel kültürü, anlatı geliştirmeyi ve disiplinlerarası prodüksiyonu bir araya getirir."}
+              : "Talat Alkan; kültürel anlatı, film, immersif deneyim ve mekansal medya alanlarında çalışan yaratıcı yönetmen ve yapımcıdır. Üretim pratiği; felsefi ve tarihsel araştırmayı, görsel kültürü, anlatı geliştirmeyi ve disiplinlerarası prodüksiyonu bir araya getirir."}
           </p>
         </aside>
       </section>
@@ -148,15 +178,15 @@ export function JournalPage({ locale }: { locale: Locale }) {
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-[0.78fr_1.22fr]">
         <aside className="journal-note border fine-rule p-7">
           <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
-            {locale === "en" ? "Substack-shaped, house-owned" : "Substack mantığında, markaya ait"}
+            {locale === "en" ? "Chronology and notes" : "Kronoloji ve notlar"}
           </p>
           <h2 className="mt-4 font-romie text-5xl leading-none text-[#f4f1ea]">
             {locale === "en" ? "A living reference shelf." : "Yaşayan bir referans rafı."}
           </h2>
           <p className="mt-5 text-sm leading-7 text-[#a7a39b]">
             {locale === "en"
-              ? "This section can later expand into essays, production diaries, launch notes and public announcements without creating a separate brand."
-              : "Bu bölüm zamanla ayrı bir marka yaratmadan denemelere, prodüksiyon günlüklerine, lansman notlarına ve kamusal duyurulara genişleyebilir."}
+              ? "This section brings together public context around the studio's projects, references and research. Longer essays and production notes will be added over time."
+              : "Bu bölüm, stüdyonun projeleri, referansları ve araştırmaları etrafındaki kamusal bağlamı bir araya getirir. Daha uzun denemeler ve prodüksiyon notları zamanla eklenecektir."}
           </p>
         </aside>
         <ol className="grid gap-px border fine-rule">
@@ -210,8 +240,8 @@ export function ContactPage({ locale }: { locale: Locale }) {
       <PageHeader
         locale={locale}
         eyebrow={locale === "en" ? "Contact" : "İletişim"}
-        title={locale === "en" ? "What story are you trying to build?" : "Nasıl bir hikaye kurmak istiyorsunuz?"}
-        body={locale === "en" ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world." : "Film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
+        title={locale === "en" ? "Tell us what you are developing." : "Geliştirdiğiniz hikayeyi anlatın."}
+        body={locale === "en" ? "For films, documentaries, museums, archives, cultural subjects and original worlds, write to us with the first contours of the project." : "Film, belgesel, müze, arşiv, kültürel konu ve özgün dünyalar için projenin ilk çerçevesiyle bize yazabilirsiniz."}
       />
       <section className="page-wrap grid gap-10 pb-20 lg:grid-cols-[0.75fr_1.25fr]">
         <div className="text-sm leading-7 text-[#a7a39b]">
@@ -251,8 +281,8 @@ function PageHeader({ locale, eyebrow, title, body }: { locale: Locale; eyebrow:
   return (
     <section className="page-wrap py-16">
       <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">{eyebrow}</p>
-      <h1 className="mt-6 max-w-5xl font-romie text-[clamp(3.4rem,9vw,8rem)] leading-[0.9] text-[#f4f1ea]">{title}</h1>
-      <p className="mt-8 max-w-3xl text-lg leading-8 text-[#a7a39b]">{body}</p>
+      <h1 className="mt-6 max-w-5xl text-balance font-romie text-[clamp(3.1rem,8vw,7.4rem)] leading-[0.92] text-[#f4f1ea]">{title}</h1>
+      <p className="mt-8 max-w-3xl text-pretty text-lg leading-8 text-[#b9b5ad]">{body}</p>
       <p className="sr-only">{locale}</p>
     </section>
   );
