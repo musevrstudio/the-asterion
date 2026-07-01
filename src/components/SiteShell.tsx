@@ -13,6 +13,24 @@ type SiteShellProps = {
 
 export function SiteShell({ locale, active, alternateHref, children }: SiteShellProps) {
   const otherLocale = alternateLocale(locale);
+  const footerText = {
+    note:
+      locale === "en"
+        ? "The Asterion is an independent story development and production house based in Istanbul and working internationally."
+        : "The Asterion, İstanbul merkezli ve uluslararası ölçekte çalışan bağımsız bir hikaye geliştirme ve prodüksiyon stüdyosudur.",
+    rights:
+      locale === "en"
+        ? "All project titles, artworks, images, trademarks and institutional names remain the property of their respective rights holders. Public-domain and archival images are credited where shown."
+        : "Tüm proje adları, eserler, görseller, ticari markalar ve kurum adları ilgili hak sahiplerine aittir. Kamu malı ve arşiv görselleri kullanıldıkları yerde kredilendirilir.",
+    references:
+      locale === "en"
+        ? "Historical references, selected brand contexts and legacy production credits describe past project context only; they do not imply current endorsement, partnership or affiliation unless explicitly stated."
+        : "Tarihsel referanslar, seçili marka bağlamları ve geçmiş prodüksiyon kredileri yalnızca geçmiş proje bağlamını ifade eder; açıkça belirtilmediği sürece güncel onay, ortaklık veya kurumsal ilişki anlamına gelmez.",
+    muse:
+      locale === "en"
+        ? "Muse Studio is mentioned only where needed as historical production credit."
+        : "Muse Studio yalnızca gerekli yerlerde tarihsel prodüksiyon kredisi olarak anılır.",
+  };
 
   return (
     <div className="asterion-shell" lang={locale}>
@@ -94,7 +112,7 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
       </header>
       <main id="main">{children}</main>
       <footer className="border-t fine-rule py-12">
-        <div className="page-wrap grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+        <div className="page-wrap grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="font-romie text-4xl text-[#f4f1ea]">{site.principle[locale]}</p>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[#a7a39b]">
@@ -102,11 +120,31 @@ export function SiteShell({ locale, active, alternateHref, children }: SiteShell
                 ? "Film, museum, immersive environment or game - the format comes after the narrative, the context and the audience."
                 : "Film, müze, immersif ortam veya oyun: format; anlatının, bağlamın ve izleyicinin ardından gelir."}
             </p>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#a7a39b]">{footerText.note}</p>
           </div>
-          <div className="text-sm leading-7 text-[#a7a39b] md:text-right">
-            <p>{site.email}</p>
-            <p>{site.location[locale]}</p>
-            <p className="mt-6 text-[#595c60]">© 2026 The Asterion</p>
+          <div className="grid gap-6 text-sm leading-7 text-[#a7a39b] md:text-right">
+            <div>
+              <p className="text-[#f4f1ea]">{site.email}</p>
+              <p>{site.location[locale]}</p>
+            </div>
+            <nav
+              aria-label={locale === "en" ? "Footer navigation" : "Alt bilgi navigasyonu"}
+              className="flex flex-wrap gap-x-4 gap-y-2 md:justify-end"
+            >
+              {navItems.map((item) => (
+                <Link key={item} href={routePaths[locale][item]} className="transition-colors hover:text-[#d7ff2f]">
+                  {navLabels[locale][item]}
+                </Link>
+              ))}
+            </nav>
+            <div className="grid gap-3 border-t fine-rule pt-5 text-xs leading-6 text-[#777a7f]">
+              <p>{footerText.rights}</p>
+              <p>{footerText.references}</p>
+              <p>{footerText.muse}</p>
+              <p className="text-[#595c60]">
+                © 2026 The Asterion. {locale === "en" ? "All rights reserved." : "Tüm hakları saklıdır."}
+              </p>
+            </div>
           </div>
         </div>
       </footer>
