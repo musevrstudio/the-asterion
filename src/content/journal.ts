@@ -19,10 +19,10 @@ export const chronology: JournalEntry[] = [
     category: { en: "Invited talk", tr: "Davetli konuşma" },
     title: { en: "UNESCO World Day for Audiovisual Heritage", tr: "UNESCO Dünya Görsel-İşitsel Miras Günü" },
     body: {
-      en: "Invited speaker on audiovisual heritage, new media and cultural memory.",
-      tr: "Görsel-işitsel miras, yeni medya ve kültürel hafıza üzerine davetli konuşmacı.",
+      en: "Invited talk on audiovisual heritage, new media and cultural memory.",
+      tr: "Görsel-işitsel miras, yeni medya ve kültürel hafıza üzerine davetli konuşma.",
     },
-    status: { en: "Event wording to be verified", tr: "Etkinlik metni teyit edilecek" },
+    status: { en: "Source verification in progress", tr: "Kaynak teyidi sürüyor" },
   },
   {
     year: "2024",
@@ -154,16 +154,6 @@ export const chronology: JournalEntry[] = [
       en: "Participation in a presentation of digital art and virtual-reality work at the Carrousel du Louvre.",
       tr: "Carrousel du Louvre'da dijital sanat ve sanal gerçeklik çalışmalarının yer aldığı sunuma katılım.",
     },
-  },
-  {
-    year: "2018",
-    category: { en: "Immersive project", tr: "İmmersif proje" },
-    title: { en: "Virtual Revolution / Sanal Devrim", tr: "Virtual Revolution / Sanal Devrim" },
-    body: {
-      en: "An immersive project developed in relation to the visual world of Devrim Erbil and presented in Istanbul, Izmir and Eskişehir.",
-      tr: "Devrim Erbil'in görsel dünyasıyla ilişkili olarak geliştirilen ve İstanbul, İzmir ile Eskişehir'de sunulan immersif proje.",
-    },
-    status: { en: "Venues to be verified", tr: "Mekanlar teyit edilecek" },
   },
   {
     year: "2018",

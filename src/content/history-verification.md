@@ -8,7 +8,7 @@ For each public history entry, confirm the following before marking as approved:
 
 | Entry | Date | Venue / City | Role | Institution | Project shown | Ownership / credit | Source | Publication approval |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UNESCO World Day for Audiovisual Heritage | 2025, exact date required | To be confirmed | Invited speaker | UNESCO-related programme, exact wording required | N/A | Talat Alkan lecture / talk | Source required | Pending |
+| UNESCO World Day for Audiovisual Heritage | 2025, exact date required | To be confirmed | Invited talk | UNESCO-related programme, exact wording required | N/A | Audiovisual heritage, new media and cultural memory | Source required | Source verification in progress |
 | Coca-Cola MENA | 2024, exact date required | Four Seasons Istanbul | Seminar and workshop lead | Coca-Cola MENA | N/A | Private executive session | Source required | Pending |
 | ORTA MetaDenimVerse | 2022, exact dates required | New York, Amsterdam, Munich, Istanbul, Kayseri | Digital experience / brand world contribution | ORTA Anadolu | MetaDenimVerse / The Blueskyer NFT context | Historical project reference | Source required | Pending |
 | Turkish Design Council - New Ways of Seeing | 2022, exact date required | To be confirmed | Workshop and talk | Turkish Design Council | N/A | Talat Alkan public programme contribution | Source required | Pending |
@@ -23,6 +23,5 @@ For each public history entry, confirm the following before marking as approved:
 | Pera Museum - A Journey into the World of Osman Hamdi Bey | 2019, exact dates required | Pera Museum, Istanbul | Creative / production role to be confirmed | Pera Museum | Osman Hamdi Bey museum experience | Historical Muse Studio context where necessary | Source required | Pending |
 | MedCruise - Genoa | 2019, exact date required | Genoa | Professional development course lead | MedCruise | N/A | Lecture / course contribution | Source required | Pending |
 | Carrousel du Louvre - Paris | 2018, exact date required | Carrousel du Louvre, Paris | Participant in digital art / VR presentation | To be confirmed | Digital art / VR works | Do not describe as Louvre Museum exhibition unless formally verified | Source required | Pending |
-| Virtual Revolution / Sanal Devrim | 2018, exact dates required | Istanbul, Izmir, Eskisehir, exact venues required | Immersive project role to be confirmed | Devrim Erbil / venues to be confirmed | Virtual Revolution / Sanal Devrim | Preserve original artist and institutional credits | Source required | Pending |
 | Art New York | 2018, exact date required | New York | Presentation with Gama Gallery | Gama Gallery | Virtual Revolution / Sanal Devrim | Include only if independently verified | Source required | Pending |
 | Bursa Uludag University, Department of Architecture | Exact date required | Bursa | Conference contribution | Bursa Uludag University | N/A | Neutral public wording only | Source required | Pending |
