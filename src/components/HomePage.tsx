@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { divisions } from "@/content/divisions";
 import { projectPath, routePaths } from "@/content/navigation";
 import { homepageHistoryHighlights } from "@/content/journal";
@@ -26,6 +27,30 @@ const practice = {
 const method = {
   en: ["Research", "Story Development", "Visual World-Building", "Production", "Experience or Distribution"],
   tr: ["Araştırma", "Hikaye Geliştirme", "Görsel Dünya Kurma", "Prodüksiyon", "Deneyim veya Dağıtım"],
+};
+
+const archiveWall = {
+  title: "Asterion Archive Wall",
+  headline: {
+    en: "Turn your archive into a living digital experience.",
+    tr: "Arşivinizi yaşayan bir dijital deneyime dönüştürün.",
+  },
+  body: {
+    en: "We transform documents, photographs, videos and audio recordings into interactive, searchable and exhibition-ready LED wall experiences for institutions with a living memory.",
+    tr: "Belgeler, fotoğraflar, videolar ve ses kayıtlarını; interaktif, aranabilir ve sergilenebilir LED wall deneyimlerine dönüştürüyoruz.",
+  },
+  tags: {
+    en: ["Digitization", "Curation", "Interactive LED Wall"],
+    tr: ["Dijitalleştirme", "Kürasyon", "İnteraktif LED Wall"],
+  },
+  cta: {
+    en: "Transform Your Archive",
+    tr: "Arşivinizi Dönüştürelim",
+  },
+  alt: {
+    en: "Asterion Archive Wall interactive digital archive experience",
+    tr: "Asterion Archive Wall interaktif dijital arşiv deneyimi",
+  },
 };
 
 export function HomePage({ locale }: { locale: Locale }) {
@@ -60,6 +85,39 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="page-wrap relative z-10 mt-12 border-t fine-rule pt-8">
+          <div className="grid gap-10 pb-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">{archiveWall.title}</p>
+              <h2 className="mt-5 max-w-3xl font-romie text-[clamp(3rem,5.6vw,5.8rem)] leading-[0.94] text-[#f4f1ea]">
+                {archiveWall.headline[locale]}
+              </h2>
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-[#a7a39b]">{archiveWall.body[locale]}</p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {archiveWall.tags[locale].map((tag) => (
+                  <span key={tag} className="border fine-rule px-3 py-2 text-xs text-[#a7a39b]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={routePaths[locale].contact} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
+                {archiveWall.cta[locale]}
+              </Link>
+            </div>
+            <figure className="media-figure">
+              <div className="relative min-h-[18rem] overflow-hidden border fine-rule md:min-h-[30rem] lg:mt-10" style={{ aspectRatio: "16 / 9" }}>
+                <Image
+                  src="/media/archive-wall.png"
+                  alt={archiveWall.alt[locale]}
+                  fill
+                  className="media-image"
+                  sizes="(min-width: 1024px) 56vw, calc(100vw - 3rem)"
+                />
+              </div>
+              <figcaption className="media-caption">
+                <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafıza ortamı"}</span>
+              </figcaption>
+            </figure>
+          </div>
           <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
             {locale === "en" ? "Selected institutional engagements" : "Seçili kurumsal işbirlikleri"}
           </p>

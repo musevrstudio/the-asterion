@@ -106,6 +106,13 @@ export function ProductionPage({ locale }: { locale: Locale }) {
       },
     },
     {
+      title: { en: "Archive Wall", tr: "Arşiv Duvarı" },
+      body: {
+        en: "Archive digitization, curation and interactive LED wall experiences for museums, institutions and cultural memory projects.",
+        tr: "Müze, kurum ve kültürel hafıza projeleri için arşiv dijitalleştirme, kürasyon ve interaktif LED wall deneyimleri.",
+      },
+    },
+    {
       title: { en: "Visual Production", tr: "Görsel Prodüksiyon" },
       body: {
         en: "Creative direction, art direction, moving image, motion design, 3D production, animation and post-production.",
