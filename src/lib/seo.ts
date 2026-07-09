@@ -38,12 +38,48 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
   },
 };
 
+const pageDescriptions: Record<RouteKey, Record<Locale, string>> = {
+  home: {
+    en: "The Asterion develops films, documentaries, museum experiences, interactive LED archive walls, archive digitization projects and visual worlds for cultural institutions and brands.",
+    tr: "The Asterion; filmler, belgeseller, müze deneyimleri, interaktif LED arşiv duvarları, arşiv dijitalleştirme projeleri ve görsel dünyalar geliştirir.",
+  },
+  work: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+  originals: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+  production: {
+    en: "Capabilities across story development, museum and exhibition narratives, archive digitization, Archive Wall experiences, spatial media and interactive LED wall production.",
+    tr: "Hikaye geliştirme, müze ve sergi anlatıları, arşiv dijitalleştirme, Arşiv Duvarı deneyimleri, mekansal medya ve interaktif LED wall prodüksiyonu.",
+  },
+  studio: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+  journal: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+  contact: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+  privacy: {
+    en: metadataText.en.description,
+    tr: metadataText.tr.description,
+  },
+};
+
 export function pageMetadata(locale: Locale, routeKey: RouteKey): Metadata {
   const otherLocale = locale === "en" ? "tr" : "en";
+  const description = pageDescriptions[routeKey][locale];
 
   return {
     title: pageTitles[routeKey][locale],
-    description: metadataText[locale].description,
+    description,
     alternates: {
       canonical: `${site.url}${routePaths[locale][routeKey]}`,
       languages: {
@@ -54,7 +90,7 @@ export function pageMetadata(locale: Locale, routeKey: RouteKey): Metadata {
     },
     openGraph: {
       title: pageTitles[routeKey][locale],
-      description: metadataText[locale].description,
+      description,
       url: `${site.url}${routePaths[locale][routeKey]}`,
       siteName: "The Asterion",
       locale: locale === "en" ? "en_US" : "tr_TR",
@@ -64,7 +100,7 @@ export function pageMetadata(locale: Locale, routeKey: RouteKey): Metadata {
     twitter: {
       card: "summary_large_image",
       title: pageTitles[routeKey][locale],
-      description: metadataText[locale].description,
+      description,
     },
   };
 }
