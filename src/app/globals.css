@@ -393,7 +393,7 @@ h3 {
 }
 
 .story-principle-visual .archive-memory-globe {
-  min-height: clamp(20rem, 46vw, 35rem);
+  min-height: clamp(22rem, 50vw, 38rem);
 }
 
 .archive-wall-visual-stack {
@@ -421,7 +421,7 @@ h3 {
   transition: transform 560ms ease;
 }
 
-.archive-globe-fallback {
+.archive-globe-static {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -430,13 +430,13 @@ h3 {
   pointer-events: none;
 }
 
-.archive-globe-fallback-grid {
+.archive-globe-static-grid {
   fill: none;
   stroke: rgba(233, 229, 220, 0.12);
   stroke-width: 1;
 }
 
-.archive-globe-fallback-points {
+.archive-globe-static-points {
   fill: #d7ff2f;
 }
 
