@@ -47,6 +47,7 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
     let height = 0;
     let pixelRatio = 1;
     const start = performance.now();
+    let canvasReady = false;
 
     function resize() {
       const rect = currentCanvas.getBoundingClientRect();
@@ -78,6 +79,10 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
       }
 
       drawGlobe(context, width, height, rotationRef.current.x, rotationRef.current.y, elapsed, locale);
+      if (!canvasReady) {
+        currentCanvas.parentElement?.setAttribute("data-canvas-ready", "true");
+        canvasReady = true;
+      }
 
       if (!reduceMotion) {
         frameRef.current = requestAnimationFrame(draw);
@@ -86,10 +91,11 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
 
     resize();
     window.addEventListener("resize", resize);
-    frameRef.current = requestAnimationFrame(draw);
+    draw(performance.now());
 
     return () => {
       window.removeEventListener("resize", resize);
+      currentCanvas.parentElement?.removeAttribute("data-canvas-ready");
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
     };
   }, [locale]);
@@ -101,7 +107,7 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
 
     if (dragRef.current.active) {
       const delta = event.clientX - dragRef.current.lastX;
-      dragRef.current.velocity = delta * -0.0072;
+      dragRef.current.velocity = delta * 0.0072;
       rotationRef.current.y += dragRef.current.velocity;
       dragRef.current.lastX = event.clientX;
     }
@@ -218,8 +224,8 @@ function drawGlobe(
   locale: "en" | "tr"
 ) {
   const centerX = width * 0.52;
-  const centerY = height * 0.54;
-  const radius = Math.min(width * 0.48, height * 0.52);
+  const centerY = height * 0.67;
+  const radius = Math.min(width * 0.44, height * 0.62);
 
   context.save();
   context.globalCompositeOperation = "source-over";
@@ -477,8 +483,8 @@ const oceanCuts = [
 
 const archivePoints = createArchivePoints();
 
-const staticGlobeCenter = { x: 500, y: 350 };
-const staticGlobeRadius = 390;
+const staticGlobeCenter = { x: 500, y: 378 };
+const staticGlobeRadius = 360;
 const staticGlobeRotation = { x: -0.1, y: 0.18 };
 
 const staticGlobeGridLines = [

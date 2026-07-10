@@ -396,10 +396,6 @@ h3 {
   min-height: clamp(22rem, 50vw, 38rem);
 }
 
-.story-principle-visual .archive-globe-canvas {
-  display: none;
-}
-
 .archive-wall-visual-stack {
   position: relative;
   display: grid;
@@ -421,8 +417,11 @@ h3 {
   z-index: 2;
   height: 100%;
   width: 100%;
+  opacity: 0;
   transform: translate3d(calc(var(--archive-x, 0) * 6px), calc(var(--archive-y, 0) * 4px), 0);
-  transition: transform 560ms ease;
+  transition:
+    opacity 420ms ease,
+    transform 560ms ease;
 }
 
 .archive-globe-static {
@@ -431,7 +430,29 @@ h3 {
   z-index: 1;
   height: 100%;
   width: 100%;
+  opacity: 1;
   pointer-events: none;
+  transition: opacity 420ms ease;
+}
+
+.archive-memory-globe[data-canvas-ready="true"] .archive-globe-canvas {
+  opacity: 1;
+}
+
+.archive-memory-globe[data-canvas-ready="true"] .archive-globe-static {
+  opacity: 0;
+}
+
+.story-principle-visual .archive-memory-globe:not([data-canvas-ready="true"]) .archive-globe-canvas {
+  opacity: 0;
+}
+
+.story-principle-visual .archive-memory-globe[data-canvas-ready="true"] .archive-globe-canvas {
+  opacity: 1;
+}
+
+.story-principle-visual .archive-memory-globe[data-canvas-ready="true"] .archive-globe-static {
+  opacity: 0;
 }
 
 .archive-globe-static-grid {
