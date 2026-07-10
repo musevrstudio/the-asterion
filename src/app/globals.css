@@ -396,6 +396,10 @@ h3 {
   min-height: clamp(22rem, 50vw, 38rem);
 }
 
+.story-principle-visual .archive-globe-canvas {
+  display: none;
+}
+
 .archive-wall-visual-stack {
   position: relative;
   display: grid;
