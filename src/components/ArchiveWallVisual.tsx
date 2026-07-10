@@ -7,7 +7,8 @@ import type { CSSProperties, PointerEvent } from "react";
 type ArchiveWallVisualProps = {
   alt: string;
   locale: "en" | "tr";
-  tags: string[];
+  tags?: string[];
+  showArchivePreview?: boolean;
 };
 
 type GlobePoint = {
@@ -26,7 +27,7 @@ const markers = [
   { key: "collections", label: { en: "Collections", tr: "Koleksiyonlar" }, lat: 60, lon: 100 },
 ];
 
-export function ArchiveWallVisual({ alt, locale, tags }: ArchiveWallVisualProps) {
+export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview = false }: ArchiveWallVisualProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frameRef = useRef<number | null>(null);
   const pointerRef = useRef({ x: 0, y: 0, active: false });
@@ -152,23 +153,27 @@ export function ArchiveWallVisual({ alt, locale, tags }: ArchiveWallVisualProps)
       >
         <canvas ref={canvasRef} className="archive-globe-canvas" aria-hidden="true" />
       </div>
-      <div className="archive-wall-preview-card">
-        <Image
-          src="/media/archive-wall.png"
-          alt={alt}
-          fill
-          sizes="(min-width: 1024px) 24vw, 52vw"
-          className="archive-wall-preview-image"
-        />
-      </div>
-      <div className="archive-wall-proof">
-        {tags.map((tag, index) => (
-          <div key={tag} className="archive-wall-proof-item">
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <p>{tag}</p>
-          </div>
-        ))}
-      </div>
+      {showArchivePreview ? (
+        <div className="archive-wall-preview-card">
+          <Image
+            src="/media/archive-wall.png"
+            alt={alt}
+            fill
+            sizes="(min-width: 1024px) 24vw, 52vw"
+            className="archive-wall-preview-image"
+          />
+        </div>
+      ) : null}
+      {tags.length > 0 ? (
+        <div className="archive-wall-proof">
+          {tags.map((tag, index) => (
+            <div key={tag} className="archive-wall-proof-item">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{tag}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

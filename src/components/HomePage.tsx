@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { divisions } from "@/content/divisions";
 import { projectPath, routePaths } from "@/content/navigation";
 import { homepageHistoryHighlights } from "@/content/journal";
@@ -62,7 +63,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="page-wrap relative grid min-h-[calc(100vh-5rem)] items-end gap-12 py-16 md:grid-cols-[1.15fr_0.85fr] md:py-24">
           <div className="relative z-10 max-w-4xl">
             <p className="text-xs uppercase tracking-[0.28em] text-[#d7ff2f]">{site.descriptor[locale]}</p>
-            <h1 className="mt-8 font-romie text-[clamp(3.4rem,11vw,10rem)] leading-[0.86] text-[#f4f1ea]">
+            <h1 className="mt-8 font-romie text-[clamp(3.1rem,7.8vw,7.9rem)] leading-[0.9] text-[#f4f1ea]">
               {site.statement[locale]}
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#a7a39b]">{site.support[locale]}</p>
@@ -84,20 +85,35 @@ export function HomePage({ locale }: { locale: Locale }) {
             ))}
           </div>
         </div>
-        <div className="page-wrap relative z-10 mt-12 border-t fine-rule pt-8">
-          <div className="archive-wall-hero grid gap-10 pb-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <div id="archive-wall" className="page-wrap relative z-10 mt-12 border-t fine-rule pt-8">
+          <div className="archive-wall-hero grid gap-10 pb-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div className="archive-wall-copy">
               <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">{archiveWall.title}</p>
               <h2 className="mt-5 max-w-3xl font-romie text-[clamp(3rem,5.6vw,5.8rem)] leading-[0.94] text-[#f4f1ea]">
                 {archiveWall.headline[locale]}
               </h2>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-[#a7a39b]">{archiveWall.body[locale]}</p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {archiveWall.tags[locale].map((tag) => (
+                  <span key={tag} className="border fine-rule px-3 py-2 text-xs text-[#a7a39b]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <Link href={routePaths[locale].contact} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
                 {archiveWall.cta[locale]}
               </Link>
             </div>
-            <figure className="media-figure">
-              <ArchiveWallVisual alt={archiveWall.alt[locale]} locale={locale} tags={archiveWall.tags[locale]} />
+            <figure className="archive-wall-media media-figure">
+              <div className="archive-wall-frame relative overflow-hidden border fine-rule lg:mt-10">
+                <Image
+                  src="/media/archive-wall.png"
+                  alt={archiveWall.alt[locale]}
+                  fill
+                  className="archive-wall-image media-image"
+                  sizes="(min-width: 1024px) 52vw, calc(100vw - 3rem)"
+                />
+              </div>
               <figcaption className="media-caption">
                 <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafıza ortamı"}</span>
               </figcaption>
@@ -216,35 +232,43 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="page-wrap py-24">
-        <p className="max-w-4xl font-romie text-[clamp(3rem,8vw,8rem)] leading-[0.9] text-[#f4f1ea]">
-          {site.principle[locale]}
-        </p>
-        <div className="mt-16 grid gap-10 border-t fine-rule pt-10 md:grid-cols-2">
-          <div>
-            <h2 className="text-xl text-[#e9e5dc]">
-              {locale === "en"
-                ? "Built on years of cultural production."
-                : "Yıllara yayılan kültürel prodüksiyon deneyimi üzerine kuruldu."}
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
-              {locale === "en"
-                ? "The Asterion carries forward a body of cultural, museum, spatial storytelling and visual production work first developed through selected projects under Muse Studio. Original project, artist and institutional credits are retained on the relevant project pages."
-                : "The Asterion; Muse Studio döneminde geliştirilen seçili kültür, müze, mekansal anlatı ve görsel prodüksiyon işlerinden oluşan birikimi sürdürür. Özgün proje, sanatçı ve kurum kredileri ilgili proje sayfalarında korunur."}
-            </p>
+      <section className="story-principle-section py-24">
+        <div className="page-wrap">
+          <div className="story-principle-visual">
+            <ArchiveWallVisual
+              alt={locale === "en" ? "Asterion story network globe" : "Asterion hikaye ağı küresi"}
+              locale={locale}
+            />
           </div>
-          <div>
-            <h2 className="text-xl text-[#e9e5dc]">
-              {locale === "en" ? "What kind of story are you developing?" : "Nasıl bir hikaye geliştiriyorsunuz?"}
-            </h2>
-            <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
-              {locale === "en"
-                ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world in development."
-                : "Geliştirme sürecindeki film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
-            </p>
-            <Link href={routePaths[locale].contact} className="paper-cta mt-6 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
-              {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
-            </Link>
+          <p className="mt-10 max-w-5xl font-romie text-[clamp(3rem,8vw,8rem)] leading-[0.9] text-[#f4f1ea]">
+            {site.principle[locale]}
+          </p>
+          <div className="mt-16 grid gap-10 border-t fine-rule pt-10 md:grid-cols-2">
+            <div>
+              <h2 className="text-xl text-[#e9e5dc]">
+                {locale === "en"
+                  ? "Built on years of cultural production."
+                  : "Yıllara yayılan kültürel prodüksiyon deneyimi üzerine kuruldu."}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
+                {locale === "en"
+                  ? "The Asterion carries forward a body of cultural, museum, spatial storytelling and visual production work first developed through selected projects under Muse Studio. Original project, artist and institutional credits are retained on the relevant project pages."
+                  : "The Asterion; Muse Studio döneminde geliştirilen seçili kültür, müze, mekansal anlatı ve görsel prodüksiyon işlerinden oluşan birikimi sürdürür. Özgün proje, sanatçı ve kurum kredileri ilgili proje sayfalarında korunur."}
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xl text-[#e9e5dc]">
+                {locale === "en" ? "What kind of story are you developing?" : "Nasıl bir hikaye geliştiriyorsunuz?"}
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
+                {locale === "en"
+                  ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world in development."
+                  : "Geliştirme sürecindeki film, belgesel, müze, arşiv, kültürel konu veya özgün dünya fikrinizi bizimle paylaşın."}
+              </p>
+              <Link href={routePaths[locale].contact} className="paper-cta mt-6 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
+                {locale === "en" ? "Start a Conversation" : "Görüşmeyi Başlat"}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

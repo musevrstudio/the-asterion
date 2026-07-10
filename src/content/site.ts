@@ -15,8 +15,8 @@ export const site = {
     tr: "Hikaye Geliştirme ve Prodüksiyon Stüdyosu",
   },
   statement: {
-    en: "Stories developed for cinema, culture and experience.",
-    tr: "Sinema, kültür ve deneyim alanları için geliştirilen hikayeler.",
+    en: "Stories for cinema, culture and experience.",
+    tr: "Sinema, kültür ve deneyim için hikayeler.",
   },
   support: {
     en: "The Asterion develops original worlds, films, documentaries, museum experiences and visual productions from research and writing to direction and delivery.",
