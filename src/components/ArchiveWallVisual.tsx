@@ -71,11 +71,11 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
         dragRef.current.velocity *= 0.94;
       }
 
-      rotationRef.current.targetY = reduceMotion ? rotationRef.current.y : 0.18 + elapsed * 0.06 + pointerRef.current.x * 0.18;
+      rotationRef.current.targetY = reduceMotion ? rotationRef.current.y : 0.18 + elapsed * 0.022 + pointerRef.current.x * 0.1;
       rotationRef.current.targetX = -0.1 + pointerRef.current.y * -0.1;
       rotationRef.current.x += (rotationRef.current.targetX - rotationRef.current.x) * 0.055;
       if (!dragRef.current.active && Math.abs(dragRef.current.velocity) < 0.002) {
-        rotationRef.current.y += (rotationRef.current.targetY - rotationRef.current.y) * 0.018;
+        rotationRef.current.y += (rotationRef.current.targetY - rotationRef.current.y) * 0.012;
       }
 
       drawGlobe(context, width, height, rotationRef.current.x, rotationRef.current.y, elapsed, locale);
@@ -107,7 +107,7 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
 
     if (dragRef.current.active) {
       const delta = event.clientX - dragRef.current.lastX;
-      dragRef.current.velocity = delta * 0.0072;
+      dragRef.current.velocity = delta * -0.0036;
       rotationRef.current.y += dragRef.current.velocity;
       dragRef.current.lastX = event.clientX;
     }
