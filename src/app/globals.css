@@ -444,6 +444,24 @@ h3 {
   fill: #d7ff2f;
 }
 
+.archive-globe-static-marker-dot {
+  fill: rgba(215, 255, 47, 0.72);
+  stroke: rgba(215, 255, 47, 0.7);
+  stroke-width: 1;
+}
+
+.archive-globe-static-marker-label-bg {
+  fill: rgba(9, 10, 12, 0.72);
+  stroke: rgba(233, 229, 220, 0.18);
+  stroke-width: 1;
+}
+
+.archive-globe-static-marker-label {
+  fill: rgba(244, 241, 234, 0.82);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
 .archive-wall-preview-card {
   position: relative;
   z-index: 5;

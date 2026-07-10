@@ -162,6 +162,24 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
               <circle key={index} cx={point.x} cy={point.y} r={point.r} opacity={point.opacity} />
             ))}
           </g>
+          <g className="archive-globe-static-markers">
+            {staticGlobeMarkers
+              .filter((marker) => marker.visible)
+              .map((marker) => {
+                const label = marker.label[locale];
+                const labelWidth = Math.max(58, label.length * 6.2 + 18);
+
+                return (
+                  <g key={marker.key} transform={`translate(${marker.x} ${marker.y})`} opacity={marker.opacity}>
+                    <circle className="archive-globe-static-marker-dot" cx="0" cy="0" r="4.5" />
+                    <rect className="archive-globe-static-marker-label-bg" x="10" y="-13" width={labelWidth} height="22" />
+                    <text className="archive-globe-static-marker-label" x="18" y="2">
+                      {label}
+                    </text>
+                  </g>
+                );
+              })}
+          </g>
         </svg>
         <canvas ref={canvasRef} className="archive-globe-canvas" aria-hidden="true" />
       </div>
@@ -459,8 +477,8 @@ const oceanCuts = [
 
 const archivePoints = createArchivePoints();
 
-const staticGlobeCenter = { x: 500, y: 290 };
-const staticGlobeRadius = 270;
+const staticGlobeCenter = { x: 500, y: 350 };
+const staticGlobeRadius = 390;
 const staticGlobeRotation = { x: -0.1, y: 0.18 };
 
 const staticGlobeGridLines = [
@@ -491,5 +509,18 @@ const staticGlobePoints = archivePoints.map((coordinate) => {
     y: Number((staticGlobeCenter.y + point.y).toFixed(1)),
     r: point.z < 0 ? 0.9 : 1.16,
     opacity: Number((point.z < 0 ? 0.07 + depth * 0.1 : 0.24 + depth * 0.44).toFixed(3)),
+  };
+});
+
+const staticGlobeMarkers = markers.map((marker) => {
+  const point = project(marker.lat, marker.lon, staticGlobeRadius, staticGlobeRotation.x, staticGlobeRotation.y);
+  const depth = (point.z + 1) / 2;
+
+  return {
+    ...marker,
+    x: Number((staticGlobeCenter.x + point.x).toFixed(1)),
+    y: Number((staticGlobeCenter.y + point.y).toFixed(1)),
+    visible: point.z > -0.1,
+    opacity: Number((0.38 + depth * 0.48).toFixed(3)),
   };
 });
