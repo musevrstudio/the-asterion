@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { divisions } from "@/content/divisions";
 import { projectPath, routePaths } from "@/content/navigation";
 import { homepageHistoryHighlights } from "@/content/journal";
 import { featuredProject, selectedProjects } from "@/content/projects";
 import { site } from "@/content/site";
 import type { Locale } from "@/content/types";
+import { ArchiveWallVisual } from "./ArchiveWallVisual";
 import { MediaBlock } from "./MediaBlock";
 import { SiteShell } from "./SiteShell";
 
@@ -85,34 +85,19 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <div className="page-wrap relative z-10 mt-12 border-t fine-rule pt-8">
-          <div className="grid gap-10 pb-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div>
+          <div className="archive-wall-hero grid gap-10 pb-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div className="archive-wall-copy">
               <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">{archiveWall.title}</p>
               <h2 className="mt-5 max-w-3xl font-romie text-[clamp(3rem,5.6vw,5.8rem)] leading-[0.94] text-[#f4f1ea]">
                 {archiveWall.headline[locale]}
               </h2>
               <p className="mt-6 max-w-2xl text-sm leading-7 text-[#a7a39b]">{archiveWall.body[locale]}</p>
-              <div className="mt-7 flex flex-wrap gap-2">
-                {archiveWall.tags[locale].map((tag) => (
-                  <span key={tag} className="border fine-rule px-3 py-2 text-xs text-[#a7a39b]">
-                    {tag}
-                  </span>
-                ))}
-              </div>
               <Link href={routePaths[locale].contact} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
                 {archiveWall.cta[locale]}
               </Link>
             </div>
             <figure className="media-figure">
-              <div className="relative min-h-[18rem] overflow-hidden border fine-rule md:min-h-[30rem] lg:mt-10" style={{ aspectRatio: "16 / 9" }}>
-                <Image
-                  src="/media/archive-wall.png"
-                  alt={archiveWall.alt[locale]}
-                  fill
-                  className="media-image"
-                  sizes="(min-width: 1024px) 56vw, calc(100vw - 3rem)"
-                />
-              </div>
+              <ArchiveWallVisual alt={archiveWall.alt[locale]} locale={locale} tags={archiveWall.tags[locale]} />
               <figcaption className="media-caption">
                 <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafıza ortamı"}</span>
               </figcaption>
