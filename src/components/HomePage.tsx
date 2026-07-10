@@ -232,9 +232,12 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="story-principle-section py-24">
+      <section id="story-network" className="story-principle-section py-24">
         <div className="page-wrap">
           <div className="story-principle-visual">
+            <div className="story-principle-label">
+              <span>{locale === "en" ? "Asterion Story Network" : "Asterion Hikaye Ağı"}</span>
+            </div>
             <ArchiveWallVisual
               alt={locale === "en" ? "Asterion story network globe" : "Asterion hikaye ağı küresi"}
               locale={locale}
