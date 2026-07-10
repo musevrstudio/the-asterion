@@ -368,29 +368,19 @@ h3 {
 .story-principle-visual {
   position: relative;
   overflow: hidden;
-  border-inline: 1px solid rgba(233, 229, 220, 0.1);
-  padding-top: clamp(3.5rem, 7vw, 6.5rem);
+  border-bottom: 1px solid rgba(233, 229, 220, 0.16);
+  padding-top: clamp(2.75rem, 6vw, 5.5rem);
 }
 
 .story-principle-label {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-bottom: 1rem;
+  padding-bottom: clamp(1rem, 2vw, 1.6rem);
   color: #d7ff2f;
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-}
-
-.story-principle-label::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  background: rgba(233, 229, 220, 0.16);
 }
 
 .story-principle-label span {
@@ -403,7 +393,7 @@ h3 {
 }
 
 .story-principle-visual .archive-memory-globe {
-  min-height: clamp(22rem, 50vw, 38rem);
+  min-height: clamp(20rem, 46vw, 35rem);
 }
 
 .archive-wall-visual-stack {
@@ -424,11 +414,30 @@ h3 {
 .archive-globe-canvas {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   height: 100%;
   width: 100%;
   transform: translate3d(calc(var(--archive-x, 0) * 6px), calc(var(--archive-y, 0) * 4px), 0);
   transition: transform 560ms ease;
+}
+
+.archive-globe-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.archive-globe-fallback-grid {
+  fill: none;
+  stroke: rgba(233, 229, 220, 0.12);
+  stroke-width: 1;
+}
+
+.archive-globe-fallback-points {
+  fill: #d7ff2f;
 }
 
 .archive-wall-preview-card {

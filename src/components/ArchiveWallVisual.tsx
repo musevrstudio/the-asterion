@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 
 type ArchiveWallVisualProps = {
@@ -34,9 +34,10 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
   const dragRef = useRef({ active: false, lastX: 0, velocity: 0 });
   const rotationRef = useRef({ x: -0.18, y: 0.2, targetX: -0.18, targetY: 0.2 });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!canvasRef.current) return;
     const currentCanvas = canvasRef.current;
+    const canvasParent = currentCanvas.parentElement;
 
     const maybeContext = currentCanvas.getContext("2d", { alpha: true });
     if (!maybeContext) return;
@@ -49,7 +50,7 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
     const start = performance.now();
 
     function resize() {
-      const rect = currentCanvas.getBoundingClientRect();
+      const rect = (canvasParent ?? currentCanvas).getBoundingClientRect();
       pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
       width = Math.max(1, rect.width);
       height = Math.max(1, rect.height);
@@ -85,11 +86,25 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
     }
 
     resize();
+    draw(performance.now());
+
+    const resizeObserver = new ResizeObserver(() => {
+      resize();
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+      draw(performance.now());
+    });
+
+    if (canvasParent) {
+      resizeObserver.observe(canvasParent);
+    } else {
+      resizeObserver.observe(currentCanvas);
+    }
+
     window.addEventListener("resize", resize);
-    frameRef.current = requestAnimationFrame(draw);
 
     return () => {
       window.removeEventListener("resize", resize);
+      resizeObserver.disconnect();
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
     };
   }, [locale]);
@@ -151,6 +166,18 @@ export function ArchiveWallVisual({ alt, locale, tags = [], showArchivePreview =
         role="img"
         aria-label={alt}
       >
+        <svg className="archive-globe-fallback" viewBox="0 0 1000 560" aria-hidden="true">
+          <g className="archive-globe-fallback-grid">
+            {fallbackGridLines.map((line, index) => (
+              <polyline key={index} points={line} vectorEffect="non-scaling-stroke" />
+            ))}
+          </g>
+          <g className="archive-globe-fallback-points">
+            {fallbackGlobePoints.map((point, index) => (
+              <circle key={index} cx={point.x} cy={point.y} r={point.r} opacity={point.opacity} />
+            ))}
+          </g>
+        </svg>
         <canvas ref={canvasRef} className="archive-globe-canvas" aria-hidden="true" />
       </div>
       {showArchivePreview ? (
@@ -446,3 +473,38 @@ const oceanCuts = [
 ];
 
 const archivePoints = createArchivePoints();
+
+const fallbackCenter = { x: 500, y: 330 };
+const fallbackRadius = 260;
+const fallbackRotation = { x: -0.1, y: 0.18 };
+
+const fallbackGridLines = [
+  ...range(-60, 60, 20).map((lat) =>
+    range(-180, 180, 5)
+      .map((lon) => {
+        const point = project(lat, lon, fallbackRadius, fallbackRotation.x, fallbackRotation.y);
+        return `${(fallbackCenter.x + point.x).toFixed(1)},${(fallbackCenter.y + point.y).toFixed(1)}`;
+      })
+      .join(" ")
+  ),
+  ...range(-150, 180, 30).map((lon) =>
+    range(-70, 70, 4)
+      .map((lat) => {
+        const point = project(lat, lon, fallbackRadius, fallbackRotation.x, fallbackRotation.y);
+        return `${(fallbackCenter.x + point.x).toFixed(1)},${(fallbackCenter.y + point.y).toFixed(1)}`;
+      })
+      .join(" ")
+  ),
+];
+
+const fallbackGlobePoints = archivePoints.map((coordinate) => {
+  const point = project(coordinate.lat, coordinate.lon, fallbackRadius, fallbackRotation.x, fallbackRotation.y);
+  const depth = (point.z + 1) / 2;
+
+  return {
+    x: Number((fallbackCenter.x + point.x).toFixed(1)),
+    y: Number((fallbackCenter.y + point.y).toFixed(1)),
+    r: point.z < 0 ? 0.9 : 1.2,
+    opacity: Number((point.z < 0 ? 0.08 + depth * 0.12 : 0.24 + depth * 0.48).toFixed(3)),
+  };
+});
