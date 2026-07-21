@@ -40,8 +40,8 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
 
 const pageDescriptions: Record<RouteKey, Record<Locale, string>> = {
   home: {
-    en: "The Asterion develops films, documentaries, museum experiences, interactive LED archive walls, archive digitization projects and visual worlds for cultural institutions and brands.",
-    tr: "The Asterion; filmler, belgeseller, müze deneyimleri, interaktif LED arşiv duvarları, arşiv dijitalleştirme projeleri ve görsel dünyalar geliştirir.",
+    en: "The Asterion develops films, documentaries, museum experiences, Archive Wall installations, life-scale digital hologram experiences and visual worlds for cultural institutions and brands.",
+    tr: "The Asterion; filmler, belgeseller, müze deneyimleri, Archive Wall kurulumları, insan ölçeğinde dijital hologram deneyimleri ve görsel dünyalar geliştirir.",
   },
   work: {
     en: metadataText.en.description,
@@ -52,8 +52,8 @@ const pageDescriptions: Record<RouteKey, Record<Locale, string>> = {
     tr: metadataText.tr.description,
   },
   production: {
-    en: "Capabilities across story development, museum and exhibition narratives, archive digitization, Archive Wall experiences, spatial media and interactive LED wall production.",
-    tr: "Hikaye geliştirme, müze ve sergi anlatıları, arşiv dijitalleştirme, Arşiv Duvarı deneyimleri, mekansal medya ve interaktif LED wall prodüksiyonu.",
+    en: "Capabilities across story development, museum and exhibition narratives, Archive Wall experiences, Asterion Presence life-scale digital holograms, spatial media and interactive production.",
+    tr: "Hikaye geliştirme, müze ve sergi anlatıları, Archive Wall deneyimleri, Asterion Presence insan ölçeğinde dijital hologramlar, mekansal medya ve interaktif prodüksiyon.",
   },
   studio: {
     en: metadataText.en.description,

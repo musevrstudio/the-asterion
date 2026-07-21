@@ -351,6 +351,46 @@ h3 {
   transform: none;
 }
 
+.presence-feature {
+  align-items: center;
+}
+
+.presence-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.presence-copy h2,
+.presence-copy p {
+  max-width: min(100%, 42rem);
+  text-wrap: pretty;
+}
+
+.presence-media {
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
+}
+
+.presence-frame {
+  aspect-ratio: 4 / 5;
+  width: min(100%, 38rem);
+  margin-left: auto;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 52% 42%, rgba(233, 229, 220, 0.08), transparent 18rem),
+    #090a0c;
+}
+
+.presence-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(0.96) contrast(1.04) brightness(0.96);
+}
+
 .story-principle-section {
   position: relative;
   overflow: hidden;
@@ -572,6 +612,11 @@ h3 {
     justify-self: end;
     margin-top: -2.7rem;
     margin-right: 0;
+  }
+
+  .presence-frame {
+    width: 100%;
+    margin-left: 0;
   }
 
   .archive-wall-proof {

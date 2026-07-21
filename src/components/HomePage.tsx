@@ -54,6 +54,30 @@ const archiveWall = {
   },
 };
 
+const presence = {
+  title: "Asterion Presence",
+  headline: {
+    en: "Give your story a human presence.",
+    tr: "Hikayenize insan ölçeğinde bir varlık kazandırın.",
+  },
+  body: {
+    en: "Life-scale digital figures for museums, exhibitions, brands and public spaces, developed from narrative and character design to cinematic production, system integration and installation.",
+    tr: "Müzeler, sergiler, markalar ve kamusal alanlar için insan ölçeğinde dijital figürler; anlatı ve karakter tasarımından sinematik prodüksiyon, sistem entegrasyonu ve kuruluma kadar geliştirilir.",
+  },
+  tags: {
+    en: ["Digital Hologram", "Character Direction", "Installation"],
+    tr: ["Dijital Hologram", "Karakter Yönetimi", "Kurulum"],
+  },
+  cta: {
+    en: "Develop a Presence",
+    tr: "Bir Presence Geliştirelim",
+  },
+  alt: {
+    en: "Asterion Presence life-scale digital hologram display",
+    tr: "Asterion Presence insan ölçeğinde dijital hologram ünitesi",
+  },
+};
+
 export function HomePage({ locale }: { locale: Locale }) {
   const featuredUrl = featuredProject.externalUrl ?? projectPath(locale, featuredProject.slug);
 
@@ -116,6 +140,39 @@ export function HomePage({ locale }: { locale: Locale }) {
               </div>
               <figcaption className="media-caption">
                 <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafıza ortamı"}</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div id="asterion-presence" className="presence-feature grid gap-10 border-t fine-rule py-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="presence-copy">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">{presence.title}</p>
+              <h2 className="mt-5 max-w-3xl font-romie text-[clamp(3rem,5.2vw,5.6rem)] leading-[0.94] text-[#f4f1ea]">
+                {presence.headline[locale]}
+              </h2>
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-[#a7a39b]">{presence.body[locale]}</p>
+              <div className="mt-7 flex flex-wrap gap-2">
+                {presence.tags[locale].map((tag) => (
+                  <span key={tag} className="border fine-rule px-3 py-2 text-xs text-[#a7a39b]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <Link href={routePaths[locale].contact} className="paper-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
+                {presence.cta[locale]}
+              </Link>
+            </div>
+            <figure className="presence-media">
+              <div className="presence-frame relative overflow-hidden border fine-rule">
+                <Image
+                  src="/media/asterion-presence.png"
+                  alt={presence.alt[locale]}
+                  fill
+                  className="presence-image"
+                  sizes="(min-width: 1024px) 48vw, calc(100vw - 3rem)"
+                />
+              </div>
+              <figcaption className="media-caption">
+                <span>{locale === "en" ? "Asterion Presence / life-scale digital hologram" : "Asterion Presence / insan ölçeğinde dijital hologram"}</span>
               </figcaption>
             </figure>
           </div>

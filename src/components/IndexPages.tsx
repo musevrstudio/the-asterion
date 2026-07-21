@@ -127,6 +127,13 @@ export function ProductionPage({ locale }: { locale: Locale }) {
       },
     },
   ];
+  practices.splice(4, 0, {
+    title: { en: "Asterion Presence", tr: "Asterion Presence" },
+    body: {
+      en: "Life-scale digital hologram figures for museums, exhibitions, brands and public spaces, shaped through narrative, performance, production and installation.",
+      tr: "Müzeler, sergiler, markalar ve kamusal alanlar için anlatı, performans, prodüksiyon ve kurulumla tasarlanan insan ölçeğinde dijital hologram figürleri.",
+    },
+  });
   return (
     <SiteShell locale={locale} active="production" alternateHref={routePaths[locale === "en" ? "tr" : "en"].production}>
       <PageHeader
