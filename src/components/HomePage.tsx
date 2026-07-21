@@ -164,7 +164,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <figure className="presence-media">
               <div className="presence-frame relative overflow-hidden border fine-rule">
                 <Image
-                  src="/media/asterion-presence-v2.png"
+                  src="/media/asterion-presence-v3.png"
                   alt={presence.alt[locale]}
                   fill
                   className="presence-image"
