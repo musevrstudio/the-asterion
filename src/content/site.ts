@@ -11,32 +11,32 @@ export const site = {
     tr: "İstanbul, Türkiye - uluslararası ölçekte çalışır",
   },
   descriptor: {
-    en: "Story Development & Production House",
-    tr: "Hikaye Geliştirme ve Prodüksiyon Stüdyosu",
+    en: "Research, Authorship & Cultural Experience",
+    tr: "Araştırma, Yazarlık ve Kültürel Deneyim",
   },
   statement: {
-    en: "Stories for cinema, culture and experience.",
-    tr: "Sinema, kültür ve deneyim için hikayeler.",
+    en: "Original worlds, cultural memory and experience.",
+    tr: "Özgün dünyalar, kültürel hafıza ve deneyim.",
   },
   support: {
-    en: "The Asterion develops original worlds, films, documentaries, museum experiences and visual productions from research and writing to direction and delivery.",
-    tr: "The Asterion; özgün dünyaları, filmleri, belgeselleri, müze deneyimlerini ve görsel prodüksiyonları araştırma ve yazımdan yönetim ve üretime uzanan bütünlüklü bir süreçle geliştirir.",
+    en: "The Asterion is a cultural practice working through research, authorship, archive, experience and long-term world-building. Production is one form this practice can take.",
+    tr: "The Asterion; araştırma, yazarlık, arşiv, deneyim ve uzun soluklu dünya kurma üzerinden çalışan kültürel bir pratiktir. Prodüksiyon bu pratiğin alabileceği biçimlerden biridir.",
   },
   principle: {
-    en: "Every form begins with a story.",
-    tr: "Her biçim bir hikayeyle başlar.",
+    en: "Every form begins as a way of seeing.",
+    tr: "Her biçim bir görme biçimiyle başlar.",
   },
 } satisfies Record<string, string | LocalizedText | { en: string; tr: string }>;
 
 export const metadataText = {
   en: {
-    title: "The Asterion - Story Development & Production House",
+    title: "The Asterion - Research, Authorship & Cultural Experience",
     description:
-      "The Asterion is an independent production house developing original stories, films, documentaries, museum experiences and visual worlds.",
+      "The Asterion is a cultural practice for research, authorship, memory, experience and original worlds.",
   },
   tr: {
-    title: "The Asterion - Hikaye Geliştirme ve Prodüksiyon Stüdyosu",
+    title: "The Asterion - Araştırma, Yazarlık ve Kültürel Deneyim",
     description:
-      "The Asterion; özgün hikayeler, filmler, belgeseller, müze deneyimleri ve görsel dünyalar geliştiren bağımsız bir prodüksiyon stüdyosudur.",
+      "The Asterion; araştırma, yazarlık, hafıza, deneyim ve özgün dünyalar üzerine çalışan kültürel bir pratiktir.",
   },
 };

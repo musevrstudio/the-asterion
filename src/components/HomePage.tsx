@@ -12,69 +12,69 @@ import { SiteShell } from "./SiteShell";
 
 const practice = {
   en: [
-    ["Films & Documentaries", "Original films, documentaries, artist films and commissioned cinematic productions."],
-    ["Museums & Experiences", "Museum narratives, exhibitions, immersive environments and cultural experiences."],
-    ["Original Worlds", "Long-term story properties developed across film, documentary, exhibition, publication and interactive media."],
-    ["Visual Production", "Creative direction, moving image, spatial media, animation and real-time visual production."],
+    ["Research & Authorship", "Research, writing, interpretation and authorship for long-term cultural work."],
+    ["Cultural Experience", "Museums, exhibitions, archives and public environments shaped around meaning and participation."],
+    ["Original Worlds", "Authored intellectual properties developed across research, cinema, exhibition, publication and interactive forms."],
+    ["Moving Image & Spatial Media", "Film, spatial media, animation and visual systems used when the work requires them."],
   ],
   tr: [
-    ["Filmler & Belgeseller", "Ã–zgÃ¼n filmler, belgeseller, sanatÃ§Ä± filmleri ve sipariÅŸe dayalÄ± sinematik prodÃ¼ksiyonlar."],
-    ["MÃ¼zeler & Deneyimler", "MÃ¼ze anlatÄ±larÄ±, sergiler, immersif ortamlar ve kÃ¼ltÃ¼rel deneyimler."],
-    ["Ã–zgÃ¼n DÃ¼nyalar", "Film, belgesel, sergi, oyun, yayÄ±n ve etkileÅŸimli medya arasÄ±nda geliÅŸtirilen uzun soluklu Ã¶zgÃ¼n anlatÄ± dÃ¼nyalarÄ±."],
-    ["GÃ¶rsel ProdÃ¼ksiyon", "YaratÄ±cÄ± yÃ¶netim, hareketli gÃ¶rÃ¼ntÃ¼, mekansal medya, animasyon ve gerÃ§ek zamanlÄ± gÃ¶rsel prodÃ¼ksiyon."],
+    ["Araştırma & Yazarlık", "Uzun soluklu kültürel işler için araştırma, yazım, yorumlama ve yazarlık."],
+    ["Kültürel Deneyim", "Anlam ve katılım etrafında şekillenen müzeler, sergiler, arşivler ve kamusal ortamlar."],
+    ["Özgün Dünyalar", "Araştırma, sinema, sergi, yayın ve etkileşimli biçimler arasında gelişen yazarlıklı fikri mülkiyetler."],
+    ["Hareketli Görüntü & Mekansal Medya", "İşin gerektirdiği yerde kullanılan film, mekansal medya, animasyon ve görsel sistemler."],
   ],
 };
 
 const method = {
-  en: ["Research", "Story Development", "Visual World-Building", "Production", "Experience or Distribution"],
-  tr: ["AraÅŸtÄ±rma", "Hikaye GeliÅŸtirme", "GÃ¶rsel DÃ¼nya Kurma", "ProdÃ¼ksiyon", "Deneyim veya DaÄŸÄ±tÄ±m"],
+  en: ["Research", "Authorship", "World-building", "Form", "Public Experience"],
+  tr: ["Araştırma", "Yazarlık", "Dünya Kurma", "Biçim", "Kamusal Deneyim"],
 };
 
 const archiveWall = {
   title: "Asterion Archive Wall",
   headline: {
-    en: "Turn your archive into a living digital experience.",
-    tr: "ArÅŸivinizi yaÅŸayan bir dijital deneyime dÃ¶nÃ¼ÅŸtÃ¼rÃ¼n.",
+    en: "A living surface for archive, memory and participation.",
+    tr: "Arşiv, hafıza ve katılım için yaşayan bir yüzey.",
   },
   body: {
-    en: "We transform documents, photographs, videos and audio recordings into interactive, searchable and exhibition-ready LED wall experiences for institutions with a living memory.",
-    tr: "Belgeler, fotoÄŸraflar, videolar ve ses kayÄ±tlarÄ±nÄ±; interaktif, aranabilir ve sergilenebilir LED wall deneyimlerine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼yoruz.",
+    en: "Archive Wall is the first expression of an Asterion product ecosystem: a way to turn documents, images, video and sound into searchable, participatory cultural environments.",
+    tr: "Archive Wall, Asterion ürün ekosisteminin ilk ifadesidir: belge, görüntü, video ve sesi aranabilir, katılımcı kültürel ortamlara dönüştüren bir yapı.",
   },
   tags: {
-    en: ["Digitization", "Curation", "Interactive LED Wall"],
-    tr: ["DijitalleÅŸtirme", "KÃ¼rasyon", "Ä°nteraktif LED Wall"],
+    en: ["Archive", "Memory", "Participation"],
+    tr: ["Arşiv", "Hafıza", "Katılım"],
   },
   cta: {
-    en: "Transform Your Archive",
-    tr: "ArÅŸivinizi DÃ¶nÃ¼ÅŸtÃ¼relim",
+    en: "Begin with an Archive",
+    tr: "Bir Arşivle Başlayalım",
   },
   alt: {
     en: "Asterion Archive Wall interactive digital archive experience",
-    tr: "Asterion Archive Wall interaktif dijital arÅŸiv deneyimi",
+    tr: "Asterion Archive Wall interaktif dijital arşiv deneyimi",
   },
 };
 
 const presence = {
   title: "Asterion Presence",
   headline: {
-    en: "Give your story a human presence.",
-    tr: "Hikayenize insan Ã¶lÃ§eÄŸinde bir varlÄ±k kazandÄ±rÄ±n.",
+    en: "Give memory a human presence.",
+    tr: "Hafızaya insan ölçeğinde bir varlık kazandırın.",
   },
   body: {
-    en: "Life-scale digital figures for museums, exhibitions, brands and public spaces, developed from narrative and character design to cinematic production, system integration and installation.",
-    tr: "MÃ¼zeler, sergiler, markalar ve kamusal alanlar iÃ§in insan Ã¶lÃ§eÄŸinde dijital figÃ¼rler; anlatÄ± ve karakter tasarÄ±mÄ±ndan sinematik prodÃ¼ksiyon, sistem entegrasyonu ve kuruluma kadar geliÅŸtirilir.",
+    en: "Life-scale digital figures for museums, exhibitions, brands and public spaces, shaped through research, character direction, performance, system integration and installation.",
+    tr: "Müzeler, sergiler, markalar ve kamusal alanlar için araştırma, karakter yönetimi, performans, sistem entegrasyonu ve kurulumla şekillenen insan ölçeğinde dijital figürler.",
   },
   tags: {
     en: ["Digital Hologram", "Character Direction", "Installation"],
-    tr: ["Dijital Hologram", "Karakter YÃ¶netimi", "Kurulum"],
+    tr: ["Dijital Hologram", "Karakter Yönetimi", "Kurulum"],
   },
   cta: {
     en: "Develop a Presence",
-    tr: "Bir Presence GeliÅŸtirelim",
+    tr: "Bir Presence Geliştirelim",
   },
   alt: {
     en: "Asterion Presence life-scale digital hologram display",
-    tr: "Asterion Presence insan Ã¶lÃ§eÄŸinde dijital hologram Ã¼nitesi",
+    tr: "Asterion Presence insan ölçeğinde dijital hologram ünitesi",
   },
 };
 
@@ -93,10 +93,10 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#a7a39b]">{site.support[locale]}</p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link href={routePaths[locale].work} className="lime-cta px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
-                {locale === "en" ? "View Selected Work" : "SeÃ§ili Ä°ÅŸleri Ä°ncele"}
+                {locale === "en" ? "Explore the Work" : "İşleri İncele"}
               </Link>
               <Link href={routePaths[locale].contact} className="border fine-rule px-5 py-3 text-sm text-[#e9e5dc]">
-                {locale === "en" ? "Start a Conversation" : "GÃ¶rÃ¼ÅŸmeyi BaÅŸlat"}
+                {locale === "en" ? "Begin a Conversation" : "Bir Görüşme Başlat"}
               </Link>
             </div>
           </div>
@@ -139,7 +139,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 />
               </div>
               <figcaption className="media-caption">
-                <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafÄ±za ortamÄ±"}</span>
+                <span>{locale === "en" ? "Archive Wall / interactive memory environment" : "Archive Wall / interaktif hafıza ortamı"}</span>
               </figcaption>
             </figure>
           </div>
@@ -172,12 +172,12 @@ export function HomePage({ locale }: { locale: Locale }) {
                 />
               </div>
               <figcaption className="media-caption">
-                <span>{locale === "en" ? "Asterion Presence / life-scale digital hologram" : "Asterion Presence / insan Ã¶lÃ§eÄŸinde dijital hologram"}</span>
+                <span>{locale === "en" ? "Asterion Presence / life-scale digital hologram" : "Asterion Presence / insan ölçeğinde dijital hologram"}</span>
               </figcaption>
             </figure>
           </div>
           <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
-            {locale === "en" ? "Selected institutional engagements" : "SeÃ§ili kurumsal iÅŸbirlikleri"}
+            {locale === "en" ? "Selected institutional engagements" : "Seçili kurumsal işbirlikleri"}
           </p>
           <ul className="mt-6 grid gap-px border fine-rule md:grid-cols-2 lg:grid-cols-3">
             {homepageHistoryHighlights.map((entry) => (
@@ -193,13 +193,13 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="page-wrap grid gap-10 py-20 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-[#d7ff2f]">
-            {locale === "en" ? "Featured Original" : "Ã–ne Ã‡Ä±kan Ã–zgÃ¼n Proje"}
+            {locale === "en" ? "Featured Original World" : "Öne Çıkan Özgün Dünya"}
           </p>
           <h2 className="mt-5 font-romie text-7xl leading-none text-[#f4f1ea]">{featuredProject.title}</h2>
           <p className="mt-6 max-w-xl text-xl leading-8 text-[#e9e5dc]">
             {locale === "en"
-              ? "A remarkable aviation chapter reimagined through immersive experience, documentary research and an expanding cinematic world."
-              : "Dikkat Ã§ekici bir havacÄ±lÄ±k dÃ¶nemini immersif deneyim, belgesel araÅŸtÄ±rmasÄ± ve geniÅŸleyen sinematik bir dÃ¼nya Ã¼zerinden yeniden yorumlayan proje."}
+              ? "An original world, research platform and evolving cultural IP rooted in a remarkable aviation chapter."
+              : "Dikkat çekici bir havacılık döneminden doğan özgün dünya, araştırma platformu ve gelişen kültürel IP."}
           </p>
           <p className="mt-6 max-w-xl text-sm leading-7 text-[#a7a39b]">{featuredProject.summary[locale]}</p>
           <div className="mt-8 flex flex-wrap gap-2">
@@ -221,7 +221,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="border-y fine-rule bg-[#0d0f12] py-20">
         <div className="page-wrap">
           <h2 className="font-romie text-5xl text-[#f4f1ea]">
-            {locale === "en" ? "A story can choose more than one form." : "Bir hikaye birden fazla biÃ§im seÃ§ebilir."}
+            {locale === "en" ? "A practice can take more than one form." : "Bir pratik birden fazla biçim alabilir."}
           </h2>
           <div className="mt-10 grid gap-px overflow-hidden border fine-rule md:grid-cols-2 lg:grid-cols-4">
             {practice[locale].map(([title, body]) => (
@@ -237,10 +237,10 @@ export function HomePage({ locale }: { locale: Locale }) {
       <section className="page-wrap py-20">
         <div className="mb-10 flex items-end justify-between gap-6">
           <h2 className="font-romie text-5xl text-[#f4f1ea]">
-            {locale === "en" ? "Selected work across culture and production" : "KÃ¼ltÃ¼r ve prodÃ¼ksiyon alanÄ±nda seÃ§ili iÅŸler"}
+            {locale === "en" ? "Works across memory, culture and experience" : "Hafıza, kültür ve deneyim alanında işler"}
           </h2>
           <Link href={routePaths[locale].work} className="hidden text-sm text-[#d7ff2f] md:block">
-            {locale === "en" ? "View all work" : "TÃ¼m iÅŸler"}
+            {locale === "en" ? "View all work" : "Tüm İşler"}
           </Link>
         </div>
         <div className="grid gap-12">
@@ -258,7 +258,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 </h3>
                 <p className="mt-5 max-w-2xl text-sm leading-7 text-[#a7a39b]">{project.summary[locale]}</p>
                 <Link href={projectPath(locale, project.slug)} className="mt-6 inline-block text-sm text-[#e9e5dc] underline decoration-[#d7ff2f] underline-offset-8">
-                  {locale === "en" ? "Read case study" : "Vaka dosyasÄ±nÄ± oku"}
+                  {locale === "en" ? "Read case study" : "Vaka dosyasını oku"}
                 </Link>
               </div>
             </article>
@@ -270,12 +270,12 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="page-wrap grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <h2 className="font-romie text-5xl text-[#f4f1ea]">
-              {locale === "en" ? "From research to the final form." : "AraÅŸtÄ±rmadan son biÃ§ime."}
+              {locale === "en" ? "From research to public form." : "Araştırmadan kamusal biçime."}
             </h2>
             <p className="mt-6 text-sm leading-7 text-[#a7a39b]">
               {locale === "en"
-                ? "Our process connects research, writing, visual development, direction, production and technology. Each project is built around the form the story actually requires."
-                : "SÃ¼recimiz araÅŸtÄ±rmayÄ±, yazÄ±mÄ±, gÃ¶rsel geliÅŸtirmeyi, yÃ¶netimi, prodÃ¼ksiyonu ve teknolojiyi birbirine baÄŸlar. Her proje, hikayenin gerÃ§ekten ihtiyaÃ§ duyduÄŸu biÃ§im Ã§evresinde kurulur."}
+                ? "The practice connects research, writing, visual development, direction, production and technology. Each work is built around the form its subject requires."
+                : "Pratik; araştırmayı, yazımı, görsel geliştirmeyi, yönetimi, prodüksiyonu ve teknolojiyi birbirine bağlar. Her iş, konusunun gerektirdiği biçim çevresinde kurulur."}
             </p>
           </div>
           <ol className="grid gap-px border fine-rule">
@@ -293,10 +293,10 @@ export function HomePage({ locale }: { locale: Locale }) {
         <div className="page-wrap">
           <div className="story-principle-visual">
             <div className="story-principle-label">
-              <span>{locale === "en" ? "Asterion Story Network" : "Asterion Hikaye AÄŸÄ±"}</span>
+              <span>{locale === "en" ? "Asterion Practice Network" : "Asterion Pratik Ağı"}</span>
             </div>
             <ArchiveWallVisual
-              alt={locale === "en" ? "Asterion story network globe" : "Asterion hikaye aÄŸÄ± kÃ¼resi"}
+              alt={locale === "en" ? "Asterion practice network globe" : "Asterion pratik ağı küresi"}
               locale={locale}
             />
           </div>
@@ -307,26 +307,26 @@ export function HomePage({ locale }: { locale: Locale }) {
             <div>
               <h2 className="text-xl text-[#e9e5dc]">
                 {locale === "en"
-                  ? "Built on years of cultural production."
-                  : "YÄ±llara yayÄ±lan kÃ¼ltÃ¼rel prodÃ¼ksiyon deneyimi Ã¼zerine kuruldu."}
+                  ? "Built on years of cultural practice."
+                  : "Yıllara yayılan kültürel pratik üzerine kuruldu."}
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
                 {locale === "en"
-                  ? "The Asterion carries forward a body of cultural, museum, spatial storytelling and visual production work first developed through selected projects under Muse Studio. Original project, artist and institutional credits are retained on the relevant project pages."
-                  : "The Asterion; Muse Studio dÃ¶neminde geliÅŸtirilen seÃ§ili kÃ¼ltÃ¼r, mÃ¼ze, mekansal anlatÄ± ve gÃ¶rsel prodÃ¼ksiyon iÅŸlerinden oluÅŸan birikimi sÃ¼rdÃ¼rÃ¼r. Ã–zgÃ¼n proje, sanatÃ§Ä± ve kurum kredileri ilgili proje sayfalarÄ±nda korunur."}
+                  ? "The Asterion carries forward a body of cultural, museum, spatial media and visual research first developed through selected projects under Muse Studio. Original project, artist and institutional credits are retained on the relevant project pages."
+                  : "The Asterion; Muse Studio döneminde geliştirilen seçili kültür, müze, mekansal medya ve görsel araştırma işlerinden oluşan birikimi sürdürür. Özgün proje, sanatçı ve kurum kredileri ilgili proje sayfalarında korunur."}
               </p>
             </div>
             <div>
               <h2 className="text-xl text-[#e9e5dc]">
-                {locale === "en" ? "What kind of story are you developing?" : "NasÄ±l bir hikaye geliÅŸtiriyorsunuz?"}
+                {locale === "en" ? "What are you trying to give form to?" : "Neye biçim vermeye çalışıyorsunuz?"}
               </h2>
               <p className="mt-4 text-sm leading-7 text-[#a7a39b]">
                 {locale === "en"
-                  ? "Talk to us about a film, documentary, museum, archive, cultural subject or original world in development."
-                  : "GeliÅŸtirme sÃ¼recindeki film, belgesel, mÃ¼ze, arÅŸiv, kÃ¼ltÃ¼rel konu veya Ã¶zgÃ¼n dÃ¼nya fikrinizi bizimle paylaÅŸÄ±n."}
+                  ? "Talk to us about a research direction, archive, cultural subject, original world or public experience in development."
+                  : "Geliştirme sürecindeki araştırma yönünü, arşivi, kültürel konuyu, özgün dünyayı veya kamusal deneyimi bizimle paylaşın."}
               </p>
               <Link href={routePaths[locale].contact} className="paper-cta mt-6 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
-                {locale === "en" ? "Start a Conversation" : "GÃ¶rÃ¼ÅŸmeyi BaÅŸlat"}
+                {locale === "en" ? "Begin a Conversation" : "Bir Görüşme Başlat"}
               </Link>
             </div>
           </div>

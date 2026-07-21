@@ -9,30 +9,30 @@ const projectRecords: Project[] = [
     status: "ongoing",
     featured: true,
     categories: [
-      { en: "Original IP", tr: "Özgün Proje" },
+      { en: "Original World", tr: "Özgün Dünya" },
       { en: "Historical Aviation", tr: "Tarihsel Havacılık" },
       { en: "Immersive Experience", tr: "Immersif Deneyim" },
-      { en: "Documentary Research", tr: "Belgesel Araştırması" },
+      { en: "Research Platform", tr: "Araştırma Platformu" },
     ],
     formats: [
       { en: "Historical research", tr: "Tarihsel araştırma" },
       { en: "Experience prototype", tr: "Deneyim prototipi" },
       { en: "Immersive flight experience", tr: "Immersif uçuş deneyimi" },
-      { en: "Documentary development", tr: "Belgesel geliştirme" },
+      { en: "Documentary research", tr: "Belgesel araştırması" },
       { en: "Cinematic development", tr: "Sinematik geliştirme" },
-      { en: "Interactive story research", tr: "Etkileşimli anlatı araştırması" },
+      { en: "Cultural IP development", tr: "Kültürel IP geliştirme" },
     ],
     summary: {
-      en: "NU.D38 is a long-term cultural and cinematic project inspired by Nuri Demirağ's aviation enterprise and the early history of civil aircraft production in Türkiye.",
-      tr: "NU.D38, Nuri Demirağ'ın havacılık girişiminden ve Türkiye'de sivil uçak üretiminin erken dönem tarihinden ilham alan uzun soluklu bir kültür ve sinema projesidir.",
+      en: "NU.D38 is an original world, research platform and evolving cultural IP inspired by Nuri Demirağ's aviation enterprise and the early history of civil aircraft production in Türkiye.",
+      tr: "NU.D38, Nuri Demirağ'ın havacılık girişiminden ve Türkiye'de sivil uçak üretiminin erken dönem tarihinden ilham alan özgün dünya, araştırma platformu ve gelişen kültürel IP'dir.",
     },
     context: {
-      en: "The project revisits a largely forgotten technological and entrepreneurial chapter through historical research, archival material, immersive flight, documentary development and cinematic storytelling.",
-      tr: "Proje, büyük ölçüde unutulmuş bir teknoloji ve girişimcilik dönemini tarihsel araştırma, arşiv malzemeleri, immersif uçuş, belgesel geliştirme ve sinematik anlatı üzerinden yeniden ele alır.",
+      en: "The work revisits a largely forgotten technological and entrepreneurial chapter through historical research, archival material, immersive flight, documentary inquiry and cinematic development.",
+      tr: "Bu çalışma, büyük ölçüde unutulmuş bir teknoloji ve girişimcilik dönemini tarihsel araştırma, arşiv malzemeleri, immersif uçuş, belgesel araştırması ve sinematik geliştirme üzerinden yeniden ele alır.",
     },
     concept: {
-      en: "Its first public form is an immersive flight experience. Beyond that, NU.D38 is being shaped as an original story universe for documentary, cinema, exhibition, publication and interactive formats.",
-      tr: "Projenin ilk kamusal formu immersif bir uçuş deneyimidir. NU.D38 bunun ötesinde belgesel, sinema, sergi, yayın ve etkileşimli formatlara açılabilecek özgün bir anlatı evreni olarak geliştirilmektedir.",
+      en: "Its first public form is an immersive flight experience. Beyond that, NU.D38 is being shaped as a long-term original world for documentary, cinema, exhibition, publication and interactive formats.",
+      tr: "İlk kamusal formu immersif bir uçuş deneyimidir. NU.D38 bunun ötesinde belgesel, sinema, sergi, yayın ve etkileşimli formatlara açılabilecek uzun soluklu bir özgün dünya olarak geliştirilmektedir.",
     },
     externalUrl: "https://nud38.com",
     verificationNotes: [
@@ -181,10 +181,10 @@ const projectRecords: Project[] = [
     categories: [
       { en: "Museum Experience", tr: "Müze Deneyimi" },
       { en: "Cultural Heritage", tr: "Kültürel Miras" },
-      { en: "Immersive Storytelling", tr: "Immersif Anlatı" },
+      { en: "Immersive Experience", tr: "Immersif Anlatı" },
     ],
     summary: {
-      en: "A museum experience exploring Osman Hamdi Bey's life, artistic world and intellectual legacy through spatial storytelling and interactive discovery.",
+      en: "A museum experience exploring Osman Hamdi Bey's life, artistic world and intellectual legacy through spatial interpretation and interactive discovery.",
       tr: "Osman Hamdi Bey'in yaşamını, sanatsal dünyasını ve düşünsel mirasını mekansal anlatı ve etkileşimli keşif yoluyla ele alan müze deneyimi.",
     },
     context: {

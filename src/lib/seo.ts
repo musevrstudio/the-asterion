@@ -9,7 +9,7 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
     tr: metadataText.tr.title,
   },
   work: {
-    en: "Work | The Asterion",
+    en: "Works | The Asterion",
     tr: "İşler | The Asterion",
   },
   originals: {
@@ -17,15 +17,15 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
     tr: "Özgün Projeler | The Asterion",
   },
   production: {
-    en: "Capabilities | The Asterion",
-    tr: "Yetkinlikler | The Asterion",
+    en: "Practice | The Asterion",
+    tr: "Pratik | The Asterion",
   },
   studio: {
-    en: "Studio | The Asterion",
-    tr: "Stüdyo | The Asterion",
+    en: "About | The Asterion",
+    tr: "Hakkında | The Asterion",
   },
   journal: {
-    en: "Journal | The Asterion",
+    en: "Notes | The Asterion",
     tr: "Notlar | The Asterion",
   },
   contact: {
@@ -40,8 +40,8 @@ const pageTitles: Record<RouteKey, Record<Locale, string>> = {
 
 const pageDescriptions: Record<RouteKey, Record<Locale, string>> = {
   home: {
-    en: "The Asterion develops films, documentaries, museum experiences, Archive Wall installations, life-scale digital hologram experiences and visual worlds for cultural institutions and brands.",
-    tr: "The Asterion; filmler, belgeseller, müze deneyimleri, Archive Wall kurulumları, insan ölçeğinde dijital hologram deneyimleri ve görsel dünyalar geliştirir.",
+    en: "The Asterion is a cultural practice for research, authorship, memory, experience, Archive Wall systems, Asterion Presence and original worlds.",
+    tr: "The Asterion; araştırma, yazarlık, hafıza, deneyim, Archive Wall sistemleri, Asterion Presence ve özgün dünyalar üzerine çalışan kültürel bir pratiktir.",
   },
   work: {
     en: metadataText.en.description,
@@ -52,8 +52,8 @@ const pageDescriptions: Record<RouteKey, Record<Locale, string>> = {
     tr: metadataText.tr.description,
   },
   production: {
-    en: "Capabilities across story development, museum and exhibition narratives, Archive Wall experiences, Asterion Presence life-scale digital holograms, spatial media and interactive production.",
-    tr: "Hikaye geliştirme, müze ve sergi anlatıları, Archive Wall deneyimleri, Asterion Presence insan ölçeğinde dijital hologramlar, mekansal medya ve interaktif prodüksiyon.",
+    en: "A practice spanning research, authorship, archive systems, cultural experience, Asterion Presence, spatial media and long-term world-building.",
+    tr: "Araştırma, yazarlık, arşiv sistemleri, kültürel deneyim, Asterion Presence, mekansal medya ve uzun soluklu dünya kurma alanlarına yayılan pratik.",
   },
   studio: {
     en: metadataText.en.description,
