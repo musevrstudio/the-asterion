@@ -157,7 +157,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                   </span>
                 ))}
               </div>
-              <Link href={routePaths[locale].contact} className="paper-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
+              <Link href={routePaths[locale].contact} className="lime-cta mt-8 inline-block px-5 py-3 text-sm" style={{ color: "#090a0c" }}>
                 {presence.cta[locale]}
               </Link>
             </div>
